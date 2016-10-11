@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<!--框架必需start-->
+<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../libs/js/framework.js"></script>
+<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+
+<!--修正IE6不支持PNG图start-->
+<style>
+img {
+	behavior:url("../../libs/js/method/pngFix/pngbehavior.htc");
+}
+</style>
+<!--修正IE6不支持PNG图end-->
+</head>
+<body>
+	<div class="welcomeBg" id="openContent">
+		 <div style="width:594px;height: 153px;background-image: url(../../sample_html/layout/welcomeTitle.png);position:absolute;right:125px;top:120px;"></div>
+		 提示：欢迎标题可改文字，PSD源文件在sample_html/layout.<br />
+		 欢迎标题的CSS和图片路径写在了页面里面，可自行调整欢迎标题在页面里的尺寸和位置。
+	</div>	
+<script>
+function customHeightSet(contentHeight){
+		$("#openContent").height(contentHeight);
+	}
+</script>
+</body>
+</html>

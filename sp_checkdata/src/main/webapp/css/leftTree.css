@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+body,td,th {
+	font-family: 宋体;
+	font-size: 14px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #D1F3FF;
+}
+a {
+	color: #192D60;
+	text-decoration: none;
+}
+a:hover {
+	color: #0389E2;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+li {
+	list-style-type: none;
+}
+.div_title{
+	width: 100%;
+	height: 19px;
+	text-indent: 10px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom: 20px;
+	font-family: 宋体;
+	font-size: 20px;
+	padding-left:10px;
+	background-image: url("../images/nav_icon.png");
+	background-position: 8px 3px;
+	background-repeat: no-repeat;
+}
+.div_title span{
+	display:block;
+	padding-left:8px;
+	font-family: 宋体;
+	font-size: 20px;
+}
+.div_list_ul{
+	float:none;
+	margin: 0px;
+	width: 100%;
+	height: 500px;
+	padding-left: 20px;
+}
+.span_01{
+	display: block;
+	height:15px;
+	margin: 0px;
+	width: 100%;
+	font-family: 宋体;
+	font-size:15px; 
+	background-image: url("../images/onSuccess.gif");
+	background-position: left;
+	background-repeat: no-repeat; 
+	text-align: left;
+	text-indent: 20px;
+}
+.span_01 a{
+	text-align: left;
+	text-indent: 20px;
+}

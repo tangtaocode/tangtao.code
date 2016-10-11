@@ -1,0 +1,67 @@
+th {
+	border: 1px solid #FFFFFF;
+	background-color: #E2EBFF;
+	font-weight: bolder;
+	color: #666666;
+	letter-spacing: 1px;
+	text-align: center;
+	line-height: 30px;
+}
+td{
+	border: 1px solid #A3C0E8;
+	font-size:small;
+	text-align: left;
+}
+.page_table {
+	border:1px solid #A3C0E8;
+	font-size: 14px;
+	margin-top: 5px;
+	font-size:small;
+}
+a{
+	text-decoration:none;
+}
+.tabon {
+	font-weight: bold;
+	font: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000002;
+	background-image: url(../images/cardbg.gif);
+	background-repeat: repeat-x;
+	border-left: solid 1px #7C92BB;
+	border-right: solid 1px #7C92BB;
+	letter-spacing: 2px;
+	text-align: center;
+	height: 24px;
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-top: 9px;
+	border-top: 1px solid #c2c2c2;
+}
+.taboff { /*width: 20%;*/
+	font-weight: lighter;
+	font: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000002;
+	background-image: url(../images/link_back.jpg);
+	background-repeat: repeat-x;
+	background-position: right bottom;
+	letter-spacing: 2px;
+	height: 20px;
+	padding-right: 12px;
+	padding-left: 12px;
+	cursor:pointer;
+	padding-top: 9px;
+	text-align: center;
+	border-top: 1px solid #c2c2c2;
+	border-left: 1px solid #c2c2c2;
+	border-right: 1px solid #c2c2c2;
+}
+.style_text_yj { /*多行文本输入框样式*/
+	font-size: 12px;
+	background-color: rgb(255, 255, 255);
+	border: #91b0c5 1px solid;
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;
+}

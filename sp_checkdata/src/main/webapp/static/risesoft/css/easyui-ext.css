@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+/*jquery.my97.js*/
+.my97-wrap{
+    border: 1px solid #95B8E7;
+    background-color: #ffffff;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.my97-text{
+    font-size: 12px;
+    border: 0px;
+    line-height: 20px;
+    width:109px;
+    height: 20px;
+    margin: 0;
+    padding: 0px 2px;
+    *margin-top: -1px;
+    *height: 18px;
+    *line-height: 18px;
+    _height: 18px;
+    _line-height: 18px;
+    vertical-align: baseline;
+}
+.my97-arrow{
+    background: url('../icons/icon-standard/16x16/date.png') no-repeat center center;
+    background-color: #E0ECFF;
+    width: 18px;
+    height: 20px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.my97-arrow-hover{
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+/*jquery.euploadify.js*/
+.euploadify-panel {}
+.euploadify-panel {}
+
+.euploadify-wrapper {}
+.euploadify-wrapper div.uploadify { display: inline-block; font-size: 12px; margin: 0; }
+.euploadify-wrapper div.uploadify .uploadify-button { border-radius: 0; margin: 0 4px 0 10px; }
+.euploadify-wrapper div.uploadify > object { left: 0px; }
+.euploadify-wrapper.euploadify-disabled { filter: alpha(opacity=60); opacity: 0.6; }
+.euploadify-wrapper a.l-btn-disabled div.uploadify > object { visibility: hidden; }
+
+.euploadify-wrapper.euploadify-invalid { border: 1px solid red; }
+
+.euploadify-wrapper-single {}
+.euploadify-wrapper-multi {}
+.euploadify-wrapper-multi-uploadify {}
+.euploadify-wrapper-multi-simple {}
+.euploadify-wrapper-multi-bootstrap {}
+.euploadify-wrapper-multi-grid {}
+.euploadify-wrapper-single .euploadify-button, .euploadify-wrapper-multi-uploadify .euploadify-button, .euploadify-wrapper-multi-simple .euploadify-button, .euploadify-wrapper-multi-bootstrap .euploadify-button {
+    margin-right: 5px; 
+}
+.euploadify-wrapper-multi-grid .euploadify-button { margin-right: 2px; } 
+.euploadify-wrapper-multi-grid .euploadify-button-mini { width: 18px; height: 18px; cursor: pointer; border-width: 1px; border-color: #FFFFFF; border-style: solid; display: inline-block; }
+.euploadify-wrapper-multi-grid .euploadify-button-mini { *display: inline; }
+.euploadify-wrapper-multi-grid .euploadify-button-mini:hover { border-color: red; }
+.euploadify-wrapper-multi-grid .euploadify-button-mini-icon { line-height: 16px; padding-left: 16px; display: inline-block; }
+
+.euploadify-select {}
+.euploadify-upload {}
+.euploadify-stop {}
+.euploadify-cancel {}
+.euploadify-hidden { display: none; }
+
+.euploadify-queue {}
+.euploadify-wrapper-single .euploadify-queue, .euploadify-wrapper-multi-uploadify .euploadify-queue, .euploadify-wrapper-multi-simple .euploadify-queue, .euploadify-wrapper-multi-bootstrap .euploadify-queue {
+    margin: 0 5px 5px 5px; 
+}
+
+.euploadify-wrapper-single .euploadify-progressbar { display: inline-block; vertical-align: middle; margin: 5px; }
+.euploadify-wrapper-single .euploadify-progressbar { *display: inline; } /*ie6,7*/
+.euploadify-progressbar .progressbar-value .progressbar-text.progressbar-text-success, .euploadify-gridpanel-progress-value.euploadify-gridpanel-progress-success {
+    background-color: #15C23C; 
+}
+.euploadify-progressbar .progressbar-value .progressbar-text.progressbar-text-error, .euploadify-gridpanel-progress-value.euploadify-gridpanel-progress-error {
+    background-color: #F10257;
+}
+
+.euploadify-wrapper-single .euploadify-buttonbar { display: inline-block; vertical-align: middle; margin: 5px 5px 5px 0; }
+.euploadify-wrapper-single .euploadify-buttonbar { *display: inline; } /*ie6,7*/
+
+.euploadify-wrapper-multi-uploadify .euploadify-buttonbar, .euploadify-wrapper-multi-simple .euploadify-buttonbar, .euploadify-wrapper-multi-bootstrap .euploadify-buttonbar {
+    vertical-align: middle; margin: 5px;
+}
+.euploadify-wrapper-multi .uploadify-queue-item { max-width: inherit; }
+.euploadify-gridpanel-progress { border: 1px solid; height: 8px; text-align: left; }
+.euploadify-gridpanel-progress-value { height: 8px; background-color: #FFAA00; margin: 0; padding: 0; }
+.euploadify-gridpanel-status { font-weight: bold; }
+.euploadify-gridpanel-status.euploadify-gridpanel-status-success { color: #15C23C; }
+.euploadify-gridpanel-status.euploadify-gridpanel-status-error { color: #F10257; }
+
+/********表单加背景色*******/
+.td_bottom_v {
+    border-bottom: 1px solid #9dc3da;
+}
+.td_lt_v {
+    border-bottom: 1px solid #9dc3da;
+    border-right: 1px solid #9dc3da;
+}
+.td_lt_v2 {
+    border-bottom: 1px solid #9dc3da;
+}
+.td_lt_v1{padding-top:10px;}
+
+.fl{ float:left;}	
+.fr{ float:right;}
+.clear{ clear:both;}
+
+.table-select{ height:26px; margin-right:5px;}
+.table-num{ margin-left:5px;}
+.teble-textarea{ border:1px solid #ccc; min-height:80px;}
+
+.mydiv{ background-color: #B5DBF1; padding-top:30px; padding-bottom: 30px;}
+.mydiv table{ background-color: #fff; border-color:#ddd;}
+.mydiv table td{ padding:5px 5px 5px 10px;}
+.mydiv table td input{ border:1px solid #ccc; height:24px; padding-left:5px;}
+.mydiv table caption{ font-family:"宋体"; font-size:24px; font-weight:bold; margin-bottom:20px;}
+.mydiv_table{ width: 750px; background-color: #fff; margin:0 auto; padding: 15px 25px;
+       -moz-box-shadow: -2px 0 5px rgba(51,51,51,0.5),0 -2px 5px rgba(51,51,51,0.5),0 2px 5px rgba(51,51,51,0.5),2px 0 5px rgba(51,51,51,0.5);
+       -webkit-box-shadow: -2px 0 5px rgba(51,51,51,0.5),0 -2px 5px rgba(51,51,51,0.5),0 2px 5px rgba(51,51,51,0.5),2px 0 5px rgba(51,51,51,0.5);
+       box-shadow: -2px 0 5px rgba(51,51,51,0.5),0 -2px 5px rgba(51,51,51,0.5),0 2px 5px rgba(51,51,51,0.5),2px 0 5px rgba(51,51,51,0.5);
+}   
+/********图标去掉后的边距去掉*****
+.l-btn-icon-left .l-btn-text {
+margin: 0 4px 0 4px;
+}
+****/
+

@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+.searchBtn{
+	background-image: url(../images/search.gif);
+	width:49px;
+	height:21px;
+	border:0px;
+	cursor: pointer;
+}
+.smscontainer{
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding: 0px;	
+}
+.search {
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+}
+.showtable{
+	width: 800px;
+	margin: 0px;
+	padding: 0px;
+}
+.showtable table{
+	width: auto;
+	border: 2px;
+	border-style: solid;
+	border-color: rgb(102,153,153);
+}
+.showtable th{
+	text-align: center;
+	width: 100px;
+}
+.showtable td{
+	text-align: center;
+	width: 100px;
+}
+.showtable a{
+ cursor: pointer;
+}
+.pagenum{
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+}

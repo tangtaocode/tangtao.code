@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+/******* main *******/
+body,html{margin:0px; font-family:Arial; font-size:12px; color:#333333; padding:0;}
+a{text-decoration:none;}
+ul{list-style:none;}
+.accordion-body a{display:block;height:25px;line-height:25px;color:#485b61;text-decoration:none;padding:0 10px;
+blr:expression(this.onFocus=this.blur());/*IE使用*/outline-style:none;/*FF使用*/}
+.accordion-body a:hover{color:#3399cc;}
+.accordion-body a.active{background:#e0f0ff;}
+
+.accordion-body div{display:block;height:20px;line-height:20px;color:#485b61;text-decoration:none;padding-top:6px;
+blr:expression(this.onFocus=this.blur());/*IE使用*/outline-style:none;/*FF使用*/}
+
+.tabs-panels .panel-body{overflow:hidden;}
+
+.index-title{float:left;width:1070px; height:56px; background:url(../images/index_01.gif) no-repeat;font-family:'微软雅黑';font-size:30px;line-height:56px;text-indent:10px;color:#fff;}
+
+.list{float:left;width:100%;height:31px;background:url(../images/index_bg2.jpg) repeat-x;}
+.list .tleft{float:left;height:30px;color:#333;padding-left:15px;line-height:30px;}
+.list .tleft span{float:left;line-height:30px;}
+.list .tleft a{color:#333;}
+.list .tleft a:hover{text-decoration:underline;}
+
+.tright{float:right;height:30px;overflow:hidden;}
+.tright .search1{float:right;width:141px;height:22px;background:url(../images/search1.jpg) no-repeat;margin-top:5px;margin-right:50px;display:inline;}
+.tright .sin{float:left;width:113px;margin-left:3px;height:18px;margin-top:1px;background:transparent;border:0;line-height:20px;color:#cccccc;}
+ .tright .sbut{float:left;width:16px;height:16px;background:transparent;border:0;margin:3px 0 0 6px;cursor:pointer;}
+ 
+.lit_menu{position:absolute;width:99px;display:none;background:url(../images/menu_top.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='images/new/menu_top.png');}
+.lit_menu .litmc{float:left;width:99px;height:150px;margin-top:5px;background:url(mages/menu_cen.png) repeat-y;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='images/menu_cen.png');}
+.lit_menu .litmb{float:left;width:99px;height:8px;background:url(../images/menu_bot.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='images/menu_bot.png');}
+.lit_menu .popmenu{width:85px;position:absolute;height:auto;margin-left:2px;}
+.lit_menu .popmenu li{height:25px;line-height:25px;cursor:pointer;color:#676767;}
+
+.lit_menu{position:absolute;width:99px;display:none;background:url(../images/menu_top.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='images/new/menu_top.png');}
+.lit_menu .litmc{float:left;width:99px;height:150px;margin-top:5px;background:url(mages/menu_cen.png) repeat-y;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='images/menu_cen.png');}
+.lit_menu .litmb{float:left;width:99px;height:8px;background:url(../images/menu_bot.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='images/menu_bot.png');}
+.lit_menu .popmenu{width:85px;position:absolute;height:auto;margin-left:2px;}
+.lit_menu .popmenu li{height:25px;line-height:25px;cursor:pointer;color:#676767;}
+
+.info{ top: 0; right: 10; _right:10px; position: absolute; height:20px;font-size:12px;color:#000;}
+.userinfo{ overflow:hidden; right:10px; }
+.userinfo ul{padding:0px;margin:0px;}
+.userinfo a{float:left;color:#000;margin:0 10px;}
+.userinfo a:hover{text-decoration:underline;}
+.userinfo span{float:left; padding-right:10px; margin-left:13px; background:url(../images/top_06.png) right 9px no-repeat;}
+.userinfo .sy{ padding-left:21px; color:#000; background:url(../images/icon_home.png) 0 12px no-repeat;}
+.userinfo .tc{ padding-left:21px; color:#000; background:url(../images/icon_tc.png) 0 12px no-repeat;}
+.userinfo .key{ padding-left:21px; color:#000; background:url(../images/key.png) 0 10px no-repeat;}
+.userinfo .sd{ padding-left:21px; color:#000; background:url(../images/padlock_closed.png) 0 9px no-repeat;}
+
+
+
+.uuser{  top: 40px; right: 20; _right:20px; position: absolute; height:30px;font-size:12px;color:#000;}
+.uuserinfo{ overflow:hidden; right:20px; width:auto;}
+.uuserinfo ul{ padding-top: 5px; padding-left:21px; color:#000; background:url(../images/icon_yh.png) 0 8px no-repeat;}
+.colour
+{ position:absolute; right:10px; top:35px;
+}
+
+.colour ul,.colour li
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ .colour li
+ {
+     margin-left:3px;
+     margin-top:4px;
+     display:inline;
+ }
+    .default, .green, .red, .orange, .gray, .azure
+{
+    float: right;
+    width: 13px;
+    height: 11px;
+    margin-left: 5px;
+    display: inline;
+    background: url(../images/colorButton.gif) left top no-repeat;
+    cursor: pointer;
+}
+
+.green
+{
+    background: url(../images/colorButton.gif) -20px top no-repeat;
+}
+
+.red
+{
+    background: url(../images/colorButton.gif) -40px top no-repeat;
+}
+
+.orange
+{
+    background: url(../images/colorButton.gif) -60px top no-repeat;
+}
+
+.gray
+{
+    background: url(../images/colorButton.gif) -80px top no-repeat;
+}
+
+.azure
+{
+    background: url(../images/colorButton.gif) -100px top no-repeat;
+}
+
+.default .selected
+{
+    height: 11px;
+    background: url(../images/zakladka.jpg) 0 -20px no-repeat;
+}
+
+.green .selected
+{
+    height: 11px;
+    background: url(../images/colorButton.gif) -20px -20px no-repeat;
+}
+
+.red .selected
+{
+    height: 11px;
+    background: url(../images/colorButton.gif) -40px -20px no-repeat;
+}
+
+.orange .selected
+{
+    height: 11px;
+    background: url(../images/colorButton.gif) -60px -20px no-repeat;
+}
+
+.gray .selected
+{
+    height: 11px;
+    background: url(../images/colorButton.gif) -80px -20px no-repeat;
+}
+
+.azure .selected
+{
+    height: 11px;
+    background: url(../images/colorButton.gif) -100px -20px no-repeat;
+}
+/******* main end *******/
+
+/******* edit *******/
+.table
+{
+    width: 99%;
+    table-layout: fixed;
+    background: #dadada;
+    font-size: 12px;
+    color: #000;
+    margin: 5px auto;
+}
+.table td
+{
+    height: 22px;
+    font-size: 12px;
+    padding:5px 0px;
+    background: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.table .lefttd
+{
+    background-color: #f5f5f5;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.table .rigthtd
+{
+    text-align: left;
+    padding-left: 3px;
+}
+
+.textbox
+{
+    font-family: "Tahoma" , "宋体";
+    background-color: Transparent;
+    border: 0;
+    font-size: 12px;
+    font-style: normal;
+    width: 99%;
+    height: 23px;
+    outline: none;
+}
+
+.textboxArea
+{
+    border: none;
+    font-family: "Tahoma" , "宋体";
+    font-size: 12px;
+    background-color: Transparent;
+    font-style: normal;
+    width: 99%;
+    height: 80px;
+    overflow-y: hidden;
+    outline: none;
+    resize: none;
+}
+.textboxArea_110
+{
+    border: none;
+    font-family: "Tahoma" , "宋体";
+    font-size: 12px;
+    background-color: Transparent;
+    font-style: normal;
+    width: 99%;
+    height: 110px;
+    overflow-y: hidden;
+    outline: none;
+    resize: none;
+}
+.textboxArea_120
+{
+    border: none;
+    font-family: "Tahoma" , "宋体";
+    font-size: 12px;
+    background-color: Transparent;
+    font-style: normal;
+    width: 99%;
+    height: 120px;
+    overflow-y: hidden;
+    outline: none;
+    resize: none;
+}
+
+.numberbox
+{
+    font-family: "Tahoma" , "宋体";
+    background-color: Transparent;
+    border: 0;
+    font-size: 12px;
+    font-style: normal;
+    width: 99%;
+    height: 23px;
+    outline: none;
+    text-align:right;
+}
+.combo
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(240, 240, 240);
+}
+.panel-body
+{
+    border-color: #dadada;
+}
+/*****add by zyx s*****/
+.tree-node-selected{ background: #E0ECFF;}
+.accordion .accordion-header-selected{background: #E0ECFF;}
+/******* edit end *******/

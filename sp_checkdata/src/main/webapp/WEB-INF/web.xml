@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+	<display-name>CA-KEYManager</display-name>
+
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:/log/log4j.xml</param-value>
+		<!-- <param-value>classpath:/log/log4j-log4jdbc.xml</param-value> -->
+	</context-param>
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>60000</param-value>
+	</context-param>
+
+	<!-- Spring ApplicationContext配置文件的路径,可使用通配符,多个路径用逗号分隔，此参数用于后面的ContextLoaderListener -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+            classpath:/springconfigs/spring-app.xml
+		</param-value>
+	</context-param>
+	
+	<context-param>
+	 	<param-name>javamelody.log</param-name>
+	 	<param-value>true</param-value>
+	 </context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+	<!-- Spring的ApplicationContext载入，listener的执行顺序按照出现的顺序 -->
+	<!-- 全部的listener执行完成后，依次执行filter，最后执行servlet -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>javamelody</filter-name>
+		<filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+		<init-param>
+			<param-name>authorized-users</param-name>
+			<param-value>admin:1qa2ws3ed</param-value>
+		</init-param>
+		<init-param>
+			<param-name>quartz-default-listener-disabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>javamelody</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>net.bull.javamelody.SessionListener</listener-class>
+	</listener>
+	
+	<!--有很多程序和框架在使用了JavaBeans Introspector之后，都没有进行清理工作，比如quartz、struts； -->
+	<!-- 当web服务器关闭的时候，垃圾回收器不能对web容器中的javaBean对象进行回收，导致内存越来越大。 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+	<!-- Filter 定义 -->
+	<!-- Character Encoding filter -->
+	
+	
+	
+	<filter>
+		<filter-name>Set Character Encoding</filter-name>
+		<filter-class>net.risesoft.filters.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name><!-- 是否忽略request請求原编码 默认是true -->
+			<param-value>false</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Set Character Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 用户session过滤 -->
+	<!--
+	<filter>
+		<filter-name>SSO-Single-Filter</filter-name>
+		<filter-class>net.risesoft.soa.framework.service.sso.client.single.SSOSingleFilter</filter-class>
+		<init-param>
+			<param-name>ssoServerLoginUrl</param-name>
+			<param-value>http://10.0.0.98:8000/sso/login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverName</param-name>
+			<param-value>http://10.0.0.98:8088</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>ssoServerUrlPrefix</param-name>
+			<param-value>http://10.0.0.98:8000/sso/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>includes</param-name>
+			<param-value>/**</param-value>
+		</init-param>
+		 
+	</filter>
+	
+	<filter-mapping>
+        <filter-name>SSO-Single-Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+     -->
+
+	<!-- Spring MVC Servlet -->
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:/springconfigs/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+ <!-- 
+ <filter>
+	    <filter-name>riseUserloginFilter</filter-name>
+	    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>riseUserloginFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  
+  <!-- 跨站点请求伪造 -->
+  <filter>
+  	<filter-name>sessionFilter</filter-name>
+  	<filter-class>net.risesoft.filters.SessionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>sessionFilter</filter-name>
+  	<url-pattern>/oneHome/exchangeFile</url-pattern>
+  </filter-mapping>
+  <!-- 跨站点请求伪造 -->
+  
+  <!-- 图片验证码Servlet -->
+  <servlet>
+    <description>图片验证码</description>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <servlet-class>net.risesoft.controller.servlet.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CheckCodeServlet</servlet-name>
+  	<url-pattern>/pwd/checkCode.html</url-pattern>
+  </servlet-mapping>
+  <!-- 图片验证码Servlet -->
+  
+  
+</web-app>

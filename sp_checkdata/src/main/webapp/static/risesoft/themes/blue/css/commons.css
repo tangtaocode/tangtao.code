@@ -1,0 +1,41 @@
+/* 统一设定body的背景色 */
+body {
+	background:#EFFAFE;
+	overflow:hidden;
+	margin-left:3;
+}
+
+body.tree{
+	background:#FFFFFF;
+	overflow:hidden;
+}
+
+
+/* 所有滚动条，都建立在div上，统一设置滚动条的样式 */
+div.risecontent{
+  overflow:auto;
+  scrollbar-3dlight-color:#C0E1F5;
+  scrollbar-arrow-color:#FFFFFF;
+  scrollbar-base-color:#FFFFFF;
+  scrollbar-darkshadow-color:#C0E1F5;
+  scrollbar-face-color:#C0E1F5;
+  scrollbar-highlight-color:#FFFFFF;
+  scrollbar-shadow-color:#FFFFFF;
+  scrollbar-track-color:#FFFFFF;
+}
+/* 设定menu的样式 */
+tr.menubar{
+	background:#E4F5FF;
+}
+/* 设定列表的样式 */
+table.riselist {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	background:#FFFFFF;
+}
+table.riselist thead tr {
+  background-color: #F3FBFE;
+}
+table.riselist td,table.riselist th{
+	border: 1px solid #ccc;
+}

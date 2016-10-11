@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+	http://www.springframework.org/schema/oxm
+	http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd">
+	
+	<!--增加下面的注解后@value在@Controller里也可获取到-->
+	<context:property-placeholder ignore-unresolvable="true" location="classpath*:properties/application.properties" />
+	
+	<context:component-scan base-package="net.risesoft.controller" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
+    
+    <bean id="contextUtil" class="net.risesoft.common.util.ContextUtil"/>
+    
+	<!-- <oxm:jaxb2-marshaller id="marshaller">
+		<oxm:class-to-be-bound name="net.risesoft.fileflow.entity.jpa.Document" />
+	</oxm:jaxb2-marshaller> -->
+    
+	<mvc:annotation-driven validator="validator" conversion-service="conversionService">
+        
+		<!--enableMatrixVariables="true">-->
+
+		<mvc:message-converters register-defaults="true">
+			<!-- StringHttpMessageConverter编码为UTF-8，防止乱码 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8"/>
+			</bean>
+			<bean id="jackson2MessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">       
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+						<value>text/json;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+
+		<mvc:argument-resolvers>
+			<bean class="org.springframework.data.web.PageableArgumentResolver"/>
+		</mvc:argument-resolvers>
+
+	</mvc:annotation-driven>
+	
+	<!-- 当在web.xml中，DispatcherServlet使用“/”映射（不是“/*”）时， -->
+	<!-- css、image、html等静态资源都不能访问，因为没有Controller映射这些资源。-->
+	<!-- 因此需要开启缺省servlet处理器， 将无法mapping到Controller的url交给default servlet handler处理 -->
+	<mvc:default-servlet-handler />
+	
+	<!-- 静态资源映射，spring做了优化，这些资源可以放在jar包中，或者某个目录下。 -->
+	<!-- <mvc:resources mapping="/static/**" location="/static"/> -->
+    
+	<!-- 拦截器设置 -->
+	<mvc:interceptors>
+		<!-- 主要用于spring:eval tag -->
+		<bean class="org.springframework.web.servlet.handler.ConversionServiceExposingInterceptor">
+			<constructor-arg ref="conversionService"/>
+		</bean>
+        
+		<!-- 如果在web.xml中没有设置openEntityManagerInViewFilter，在这里设置也一样 -->
+		<!-- <bean class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor"/> -->
+	</mvc:interceptors>    
+                
+	<!-- 默认的视图解析器。在上边的解析器无法解析时使用 -->
+	<bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- InternalResourceViewResolver必须总是赋予最低的优先级（最大的order值）， -->
+		<!-- 因为不管返回什么视图名称，它都将解析视图。 -->
+		<!-- 如果它的优先级高于其它解析器的优先级的话，它将使得其它具有较低优先级的解析器没有机会解析视图。 -->
+		<property name="order" value="100"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="contentType" value="text/html"/>
+		<property name="prefix" value="/WEB-INF/page"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+    
+	<!-- 支持上传文件 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+		p:defaultEncoding="UTF-8"
+		p:maxUploadSize="5242880"
+		p:uploadTempDir="dynamicfile/uploadtemp" />
+
+	<!-- 控制器异常处理 -->
+	<bean id="exceptionHandlerExceptionResolver" class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+		<!-- <property name="contentNegotiationManager" ref="contentNegotiationManager"/> -->
+	</bean>
+    
+	<!-- 定义无Controller的path<->view直接映射 -->
+	<mvc:view-controller path="/" view-name="/commons/404" />
+    
+</beans>

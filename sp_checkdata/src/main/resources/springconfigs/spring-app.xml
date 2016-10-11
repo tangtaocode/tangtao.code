@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	
+
+	<bean id="systemproperty_initializer" class="net.risesoft.common.util.PropertiesUtil">
+		<property name="systemProperties">
+			<map>
+				<entry key="log4jdbc.log4j2.properties.file" value="/properties/log4jdbc.log4j2.properties"/>
+			</map>
+		</property>
+	</bean>
+	<!--在注解中也能获取到值 -->
+	<context:property-placeholder ignore-unresolvable="true" location="classpath*:properties/timer.properties" />
+	<context:annotation-config />
+	<context:component-scan base-package="net.risesoft.service,net.risesoft.filters,net.risesoft.webservice,net.risesoft.timer,net.risesoft.dao,net.risesoft.lhsms.webservice" >
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<task:annotation-driven />
+	<util:properties id="commonProps" location="classpath:properties/application.properties" local-override="true"/>
+	
+	<!-- 国际化的消息资源文件（本系统中主要用于显示/错误消息定制） -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<!-- 在web环境中一定要定位到classpath 否则默认到当前web应用下找  -->
+				<value>classpath:messages/i18n/messages</value>
+				<value>classpath:messages/validate/ValidationMessages</value>
+			</list>
+		</property>
+		<property name="useCodeAsDefaultMessage" value="false"/>
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="cacheSeconds" value="60"/>
+	</bean>
+    
+	<!-- 以下 validator  ConversionService 在使用 mvc:annotation-driven 会 自动注册-->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+		<!-- 如果不加，默认使用classpath下的 ValidationMessages.properties -->
+		<property name="validationMessageSource" ref="messageSource"/>
+	</bean>
+
+	<!-- 类型转换及数据格式化 -->
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"/>
+	
+	<bean id="facadeMonitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">
+	  <property name="pointcut">
+	   <bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+	    	<property name="pattern" value="net.risesoft.*.*" />
+	   </bean>
+	  </property>
+ 	</bean>
+
+	<bean id="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="exposeSchedulerInRepository" value="true" />
+	</bean>
+	
+	<import resource="spring-jpa.xml"/>
+	<import resource="classpath:net/bull/javamelody/monitoring-spring-datasource.xml" />
+	<import resource="classpath:net/bull/javamelody/monitoring-spring-aspectj.xml" />
+	<!-- <import resource="cxf-servlet.xml" /> -->
+</beans>

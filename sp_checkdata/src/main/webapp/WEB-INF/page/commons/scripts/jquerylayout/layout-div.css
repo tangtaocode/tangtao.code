@@ -1,0 +1,111 @@
+body {
+	color: #FFF;
+}
+.ui-layout-north,.ui-layout-south,.ui-layout-west,.ui-layout-east {
+	/*	NOTE: hiding an iframe may cause JS errors if the iframe page autoruns a script, so...
+		onopen: loadIframePage() == loads the *real* iframe page from "longdesc" attribute at 1st open */
+	display: none;
+	overflow: hidden;
+}
+
+iframe {
+	padding: 0 !important; /* iframes should not have padding */
+	overflow: auto !important;
+}
+
+/* color panes so they can be seen */
+.ui-layout-pane {
+	color: #000;
+	background: #EEE;
+}
+/* masks are usually transparent - make them visible (must 'override' default) */
+.ui-layout-mask {
+	background: #C00 !important;
+	opacity: .20 !important;
+	filter: alpha(opacity = 20) !important;
+}
+
+.ui-layout-south {
+	padding: 0; /* south pane is an iframe-container, so remove padding */
+}
+
+.ui-layout-west {
+	padding: 0;
+	/* west pane has a scrolling content-div, so remove padding */
+}
+
+.ui-layout-west .ui-layout-content { /* Google IFRAME */
+	border-top: 0px solid #BBB;
+	border-bottom: 0px solid #BBB;
+}
+
+.ui-layout-west .header {
+	background: url("/themes/${themes}/images/tree011.jpg") repeat-x;
+	height: 29px;
+	width: 165px;
+	font-family: "ËÎÌו";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 28px;
+	text-indent: 20px;
+	letter-spacing: 1px;
+	margin-bottom: 3px;
+}
+
+.ui-layout-west .footer,.ui-layout-west p {
+	background: #EEE;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+.ui-layout-west .footer {
+	color: #FFF;
+	background: #777;
+}
+
+.ui-layout-west p { /* 2nd Footer: "Toggle South" */
+	background: #F9F9F9;
+	border: 4px outset #FFF;
+	margin: 7px;
+}
+
+.ui-layout-resizer-north{
+	background: url("/themes/${themes}/images/border.jpg");
+	background-repeat: repeat-x;
+    height: 5px;
+}
+.ui-layout-resizer-west{
+	background-image: url("/themes/${themes}/images/tree_l.gif");
+    background-repeat: repeat-y;
+    width: 5px;
+}
+.ui-layout-toggler-west {
+	background:url("/themes/blue/images/tree_close.gif") no-repeat center left;
+	border-width: 0px 0px;
+}
+.ui-layout-pane { /* all 'panes' */
+	background:	#FFF; 
+	border:		0px solid #BBB;
+	padding:	0px; 
+	overflow:	auto;
+}
+.ui-layout-resizer	{ /* all 'resizer-bars' */
+	border:			0px;
+	}
+.ui-layout-resizer-dragging {	/* CLONED resizer being dragged */
+		border:  	0px;
+}
+.ui-layout-resizer-north-sliding{
+	border-bottom-width: 0px;
+}
+.ui-layout-resizer-north-sliding:hover {
+	border-bottom-width: 0px;
+}
+.ui-layout-resizer-west-sliding{
+	border-right-width: 0px;
+}
+.ui-layout-resizer-west-sliding:hover {
+	border-right-width: 0px;
+}

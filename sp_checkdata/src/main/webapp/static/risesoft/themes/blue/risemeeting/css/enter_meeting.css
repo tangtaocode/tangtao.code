@@ -1,0 +1,50 @@
+body{
+    padding:0 0 0 0; margin:0 0 0 0;
+	SCROLLBAR-FACE-COLOR: #58A9DB;
+	SCROLLBAR-HIGHLIGHT-COLOR: #e4eaf1;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	SCROLLBAR-TRACK-COLOR: #AFCFE3;
+	SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+}
+body, input, select, td, textarea,th{
+	font-family: ËÎÌו;
+	color: #000000;
+	font-size: 16px;
+}
+a, a:visited, a:hover {
+	color:#000000; text-decoration:none;
+}
+a:hover {
+	text-decoration: underline;
+        color: #000000;
+}
+
+
+/*.changed {
+	background-color: #ee0;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+}*/
+
+table {
+	border: 0px solid #666;
+	width: 250px;
+}
+th, td {
+    color:#0000
+	padding: 2px 4px 2px 4px;
+	vertical-align: top;
+}
+
+.td_1{
+	text-align: left;
+	font-family: ËÎÌו;
+	color: #000000;
+	font-size: 16px;
+}
+
+
+

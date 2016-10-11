@@ -1,0 +1,42 @@
+/* 弹出层样式 */
+
+html,body,h2{margin:0;}
+img{border:none}
+#main{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	display:block;
+}
+#pop{background:#fff;width:300px; height:200px;font-size:12px;position:fixed;right:0;bottom:0;}
+#popHead{
+	line-height:32px;background:#f6f0f3;border-bottom:1px solid #e0e0e0;font-size:12px;padding:0 0 0 0px;
+	}
+#popHead h2{
+	font-size:14px;color:#666;line-height:32px;height:32px;
+	background-image: url("../images/Phone.gif");
+	background-position: 0px 5px;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+	}
+#popHead #popClose{position:absolute;right:10px;top:1px;}
+#popHead a#popClose:hover{color:#f00;cursor:pointer;}
+.popContent{
+	background-image: url("../images/ap_back.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	padding-top: 16px;
+}
+.popContent a{
+	text-align:left;
+	cursor: pointer;
+	text-indent: 20px;
+}
+.popContent ul{
+	text-align:left;
+}
+.popContent ul li{
+	text-align:left;
+	height: 25px;
+	padding-left: 20px;
+}
