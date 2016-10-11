@@ -1,0 +1,12 @@
+body {      /*页面整体样式*/
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "宋体";
+	font-size: 13px;
+	color: #333333;
+	line-height: 24px;
+	letter-spacing: 1px;
+	padding: 20px;
+}

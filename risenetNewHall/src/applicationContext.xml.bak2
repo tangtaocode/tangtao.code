@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop" 
+	   xmlns:tx="http://www.springframework.org/schema/tx" 
+	   xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	   xmlns:dwra="http://www.directwebremoting.org/schema/spring-dwr-annotations"
+	   xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd
+            http://www.directwebremoting.org/schema/spring-dwr-annotations http://www.directwebremoting.org/schema/spring-dwr-annotations.xsd">
+	<!--配置文件导入	-->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:dataSource.properties</value>
+		</property>
+	</bean>
+	<!--数据源	-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" name="hibernateDataSource">
+		<property name="driverClassName" value="${oracle.database.driver}"></property>
+		<property name="url" value="${oracle.database.url}"></property>
+		<property name="username" value="${oracle.database.user}"></property>
+		<property name="password" value="${oracle.database.password}"></property>
+		<property name="maxActive" value="${jdbc.database.maxActive}"></property>
+		<property name="maxIdle" value="${jdbc.database.maxIdle}"></property>
+		<property name="maxWait" value="${jdbc.database.maxWait}"></property>
+	</bean>
+
+	<!-- 定义JdbcTemplate Bean(线程安全,执行底层sql语句) -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<!-- 设置数据源 -->
+		<property name="dataSource" ref="dataSource" />
+
+		<!-- 设置jdbcTemplate创建的statement查询数据时最大的超时时间,默认0 -->
+		<property name="queryTimeout" value="0" />
+
+		<!-- 设置底层ResultSet每次从数据库返回的行数,默认0,Oracle默认100 -->
+		<property name="fetchSize" value="${hibernate.jdbc.fetch_size}" />
+
+		<!-- 设置底层ResultSet从数据库返回的最大行数,默认0 -->
+		<property name="maxRows" value="0" />
+
+		<!-- 是否忽略sql警告信息,默认true,false JdbcTemplate将会抛出SQLWarningException -->
+		<property name="ignoreWarnings" value="true" />
+
+		
+		<property name="nativeJdbcExtractor" ref="nativeJdbcExtractor" />
+	</bean>
+	<!-- 定义DBCP数据源的JDBC本地对象抽取器 -->
+	<bean id="nativeJdbcExtractor" lazy-init="true"
+		class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor" />
+
+	<!--session工厂，里面可以配置Hibernate的映射文件，使用annotatedClasses-->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!--hibernate的方言，建议改成MySQL5Dialect-->
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<!--开发的时候尽量打开true-->
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<!-- 设定JDBC的Statement读取数据的时候每次从数据库中取出的记录条数 -->
+				<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+				<!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小 -->
+          		<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+          		<!-- 允许查询缓存, 个别查询仍然需要被设置为可缓存的 -->
+          		<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+          		<!-- 自定义的CacheProvider的类名. 取值 -->
+          		<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+          		<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+          		<prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="net.risesoft.*"></property>
+
+		
+	</bean>
+
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+
+
+	<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+
+	<!-- 那些类的哪些方法参与事务 -->
+	<aop:config>
+		<aop:pointcut id="allServiceMethod" expression="execution(* net.risesoft.daos.*.*.*(..))" />
+		<aop:advisor pointcut-ref="allServiceMethod" advice-ref="txAdvice" />
+	</aop:config>
+
+	<!-- 使Spring关注Annotation -->
+	<context:annotation-config />
+
+	<!-- 让Spring通过自动扫描来查询和管理Bean -->
+	<context:component-scan base-package="net.risesoft" />
+	
+	<!-- 让Spring通过自动扫描来查询和管理定时器 -->
+	
+	<!-- 配置DWR -->
+	<dwr:annotation-scan base-package="net.risesoft" scanDataTransferObject="true" scanRemoteProxy="true" />
+</beans>

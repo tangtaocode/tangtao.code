@@ -1,0 +1,2 @@
+SendMessageServiceImpl.java
+http://192.168.0.166:8888/engine/gettemplate.jsp?temp_Id=623&approveItemGUID={7F000001-0000-0000-7185-AA9300000016}&insGuid={BFA7FFA4-0000-0000-6947-1E870000002C}&userId={BFA80070-FFFF-FFFF-FBA2-520D00000001}&edittype=1

@@ -1,0 +1,989 @@
+/*************************************************************
+ * name:theme
+ * img:/widgets/Themes/theme/face.jpg
+ * label:风格样式三
+*************************************************************/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form,  input, textarea, p, blockquote, table, th, td {
+	margin:0;
+	padding:0;
+	background:#fff;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style:normal;
+}
+ul, li {
+	list-style-type:none;
+}
+img {
+	border:none;
+}
+input, textarea, select {
+	font-family:inherit;
+	font-weight:inherit;
+	vertical-align:middle;
+
+}
+input,select{
+    vertical-align:middle;
+    height:20px;
+    line-height:18px;
+} 
+body {
+	background: #fff;
+	color: #333;
+	font: 12px/1.5 tahoma,arial,宋体;
+}
+A
+{
+	color: #3e3e3e;
+}
+A:hover
+{
+	color: #f60;
+}
+
+.h
+{
+	color: #f50 !important;
+}
+.h *
+{
+	color: #f50 !important;
+}
+
+H1
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+H2
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+H3
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+H4
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+H5
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+H6
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+HR
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+P
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+BLOCKQUOTE
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+DL
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+DT
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+DD
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+UL
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+OL
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+LI
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+PRE
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+FORM
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+FIELDSET
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+LEGEND
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+BUTTON
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+INPUT
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+TEXTAREA
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+TH
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+TD
+{
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+BUTTON
+{
+	font: 12px/1.5 tahoma,arial,宋体;
+}
+INPUT
+{
+	font: 12px/1.5 tahoma,arial,宋体;
+}
+SELECT
+{
+	font: 12px/1.5 tahoma,arial,宋体;
+}
+TEXTAREA
+{
+	font: 12px/1.5 tahoma,arial,宋体;
+}
+H1
+{
+	font-size: 100%;
+}
+H2
+{
+	font-size: 100%;
+}
+H3
+{
+	font-size: 100%;
+}
+H4
+{
+	font-size: 100%;
+}
+H5
+{
+	font-size: 100%;
+}
+H6
+{
+	font-size: 100%;
+}
+ADDRESS
+{
+	font-style: normal;
+}
+CITE
+{
+	font-style: normal;
+}
+DFN
+{
+	font-style: normal;
+}
+EM
+{
+	font-style: normal;
+}
+VAR
+{
+	font-style: normal;
+}
+CODE
+{
+	font-family: courier new,courier,monospace;
+}
+KBD
+{
+	font-family: courier new,courier,monospace;
+}
+PRE
+{
+	font-family: courier new,courier,monospace;
+}
+SAMP
+{
+	font-family: courier new,courier,monospace;
+}
+SMALL
+{
+	font-size: 12px;
+}
+UL
+{
+	list-style-type: none;
+}
+OL
+{
+	list-style-type: none;
+}
+
+SUP
+{
+	vertical-align: text-top;
+}
+SUB
+{
+	vertical-align: text-bottom;
+}
+LEGEND
+{
+	color: #000;
+}
+FIELDSET
+{
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+IMG
+{
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+BUTTON
+{
+	font-size: 100%;
+}
+INPUT
+{
+	font-size: 100%;
+}
+SELECT
+{
+	font-size: 100%;
+}
+TEXTAREA
+{
+	font-size: 100%;
+}
+TABLE
+{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+/************网站顶部定义**************/
+
+.headerV27 {
+    background: url("images/top.gif") repeat-x scroll left -29px transparent;
+}
+.wrapper {
+	/*width:960px;*/
+	width:1002px;
+	margin: 0px auto;
+	padding:0px;
+}
+.wrapper1100 {
+	/*width:960px;*/
+	width:1002px;
+	margin: 0px auto;
+	padding:0px;
+}
+
+.mtop10 {
+	margin-top:10px;
+}
+
+.Tag_list {
+    background: url("images/back.gif") no-repeat scroll left -736px transparent;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.window {
+	font-size:12px;
+	position:absolute;
+	overflow:hidden;
+	background:transparent url('images/panel_title.png');
+	padding:5px;
+	border:1px solid #99BBE8;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+}
+.window-shadow{
+	position:absolute;
+	background:#ddd;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+	filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2,MakeShadow=false,ShadowOpacity=0.2);
+}
+.window .window-header{
+	background:transparent;
+	padding:2px 0px 4px 0px;
+}
+.window .window-body{
+	background:#fff;
+	border:1px solid #99BBE8;
+	border-top-width:0px;
+}
+.window .window-body-noheader{
+	border-top-width:1px;
+}
+.window .window-header .panel-icon{
+	left:1px;
+	top:1px;
+}
+.window .window-header .panel-with-icon{
+	padding-left:18px;
+}
+.window .window-header .panel-tool{
+	top:0px;
+	right:1px;
+}
+.window-proxy{
+	position:absolute;
+	overflow:hidden;
+	border:1px dashed #15428b;
+}
+.window-proxy-mask{
+	position:absolute;
+	background:#fafafa;
+	filter:alpha(opacity=10);
+	opacity:0.10;
+}	
+.window-mask{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=10);
+	opacity:0.40;
+	background:#ccc;
+	font-size:1px;
+	zoom:1;
+	overflow:hidden;
+}
+.messager-body{
+	padding:5px 10px;
+}
+.messager-button{
+	text-align:center;
+	padding-top:10px;
+}
+.messager-icon{
+	float:left;
+	width:47px;
+	height:35px;
+}
+a.l-btn{
+	color:#444;
+	background:url('images/button_a_bg.gif') no-repeat top right;
+	font-size:12px;
+	text-decoration:none;
+	display:inline-block;
+	zoom:1;
+	height:24px;
+	padding-right:18px;
+	cursor:pointer;
+	outline:none;
+}
+a.l-btn-plain{
+	background:transparent;
+	padding-right:5px;
+	border:1px solid transparent;
+	_border:0px solid #efefef;
+	_padding:1px 6px 1px 1px;
+}
+a.l-btn-disabled{
+	color:#ccc;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	cursor:default;
+}
+a.l-btn span.l-btn-left{
+	display:inline-block;
+	background:url('images/button_span_bg.gif') no-repeat top left;
+	padding:4px 0px 4px 18px;
+	line-height:16px;
+	height:16px;
+}
+a.l-btn-plain span.l-btn-left{
+	background:transparent;
+	padding-left:5px;
+}
+
+a.l-btn span span.l-btn-text{
+	display:inline-block;
+	height:16px;
+	line-height:16px;
+	padding:0px;
+}
+a.l-btn span span span.l-btn-empty{
+	display:inline-block;
+	padding:0px;
+	width:16px;
+}
+a:hover.l-btn{
+	background-position: bottom right;
+	outline:none;
+}
+a:hover.l-btn span.l-btn-left{
+	background-position: bottom left;
+}
+
+a:hover.l-btn-plain{
+	border:1px solid #7eabcd;
+	background:url('images/button_plain_hover.png') repeat-x left bottom;
+	_padding:0px 5px 0px 0px;
+	-moz-border-radius:3px;
+	-webkit-border-radius: 3px;
+}
+a:hover.l-btn-disabled{
+	background-position:top right;
+}
+a:hover.l-btn-disabled span.l-btn-left{
+	background-position:top left;
+}
+a.l-btn .l-btn-focus{
+	outline:#0000FF dotted thin;
+}
+
+.panel-tool{
+	position:absolute;
+	right:5px;
+	top:4px;
+}
+.panel-tool a{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	margin-left:2px;
+}
+.panel-tool a:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.panel-tool-close{
+	background:url('images/panel_tools.gif') no-repeat -16px 0px;
+}
+.panel-tool-min{
+	background:url('images/panel_tools.gif') no-repeat 0px 0px;
+}
+.panel-tool-max{
+	background:url('images/panel_tools.gif') no-repeat 0px -16px;
+}
+.panel-tool-restore{
+	background:url('images/panel_tools.gif') no-repeat -16px -16px;
+}
+.panel-tool-collapse{
+	background:url('images/panel_tool_collapse.gif') no-repeat;
+}
+.panel-tool-expand{
+	background:url('images/panel_tool_expand.gif') no-repeat;
+}
+.panel-loading{
+	padding:11px 0px 10px 30px;
+	background:url('images/panel_loading.html') no-repeat 10px 10px;
+}
+
+
+.clear {
+	LINE-HEIGHT: 0px; HEIGHT: 0px; CLEAR: both; FONT-SIZE: 0px; OVERFLOW: hidden
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; FONT-SIZE: 0px; CONTENT: " "
+}
+.clearfix {
+	ZOOM: 1
+}
+.ddnewhead_wrap {
+	FONT: 12px/18px "宋体",Arial,Helvetica,sans-serif; COLOR: #404040
+}
+.ddnewhead_wrap A {
+	COLOR: #1a66b3; TEXT-DECORATION: none
+}
+.ddnewhead_wrap A:hover {
+	COLOR: #1a66b3; TEXT-DECORATION: underline
+}
+.ddnewhead_wrap IMG {
+	DISPLAY: inline
+}
+.ddnewhead_wrap LI {
+	CLEAR: none
+}
+.ddnewhead_wrap H1 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.ddnewhead_wrap H2 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.ddnewhead_wrap H3 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.ddnewhead_wrap H4 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.ddnewhead_wrap H5 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.ddnewhead_wrap H6 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.ddnewhead_operate A {
+	COLOR: #404040; TEXT-DECORATION: none
+}
+.ddnewhead_operate LI A {
+	COLOR: #404040; TEXT-DECORATION: none
+}
+.ddnewhead_operate A:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+.ddnewhead_operate LI A:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+.ddnewhead_operate {
+	WIDTH: 100%; BACKGROUND: #eee; HEIGHT: 25px;
+}
+.ddnewhead_operate_nav {
+	PADDING-RIGHT: 14px; DISPLAY: inline; FLOAT: right; HEIGHT: 20px; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav LI {
+	MARGIN: 2px 0px 0px; FLOAT: left; HEIGHT: 7px
+}
+.ddnewhead_operate_nav LI A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 11px; PADDING-RIGHT: 11px; DISPLAY: inline-block; HEIGHT: 19px; COLOR: #404040; OVERFLOW: hidden; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav LI.help A {
+	PADDING-RIGHT: 4px
+}
+.ddnewhead_operate_nav LI A {
+	COLOR: #404040
+}
+.ddnewhead_operate_nav LI A:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+.ddnewhead_operate_nav LI A.hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+.ddnewhead_operate .ddnewhead_cart {
+	PADDING-LEFT: 27px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat 13px -176px; HEIGHT: 19px
+}
+.ddnewhead_operate .ddnewhead_cart A {
+	PADDING-LEFT: 6px
+}
+.ddnewhead_operate .ddnewhead_cart A .cart_num {
+	COLOR: #f60
+}
+.ddnewhead_operate P {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 25px; WIDTH: 550px; PADDING-RIGHT: 10px; WHITE-SPACE: nowrap; FLOAT: left; HEIGHT: 18px; OVERFLOW: hidden; PADDING-TOP: 4px
+}
+.ddnewhead_operate P SPAN {
+	DISPLAY: inline-block
+}
+.ddnewhead_operate P A {
+	DISPLAY: inline-block
+}
+.ddnewhead_operate P A:hover {
+	COLOR: #f60
+}
+.ddnewhead_operate A.login_link {
+	COLOR: #1a66b3; MARGIN-RIGHT: 13px
+}
+.ddnewhead_operate A.login_link:hover {
+	COLOR: #1a66b3; MARGIN-RIGHT: 13px
+}
+.ddnewhead_operate_nav LI.ddnewhead_separate {
+	LINE-HEIGHT: 0; MARGIN: 10px 0px 0px; WIDTH: 1px; BACKGROUND: #bcbcbc; HEIGHT: 7px; FONT-SIZE: 0px; OVERFLOW: hidden
+}
+.ddnewhead_operate_nav .ddnewhead_mydd {
+	Z-INDEX: 10001; POSITION: relative; WIDTH: 71px; HEIGHT: 21px
+}
+
+.ddnewhead_operate_nav .ddnewhead_mydd A.menu_btn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; PADDING-RIGHT: 15px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -164px -178px; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd A.menu_btn:hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 5px; PADDING-RIGHT: 16px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -86px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd A.hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 5px; PADDING-RIGHT: 16px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -86px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd_panel {
+	Z-INDEX: 200; POSITION: absolute; WIDTH: 71px; DISPLAY: none; BACKGROUND: #fff; OVERFLOW: hidden; TOP: 21px; LEFT: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd_list {
+	BORDER-BOTTOM: #ee7304 1px solid; BORDER-LEFT: #ee7304 1px solid; WIDTH: 69px; FLOAT: none; HEIGHT: 117px; OVERFLOW: hidden; BORDER-TOP: #ee7304 1px; BORDER-RIGHT: #ee7304 1px solid
+}
+.ddnewhead_operate_nav .ddnewhead_mydd_list LI {
+	PADDING-BOTTOM: 1px; MARGIN: 0px; PADDING-LEFT: 6px; WIDTH: 57px; PADDING-RIGHT: 6px; DISPLAY: block; FLOAT: none; HEIGHT: 23px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd_list LI A {
+	BORDER-BOTTOM: #f5f4f4 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px;  PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; HEIGHT: 21px; COLOR: #404040; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+
+
+.ddnewhead_operate_nav .ddnewhead_help {
+	Z-INDEX: 200; POSITION: relative; WIDTH: 71px; HEIGHT: 21px
+}
+.ddnewhead_operate_nav .ddnewhead_help A.menu_btn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; WIDTH: 48px; PADDING-RIGHT: 15px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -182px -178px; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_help A.menu_btn:hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 5px; PADDING-RIGHT: 16px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -103px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_help A.hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 5px; PADDING-RIGHT: 16px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -103px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_help_panel {
+	Z-INDEX: 200; POSITION: absolute; WIDTH: 71px; DISPLAY: none; BACKGROUND: #fff; OVERFLOW: hidden; TOP: 21px; LEFT: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_help_list {
+	BORDER-BOTTOM: #ee7304 1px solid; BORDER-LEFT: #ee7304 1px solid; WIDTH: 69px; FLOAT: none; HEIGHT: 93px; OVERFLOW: hidden; BORDER-TOP: #ee7304 1px; BORDER-RIGHT: #ee7304 1px solid
+}
+.ddnewhead_operate_nav .ddnewhead_help_list LI {
+	PADDING-BOTTOM: 1px; MARGIN: 0px; PADDING-LEFT: 3px; WIDTH: 63px; PADDING-RIGHT: 3px; DISPLAY: block; FLOAT: none; HEIGHT: 23px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_help_list LI A {
+	BORDER-BOTTOM: #f5f4f4 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 3px; WIDTH: 63px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; HEIGHT: 21px; COLOR: #404040; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_operate_nav .ddnewhead_help_list LI A:hover {
+	POSITION: relative; PADDING-BOTTOM: 2px; MARGIN: 0px -3px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #ffbd91; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+
+
+
+.ddnewhead_operate_nav .ddnewhead_fav {
+	Z-INDEX: 200; POSITION: relative; WIDTH: 71px; HEIGHT: 21px
+}
+.ddnewhead_operate_nav .ddnewhead_fav A.menu_btn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 71px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -182px -178px; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_fav A.menu_btn:hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -103px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_fav A.hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -103px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_fav_panel {
+	Z-INDEX: 200; POSITION: absolute; WIDTH: 71px; DISPLAY: none; BACKGROUND: #fff;  TOP: 21px; LEFT: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_fav_list {
+	BORDER-BOTTOM: #ee7304 1px solid; BORDER-LEFT: #ee7304 1px solid; WIDTH: 71px; FLOAT: none; HEIGHT: 53px; BORDER-TOP: #ee7304 1px; BORDER-RIGHT: #ee7304 1px solid
+}
+.ddnewhead_operate_nav .ddnewhead_fav_list LI {
+	PADDING-BOTTOM: 1px; MARGIN: 0px; WIDTH: 71px; DISPLAY: block; FLOAT: none; HEIGHT: 23px;  PADDING-TOP: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_fav_list LI A {
+	BORDER-BOTTOM: #f5f4f4 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; WIDTH: 71px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; HEIGHT: 21px; COLOR: #404040; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_operate_nav .ddnewhead_fav_list LI A:hover {
+	POSITION: relative; PADDING-BOTTOM: 2px; MARGIN: 0px -3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #ffbd91; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+
+.ddnewhead_operate_nav .ddnewhead_gcard {
+	Z-INDEX: 200; POSITION: relative; WIDTH: 59px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard A.menu_btn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; PADDING-RIGHT: 15px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -175px -178px; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard A.menu_btn:hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 5px; PADDING-RIGHT: 16px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -97px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard A.hover {
+	BORDER-BOTTOM: #ee7304 1px; POSITION: relative; BORDER-LEFT: #ee7304 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: -1px; PADDING-LEFT: 5px; PADDING-RIGHT: 16px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) #fff no-repeat -97px -179px; HEIGHT: 21px; COLOR: #f60; BORDER-TOP: #ee7304 1px solid; BORDER-RIGHT: #ee7304 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard_panel {
+	Z-INDEX: 200; POSITION: absolute; WIDTH: 59px; DISPLAY: none; BACKGROUND: #fff; OVERFLOW: hidden; TOP: 21px; LEFT: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard_list {
+	BORDER-BOTTOM: #ee7304 1px solid; BORDER-LEFT: #ee7304 1px solid; WIDTH: 57px; FLOAT: none; HEIGHT: 69px; OVERFLOW: hidden; BORDER-TOP: #ee7304 1px; BORDER-RIGHT: #ee7304 1px solid
+}
+.ddnewhead_operate_nav .ddnewhead_gcard_list LI {
+	PADDING-BOTTOM: 1px; MARGIN: 0px; PADDING-LEFT: 6px; WIDTH: 45px; PADDING-RIGHT: 6px; DISPLAY: block; FLOAT: none; HEIGHT: 23px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard_list LI A {
+	BORDER-BOTTOM: #f5f4f4 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 0px; WIDTH: 45px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; HEIGHT: 21px; COLOR: #404040; FONT-SIZE: 12px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd_list LI A.hover {
+	POSITION: relative; PADDING-BOTTOM: 2px; MARGIN: 0px -6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #ffbd91; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_operate_nav .ddnewhead_mydd_list LI A:hover {
+	POSITION: relative; PADDING-BOTTOM: 2px; MARGIN: 0px -6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #ffbd91; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard_list LI A:hover {
+	POSITION: relative; PADDING-BOTTOM: 2px; MARGIN: 0px -6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #ffbd91; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_operate_nav .ddnewhead_gcard_list LI A.hover {
+	POSITION: relative; PADDING-BOTTOM: 2px; MARGIN: 0px -6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #ffbd91; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.ddnewhead_content .ddnewhead_logo {
+	POSITION: absolute; WIDTH: 160px; HEIGHT: 70px; OVERFLOW: hidden; TOP: 0px; LEFT: 0px
+}
+.ddnewhead_content .ddnewhead_slogan {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 160px; WIDTH: 120px; PADDING-RIGHT: 0px; HEIGHT: 20px; COLOR: #f60; OVERFLOW: hidden; PADDING-TOP: 20px
+}
+.ddnewhead_rightflash {
+	POSITION: absolute; WIDTH: 153px; HEIGHT: 70px; OVERFLOW: hidden; TOP: 0px; RIGHT: 0px
+}
+.ddnewhead_mainnav {
+	HEIGHT: 30px
+}
+.ddnewhead_mainnav LI {
+	POSITION: relative; FLOAT: left; HEIGHT: 30px
+}
+.ddnewhead_mainnav A {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 77px; DISPLAY: block; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat 0px 0px; HEIGHT: 30px; COLOR: #4f4f4f; FONT-SIZE: 14px; CURSOR: pointer; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.ddnewhead_mainnav A:hover {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 77px; DISPLAY: block; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat 0px 0px; HEIGHT: 30px; COLOR: #4f4f4f; FONT-SIZE: 14px; CURSOR: pointer; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.ddnewhead_mainnav A.home {
+	WIDTH: 78px; BACKGROUND-POSITION: -160px 0px
+}
+.ddnewhead_mainnav A.home:hover {
+	WIDTH: 78px
+}
+.ddnewhead_mainnav A.book {
+	COLOR: #0a6e4c
+}
+.ddnewhead_mainnav A.goods {
+	WIDTH: 101px; BACKGROUND-POSITION: -320px 0px; LETTER-SPACING: 3px
+}
+.ddnewhead_mainnav A.goods:hover {
+	WIDTH: 101px; BACKGROUND-POSITION: -320px 0px; LETTER-SPACING: 3px
+}
+.ddnewhead_mainnav A SPAN {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; HEIGHT: 20px; CURSOR: pointer; PADDING-TOP: 7px
+}
+.ddnewhead_mainnav A.now {
+	POSITION: relative; PADDING-LEFT: 1px; BACKGROUND-POSITION: -80px 0px; COLOR: #fff; MARGIN-LEFT: -1px
+}
+.ddnewhead_mainnav A:hover {
+	POSITION: relative; PADDING-LEFT: 1px; BACKGROUND-POSITION: -80px 0px; COLOR: #fff; MARGIN-LEFT: -1px
+}
+.ddnewhead_mainnav A.home:hover {
+	PADDING-LEFT: 0px; MARGIN-LEFT: 0px
+}
+.ddnewhead_mainnav A.goods:hover {
+	BACKGROUND-POSITION: -425px 0px
+}
+.ddnewhead_mainnav A.home_now {
+	BACKGROUND-POSITION: -240px 0px; COLOR: #fff
+}
+.ddnewhead_mainnav A.home_now:hover {
+	BACKGROUND-POSITION: -240px 0px; COLOR: #fff
+}
+.ddnewhead_mainnav LI .new {
+	POSITION: absolute; WIDTH: 25px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/new_20101230.gif) no-repeat 0px 0px; HEIGHT: 15px; TOP: -10px; RIGHT: 0px
+}
+.ddnewhead_mainnav LI .xiango {
+	Z-INDEX: 20; POSITION: absolute; WIDTH: 26px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/icon-go.gif) no-repeat 0px 0px; HEIGHT: 18px; TOP: -11px; RIGHT: 2px
+}
+.ddnewhead_hotsort {
+	WIDTH: 100%; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_bg_20110616.gif) repeat-x 0px -30px; HEIGHT: 30px; CLEAR: both; OVERFLOW: hidden
+}
+.ddnewhead_hotsort_list {
+	POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 15px; WIDTH: 921px; PADDING-RIGHT: 24px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_bg_20110616.gif) repeat-x 0px -30px; HEIGHT: 29px; OVERFLOW: hidden; PADDING-TOP: 1px
+}
+.ddnewhead_hotsort_list I {
+	POSITION: absolute; WIDTH: 3px; DISPLAY: block; BACKGROUND: #ff8037; HEIGHT: 30px; TOP: 4px
+}
+.ddnewhead_hotsort_list A {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 5px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; DISPLAY: inline-block; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -240px -37px; COLOR: #fff; FONT-SIZE: 12px; TEXT-DECORATION: none; PADDING-TOP: 7px
+}
+.ddnewhead_hotsort_list A:hover {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+.ddnewhead_hotsort_list A IMG {
+	MARGIN-LEFT: 3px
+}
+.ddnewhead_bottom {
+	WIDTH: 100%; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_bg_20110616.gif) #fff repeat-x 0px -60px; HEIGHT: 40px
+}
+.ddnewhead_category {
+	WIDTH: 150px; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat 0px -145px; FLOAT: left; HEIGHT: 29px
+}
+.ddnewhead_category_hover {
+	BACKGROUND-POSITION: -160px -145px
+}
+.ddnewhead_category .docnewhomepage_sort {
+	DISPLAY: none
+}
+.ddnewhead_category_hover .docnewhomepage_sort {
+	DISPLAY: block
+}
+.ddnewhead_category A.menu_btn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 26px; WIDTH: 124px; PADDING-RIGHT: 0px; DISPLAY: block; HEIGHT: 22px; COLOR: #fdb08b; FONT-SIZE: 14px; OVERFLOW: hidden; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 7px
+}
+.ddnewhead_category_hover A.menu_btn {
+	COLOR: #4e4e4e
+}
+.ddnewhead_category A.menu_btn:hover {
+	COLOR: #4e4e4e; TEXT-DECORATION: underline
+}
+.ddnewhead_search_none {
+	BACKGROUND-POSITION: 0px -205px
+}
+.ddnewhead_search_input {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; BORDER-RIGHT-STYLE: none; MARGIN: 2px 0px 1px; PADDING-LEFT: 28px; WIDTH: 317px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; HEIGHT: 13px; COLOR: #c1c1c1; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; OVERFLOW: hidden; PADDING-TOP: 8px
+}
+.ddnewhead_searchsort_btn {
+	POSITION: absolute; BORDER-LEFT: #e7ecf3 1px solid; MARGIN-TOP: 2px; WIDTH: 113px; BACKGROUND: #f1f6f7; FLOAT: left; HEIGHT: 26px; TOP: 6px; LEFT: 505px
+}
+.ddnewhead_searchsort_btn A {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 8px; DISPLAY: block; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -228px -112px; HEIGHT: 26px; COLOR: #0f86d2; OVERFLOW: hidden; TEXT-DECORATION: none
+}
+.ddnewhead_searchsort_btn A:hover {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 8px; DISPLAY: block; background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -228px -112px; HEIGHT: 26px; COLOR: #0f86d2; OVERFLOW: hidden; TEXT-DECORATION: none
+}
+.ddnewhead_searchsort_btn A:hover {
+	BACKGROUND-POSITION: -417px -112px
+}
+.ddnewhead_searchsort_btn A SPAN {
+	WIDTH: 80px; DISPLAY: block; OVERFLOW: hidden
+}
+.ddnewhead_searchsort_btn P {
+	BORDER-BOTTOM: #e7ecf3 1px solid; POSITION: absolute; BORDER-LEFT: #e7ecf3 1px solid; PADDING-BOTTOM: 1px; OVERFLOW-Y: auto; WIDTH: 112px; BACKGROUND: #fff; BORDER-TOP: #e7ecf3 1px; TOP: 27px; BORDER-RIGHT: #e7ecf3 1px solid; LEFT: -1px
+}
+.ddnewhead_searchsort_btn P A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: default
+}
+.ddnewhead_searchsort_btn P A:hover {
+	BACKGROUND: #1bb0ff; COLOR: #fff
+}
+.ddnewhead_search_btn:hover {
+	background:url(/Widgets/WidgetCollection/山东省级网上政务大厅/厅局首页/BureauHeader/Images/unite_header_20110616.gif) no-repeat -100px -110px
+}
+.ddnewhead_adsearch {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 12px; WIDTH: 234px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 34px; COLOR: #666; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.ddnewhead_adsearch A {
+	FLOAT: left; COLOR: #404040; TEXT-DECORATION: none
+}
+.ddnewhead_adsearch A:hover {
+	COLOR: #f60
+}
+.ddnewhead_adsearch .ddnewhead_adsearch_separate {
+	PADDING-LEFT: 16px; FLOAT: left
+}
+.ddnewhead_search_homepage .ddnewhead_adsearch_separate {
+	PADDING-LEFT: 15px
+}

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!--配置UrlRewriteFilter过滤器-->
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+        <init-param>  
+            <param-name>logLevel</param-name>  
+            <param-value>ERROR</param-value> 
+        </init-param> 
+        <init-param>
+	        <param-name>confPath</param-name>
+	        <param-value>/WEB-INF/classes/urlrewrite.xml</param-value>
+    	</init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>*.html</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+	
+	<!-- struts2过滤器 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<!-- struts2过滤器 -->
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- spring 配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:applicationContext.xml</param-value>
+	</context-param>
+	
+	<!-- 启动Web容器时，自动装配ApplicationContext的配置信息 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- 扩展spring bean的作用域有request,session,global session等 -->
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	
+	<!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	
+	<!-- 字符编码过滤器 -->
+	<filter>
+		<filter-name>Spring character encoding filter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Spring character encoding filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+ 	<!-- 防止SQL注入的过滤器  -->
+    <filter>  
+        <filter-name>antiSqlInjection</filter-name>  
+        <filter-class>net.risesoft.common.FilterSqlInjection</filter-class>  
+        <init-param>
+            <param-name>nonFilterUrl</param-name>
+            <param-value>/common/down,/engine/</param-value>
+        </init-param>
+    </filter>  
+    <filter-mapping>  
+        <filter-name>antiSqlInjection</filter-name>  
+        <url-pattern>/*</url-pattern> 
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher> 
+    </filter-mapping> 
+	 
+	<!-- 添加DWR 结束-->
+	
+	
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.spring.DwrSpringServlet</servlet-class>
+	
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>crossDomainSessionSecurity</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowScriptTagRemoting</param-name>
+            <param-value>true</param-value>
+        </init-param>
+	</servlet>
+  <servlet>
+    <description>验证码</description>
+    <display-name>统一验证码</display-name>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <servlet-class>net.risesoft.utils.servlet.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>文件下载</description>
+    <display-name>统一文件下载</display-name>
+    <servlet-name>DownFileServlet</servlet-name>
+    <servlet-class>net.risesoft.utils.servlet.DownFileServlet</servlet-class>
+  </servlet>
+
+	<servlet>
+		<servlet-name>proxool</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+	
+	<!--springMVC配置-->
+	 <servlet>
+        <servlet-name>spring</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-servlet.xml</param-value>
+		</init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>*.spring</url-pattern>
+     </servlet-mapping>
+     
+     
+	<servlet-mapping>
+		<servlet-name>proxool</servlet-name>
+		<url-pattern>/proxool</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>dwr-invoker</servlet-name>
+        <url-pattern>/dwr/*</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <url-pattern>/servlet/CheckCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownFileServlet</servlet-name>
+    <url-pattern>/servlet/DownFileServlet</url-pattern>
+  </servlet-mapping>
+  
+
+	<!-- 添加DWR 结束-->
+	
+	
+<!--  查看场站信息   开始-->
+  <servlet>
+    <servlet-name>CorpStationFileServlet</servlet-name>
+    <servlet-class>net.risesoft.form.servlet.CorpStationServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>CorpStationFileServlet</servlet-name>
+    <url-pattern>/servlet/FormsViewServlet</url-pattern>
+  </servlet-mapping>
+	<!--	 查看场站信息     结束 -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/page/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/page/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/page/error/404.jsp</location>
+	</error-page>
+</web-app>
+  

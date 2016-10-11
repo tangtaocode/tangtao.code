@@ -1,0 +1,85 @@
+/* CSS Document */
+
+.STYLE0
+{
+	height: 18px;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 1px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+
+.STYLE1 {
+	text-align:center;
+	font-size: 12px;
+	background-color: #FFFFFF;
+}
+
+.STYLE2 {	background-color: #AED1EC; }
+
+.STYLE3 {
+	text-align:center;
+	font-size: 16px;
+	background-color: #f5f5f5;;
+	font-weight: bold;
+}
+
+.STYLE4
+{
+	text-align:right;
+	width:98%;
+}
+
+.STYLE5
+{
+	text-align:right;
+	width:75%;
+	background-color: #FFFFFF;
+}
+
+.STYLE6
+{
+	
+    text-align:left;
+	font-size: 12px;
+	background-color: #FFFFFF;
+}
+.STYLE7 
+{
+	font-size: 36px;
+	font-weight: bold;
+}
+.STYLE8  {	font-size: 18px; }
+
+.STYLE9  {  width:90%; } 
+
+.STYLE91  {  width:70%; }
+
+.STYLE10 {  width:98%; }
+
+.STYLE11  {  width:120px; }
+
+.STYLE12  {  width:50px; }
+
+.STYLE13  {  width:80%; }
+
+.STYLE14  {  width:20px; }
+
+.STYLE141  {  width:40px; }
+
+.STYLE15  {  width:60px; }
+
+.STYLE16 {	text-align:right; }
+
+.STYLE17 {	text-align:left; }

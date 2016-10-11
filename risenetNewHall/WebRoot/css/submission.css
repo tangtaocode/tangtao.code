@@ -1,0 +1,32 @@
+#overDiv{
+	background-color: #CCCCCC;
+	width: 104%;
+	height: 100%;
+	left:0;
+	top:0;/*FF IE7*/
+	filter:alpha(opacity=40);/*IE*/
+	opacity:0.4;/*FF*/
+	z-index:1000;
+	position:fixed!important;/*FF IE7*/
+	position:absolute;/*IE6*/
+	_top:expression(eval(document.compatMode &&	document.compatMode=='CSS1Compat') ?
+	documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+	document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}
+#dlDiv{
+	background-repeat:repeat-x;
+	
+	z-index:1001;
+	width: 400px;
+	height: 300px;
+	left:43%;/*FF IE7*/
+	top:37%;/*FF IE7*/
+	margin-left:-150px!important;/*FF IE7 该值为本身宽的一半 */
+	margin-top:-60px!important;/*FF IE7 该值为本身高的一半*/
+	margin-top:0px;
+	position:fixed!important;/*FF IE7*/
+	position:absolute;/*IE6*/
+	_top: expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?
+	documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+	document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}

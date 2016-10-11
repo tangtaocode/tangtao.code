@@ -1,0 +1,13 @@
+table{
+border-top:#9DC3DA solid 1px;
+border-left:#9DC3DA solid 1px;
+text-align: center;
+}
+td{
+border-bottom:#9DC3DA solid 1px;
+border-right:#9DC3DA solid 1px;
+}
+th{
+border-bottom:#9DC3DA solid 1px;
+border-right:#9DC3DA solid 1px;
+}

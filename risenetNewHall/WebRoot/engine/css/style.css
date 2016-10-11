@@ -1,0 +1,11 @@
+input{
+	width:110px;
+}
+.bottom{
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	font-family:"ºÚÌå";
+	font-size:14px;
+}

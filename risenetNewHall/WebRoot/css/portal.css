@@ -1,0 +1,692 @@
+/* 由 F12 开发人员工具生成。这可能不是原始源文件的准确表示形式。*/
+BODY {
+    FONT-SIZE: 15px;
+    BORDER-TOP: 0px;
+    HEIGHT: 100%;
+    FONT-FAMILY: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+    BORDER-RIGHT: 0px;
+    WHITE-SPACE: normal;
+    BORDER-BOTTOM: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: 0px;
+    LINE-HEIGHT: 25px;
+    PADDING-RIGHT: 0px;
+    MAX-HEIGHT: 100%;
+    BACKGROUND-COLOR: white
+	background:#fff;
+}
+
+A {
+    CURSOR: pointer;
+    COLOR: #6688cc;
+    TEXT-DECORATION: none;
+}
+
+A:hover {
+    COLOR: red;
+    text-decoration: none;
+} .htmlBg {
+    HEIGHT: 170px;
+    BACKGROUND-IMAGE: url(/images/govpublic/front_head_bg.gif);
+    BACKGROUND-REPEAT: repeat-x
+} .TopMenuBg {
+    HEIGHT: 33px;
+    BACKGROUND-REPEAT: repeat-x
+} .TopMenu {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: center;
+    WIDTH: 110px
+} .TopMenuSidebar {
+    HEIGHT: 33px;
+    BACKGROUND-IMAGE: url(/images/govpublic/bg_topmenu.gif);
+    WHITE-SPACE: nowrap;
+    WIDTH: 21px
+} .TopMenu TD {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: middle;
+    COLOR: black;
+    TEXT-ALIGN: center;
+    WIDTH: 160px
+} .TopMenu A {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: middle;
+    WHITE-SPACE: nowrap;
+    COLOR: white;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 2px;
+    TEXT-DECORATION: none;
+    DISPLAY: block;
+    WIDTH: 160px
+} .TopMenu A:hover {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: top;
+    COLOR: #ffff00;
+    TEXT-DECORATION: none;
+    WIDTH: 160px
+} .TopMenuSep {
+    COLOR: white;
+    FONT: 80% Verdana
+} .TopMenuSelected {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: middle;
+    COLOR: #ffff00;
+    TEXT-ALIGN: center;
+    WIDTH: 110px
+} .TopMenuSelected TD {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: middle;
+    TEXT-ALIGN: center;
+    WIDTH: 160px
+} .TopMenuSelected A {
+    FONT-SIZE: 16px;
+    HEIGHT: 33px;
+    VERTICAL-ALIGN: middle;
+    WHITE-SPACE: nowrap;
+    COLOR: #ffff00;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 2px;
+    TEXT-DECORATION: none;
+    DISPLAY: block;
+    WIDTH: 160px
+} .TopMenuSelected A:hover {
+    FONT-SIZE: 16px;
+    VERTICAL-ALIGN: middle;
+    COLOR: #ffff00;
+    TEXT-DECORATION: none;
+    MARGIN: 0px;
+    DISPLAY: block;
+    WIDTH: 200px
+} .dr-table {
+    BORDER-TOP: #c0c0c0 1px solid;
+    BORDER-COLLAPSE: collapse;
+    EMPTY-CELLS: show;
+    BORDER-LEFT: #c0c0c0 1px solid
+} .dr-table-cell {
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .dr-subtable-cell {
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .dr-table-header {
+} .dr-table-header-continue {
+} .dr-table-headercell {
+    FONT-SIZE: 14px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    FONT-WEIGHT: bold;
+    COLOR: black;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 6px
+} .dr-table-subheadercell {
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    WHITE-SPACE: nowrap;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 6px
+} .dr-subtable-headercell {
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 6px
+} .Grid {
+    FONT-SIZE: 14px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial
+} .Grid TD {
+    FONT-SIZE: 14px;
+    PADDING-BOTTOM: 6px;
+    PADDING-TOP: 6px;
+    PADDING-LEFT: 8px;
+    PADDING-RIGHT: 8px;
+	border-left:1px solid #C0C0C0;
+} .Grid .Header {
+    FONT-SIZE: 14px;
+    HEIGHT: 17px;
+    FONT-FAMILY: "Microsoft YaHei", "u5faeu8f6fu96c5u9ed1", "Segoe UI", Arial;
+    BACKGROUND-IMAGE: url(/images/govpublic/bg_table_head.gif);
+    BACKGROUND-REPEAT: repeat-x;
+    BORDER-BOTTOM: #ccc 1px solid;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    BACKGROUND-COLOR: #f1f6fe
+} .Grid .dr-table-thead {
+    FONT-SIZE: 14px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    BACKGROUND-IMAGE: url(${request.contextPath}/images/framework/bg_th.png);
+    BACKGROUND-REPEAT: repeat-x;
+    COLOR: black;
+    TEXT-ALIGN: left;
+    BACKGROUND-COLOR: #ccc
+} .Grid .StatHeader {
+    FONT-SIZE: 14px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    BACKGROUND-IMAGE: none;
+    BACKGROUND-REPEAT: repeat-x;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    COLOR: black;
+    TEXT-ALIGN: left;
+    BACKGROUND-COLOR: #f1f6fe
+} .Grid .EvenRow {
+    BACKGROUND-COLOR: #f1f6fe
+} .Grid .OddRow {
+    BACKGROUND-COLOR: #ffffff
+} .Grid .active-row {
+    BACKGROUND-COLOR: #ffebda
+} .Grid .Header TH {
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 6px;
+    PADDING-RIGHT: 6px
+} .Grid .Pager TD {
+    FONT-SIZE: 14px;
+    HEIGHT: 20px;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    BACKGROUND-COLOR: #fcfcfc
+} .Grid .Pager TD TD {
+    HEIGHT: 12px;
+    PADDING-BOTTOM: 3px;
+    PADDING-TOP: 3px;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px
+} .Grid .GridColumn {
+    FONT-SIZE: 14px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    WHITE-SPACE: normal;
+    BORDER-BOTTOM: #c0c0c0 0px solid
+} .Grid .StatGridColumn {
+    FONT-SIZE: 14px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial
+} .Grid .StatFirstColumn {
+    BACKGROUND-COLOR: #f0f0f0
+} .Grid .StatItem {
+    TEXT-ALIGN: right
+} .Grid .StatSumItem {
+    COLOR: #a85151;
+    TEXT-ALIGN: right
+} .message {
+    CURSOR: pointer;
+    FONT-SIZE: 14px;
+    BORDER-TOP: #cccccc 1px solid;
+    BORDER-BOTTOM: #cccccc 1px solid;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 5px;
+    MARGIN: 0px;
+    PADDING-RIGHT: 0px;
+    BACKGROUND-COLOR: #ffffe1
+} .message LI {
+    LIST-STYLE-TYPE: none;
+    BACKGROUND: no-repeat left center;
+    LIST-STYLE-IMAGE: none;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 20px
+} .message LI.infomsg {
+    BACKGROUND-IMAGE: url(/images/govpublic/ico_flag_info.png);
+    COLOR: black
+} .message LI.errormsg {
+    BACKGROUND-IMAGE: url(/images/govpublic/ico_flag_warning.png);
+    COLOR: red;
+    text-decoration: none;
+} .message LI.warnmsg {
+    BACKGROUND-IMAGE: url(/images/govpublic/ico_flag_warning.png)
+} .name {
+    VERTICAL-ALIGN: top;
+    WHITE-SPACE: nowrap;
+    FLOAT: left;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: right;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    CLEAR: left;
+    PADDING-RIGHT: 4px;
+    WIDTH: 115px
+} .value {
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px
+} .error {
+    FLOAT: left;
+    PADDING-LEFT: 6px
+} .errors {
+    VERTICAL-ALIGN: middle;
+    COLOR: red text-decoration:
+
+none;
+}
+
+IMG.errors {
+    PADDING-RIGHT: 2px
+} .errors INPUT {
+    BORDER-TOP: red 1px solid;
+    BORDER-RIGHT: red 1px solid;
+    BORDER-BOTTOM: red 1px solid;
+    BORDER-LEFT: red 1px solid
+} .errors TEXTAREA {
+    BORDER-TOP: red 1px solid;
+    BORDER-RIGHT: red 1px solid;
+    BORDER-BOTTOM: red 1px solid;
+    BORDER-LEFT: red 1px solid
+} .required {
+    COLOR: red;
+    PADDING-LEFT: 2px
+} .infoDetail {
+    CURSOR: pointer;
+    FONT-SIZE: 14px;
+    BORDER-TOP: #cccccc 1px solid;
+    BORDER-RIGHT: #cccccc 1px solid;
+    WHITE-SPACE: normal;
+    BORDER-BOTTOM: #cccccc 1px solid;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    BORDER-LEFT: #cccccc 1px solid;
+    PADDING-RIGHT: 4px;
+    BACKGROUND-COLOR: #ffffe1
+} .infoDetailNoTop {
+    CURSOR: pointer;
+    FONT-SIZE: 14px;
+    BORDER-TOP: #cccccc 0px solid;
+    BORDER-RIGHT: #cccccc 1px solid;
+    WHITE-SPACE: normal;
+    BORDER-BOTTOM: #cccccc 1px solid;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    BORDER-LEFT: #cccccc 1px solid;
+    PADDING-RIGHT: 4px;
+    BACKGROUND-COLOR: #ffffe1
+} .GridToolbar {
+    BORDER-RIGHT: #ccc 1px solid;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND-IMAGE: url(/images/govpublic/toolgrad6.gif);
+    BACKGROUND-POSITION: center top;
+    COLOR: #000000;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 6px;
+    PADDING-LEFT: 8px;
+    BORDER-LEFT: #ccc 1px solid;
+    PADDING-RIGHT: 8px;
+    BACKGROUND-COLOR: #eaf3fb
+} .GridToolbar TD {
+    FONT-SIZE: 14px
+} .frontBannerBg {
+    HEIGHT: 155px;
+    BACKGROUND-IMAGE: url(/images/govpublic/portal_banner_bg.gif);
+    BACKGROUND-REPEAT: no-repeat
+} .serviceSubjectRightBg {
+    HEIGHT: 114px;
+    BACKGROUND-IMAGE: url(/images/govpublic/service_subject_right_bg.gif);
+    BACKGROUND-REPEAT: no-repeat
+} .titlelink {
+} .titlelink A {
+    FONT-SIZE: 14px;
+    COLOR: #333333;
+    TEXT-DECORATION: none;
+    MARGIN: 4px
+} .titlelink A:hover {
+    FONT-SIZE: 14px;
+    COLOR: #ff3300;
+    TEXT-DECORATION: underline
+} .defaultFontFamily {
+    FONT-FAMILY: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial
+} .grayFont {
+    COLOR: #929292
+} .catalogPanelGridColumn {
+    HEIGHT: 110px;
+    WIDTH: 115px
+} .catalogPanelGridBg {
+    BACKGROUND-IMAGE: url(/images/govpublic/imgBtnDiv_bg.gif);
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-POSITION: 50% bottom
+} .serviceCatalogImg A {
+    FONT-SIZE: 16px;
+    HEIGHT: 100px;
+    VERTICAL-ALIGN: middle;
+    WHITE-SPACE: nowrap;
+    COLOR: black;
+    TEXT-ALIGN: left;
+    TEXT-DECORATION: none;
+    DISPLAY: block;
+    WIDTH: 100px
+} .serviceCatalogImg A:hover {
+    FONT-SIZE: 16px;
+    HEIGHT: 100px;
+    VERTICAL-ALIGN: top;
+    BACKGROUND-IMAGE: url(/images/govpublic/scroll_item_hover.png);
+    BACKGROUND-REPEAT: repeat-x;
+    TEXT-DECORATION: none;
+    WIDTH: 100px
+} .tableLeftPadding0 TD {
+    PADDING-LEFT: 0px
+} .tableLeftPadding10 TD {
+    PADDING-LEFT: 10px
+} .tableRightPadding10 TD {
+    PADDING-RIGHT: 10px
+} .tableLeftPadding0 TD {
+    PADDING-LEFT: 0px
+} .tableLeftPadding18 TD {
+    PADDING-LEFT: 18px
+} .tableRightPadding18 TD {
+    PADDING-RIGHT: 18px
+} .tableLeftRightPadding10 TD {
+    PADDING-LEFT: 10px;
+    PADDING-RIGHT: 10px
+} .tableTopBottomPadding10 TD {
+    PADDING-BOTTOM: 10px;
+    PADDING-TOP: 10px
+} .tablePadding10 TD {
+    PADDING-BOTTOM: 10px;
+    PADDING-TOP: 10px;
+    PADDING-LEFT: 10px;
+    PADDING-RIGHT: 10px
+} .bottomword {
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: "微软雅黑";
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+} .webpart_head {
+    FONT-SIZE: 16px;
+    PADDING-LEFT: 12px
+} .webpart_content {
+    BACKGROUND-COLOR: #ffffff
+} .webpart_head_td_split {
+    HEIGHT: 39px;
+    BACKGROUND-IMAGE: url(/images/govpublic/webpart_td_split.gif);
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-POSITION: 50% bottom;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 15px;
+    MARGIN: 0px;
+    PADDING-RIGHT: 10px
+} .webpart_head_td {
+    HEIGHT: 38px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 17px;
+    MARGIN: 0px;
+    PADDING-RIGHT: 10px
+} .titleTab {
+    OVERFLOW: hidden;
+    CURSOR: pointer;
+    FONT-SIZE: 11pt;
+    HEIGHT: 27px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND-POSITION: 0px 0px;
+    TEXT-ALIGN: center;
+    WIDTH: 114px
+} .titleTab:hover {
+    OVERFLOW: hidden;
+    CURSOR: pointer;
+    FONT-SIZE: 11pt;
+    HEIGHT: 27px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND-POSITION: 0px 0px;
+    COLOR: red;
+    TEXT-ALIGN: center;
+    WIDTH: 114px text-decoration:
+
+none;
+} .titleTabSelected {
+    OVERFLOW: hidden;
+    CURSOR: pointer;
+    FONT-SIZE: 12pt;
+    font-weight: bold;
+    HEIGHT: 27px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND-IMAGE: url(/images/govpublic/btn_title_enabled.gif);
+    BACKGROUND-POSITION: 0px 0px;
+    COLOR: white;
+    TEXT-ALIGN: center;
+    WIDTH: 114px
+} .titleTabSelected A {
+    CURSOR: pointer;
+    FONT-SIZE: 11pt;
+    COLOR: white
+} .PortalViewBodyGrad {
+    BORDER-TOP: #ccc 1px solid;
+    BORDER-RIGHT: #ccc 1px solid;
+    BORDER-BOTTOM: #ccc 1px solid;
+    BORDER-LEFT: #ccc 1px solid;
+    BACKGROUND-COLOR: #f9fcfd
+} .PortalViewBodyGradNoTop {
+    BORDER-TOP: #ccc 0px solid;
+    BORDER-RIGHT: #ccc 1px solid;
+    BORDER-BOTTOM: #ccc 1px solid;
+    BORDER-LEFT: #ccc 1px solid;
+    BACKGROUND-COLOR: #f9fcfd
+} .PortalViewBodyGradNoBottom {
+    BORDER-TOP: #ccc 1px solid;
+    BORDER-RIGHT: #ccc 1px solid;
+    BORDER-BOTTOM: #ccc 0px solid;
+    BORDER-LEFT: #ccc 1px solid;
+    BACKGROUND-COLOR: #f9fcfd
+} .PortalViewBodyGradNoTopNoBottom {
+    BORDER-TOP: #ccc 0px solid;
+    BORDER-RIGHT: #ccc 1px solid;
+    BORDER-BOTTOM: #ccc 0px solid;
+    BORDER-LEFT: #ccc 1px solid;
+    BACKGROUND-COLOR: #f9fcfd
+} .PortalViewBodyNone {
+    BACKGROUND-COLOR: #f9fcfd
+} .rotator_selected_td {
+    FONT-SIZE: 16px;
+    FONT-FAMILY: "Microsoft YaHei";
+    BACKGROUND-IMAGE: url(/images/govpublic/btn_rotator_selected.gif);
+    WHITE-SPACE: nowrap;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom;
+    PADDING-TOP: 6px;
+    PADDING-LEFT: 8px;
+    PADDING-RIGHT: 8px
+} .rotator_default_td {
+    FONT-SIZE: 16px;
+    FONT-FAMILY: "Microsoft YaHei";
+    BACKGROUND-IMAGE: url(/images/govpublic/btn_rotator_default.gif);
+    WHITE-SPACE: nowrap;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom;
+    COLOR: #4f87af;
+    PADDING-TOP: 6px;
+    PADDING-LEFT: 8px;
+    PADDING-RIGHT: 8px
+} #rotating-item-wrapper {
+    HEIGHT: 200px;
+    POSITION: relative
+} .rotating-item {
+    POSITION: absolute;
+    LEFT: 0px;
+    DISPLAY: none;
+    TOP: 0px
+}
+
+SELECT {
+    FONT-SIZE: 14px;
+    BORDER-TOP: #808080 1px solid;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    BORDER-RIGHT: #808080 1px solid;
+    BORDER-BOTTOM: #808080 1px solid;
+    BORDER-LEFT: #808080 1px solid
+} .forwardButtonEnabled {
+    CURSOR: pointer;
+    BACKGROUND-IMAGE: url(/images/govpublic/toleft.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom
+} .forwardButtonDisabled {
+    CURSOR: auto;
+    BACKGROUND-IMAGE: url(/images/govpublic/toleft_gray.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom
+} .nextButtonEnabled {
+    CURSOR: pointer;
+    BACKGROUND-IMAGE: url(/images/govpublic/toright.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom
+} .nextButtonDisabled {
+    CURSOR: auto;
+    BACKGROUND-IMAGE: url(/images/govpublic/toright_gray.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom
+} .forwardButtonEnabled_big {
+    CURSOR: pointer;
+    BACKGROUND-IMAGE: url(/images/govpublic/enabled_pre.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: 50% top
+} .forwardButtonDisabled_big {
+    CURSOR: auto;
+    BACKGROUND-IMAGE: url(/images/govpublic/disabled_pre.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: 50% top
+} .nextButtonEnabled_big {
+    CURSOR: pointer;
+    BACKGROUND-IMAGE: url(/images/govpublic/enabled_next.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: 50% top
+} .nextButtonDisabled_big {
+    CURSOR: auto;
+    BACKGROUND-IMAGE: url(/images/govpublic/disabled_next.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: 50% top
+} .selectedBtn {
+    FONT-SIZE: 16px;
+    FONT-FAMILY: "Microsoft YaHei";
+    BACKGROUND-IMAGE: url(/images/govpublic/btn2.gif);
+    WHITE-SPACE: nowrap;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom;
+    PADDING-TOP: 6px;
+    PADDING-LEFT: 8px;
+    PADDING-RIGHT: 8px
+} .defaultBtn {
+    FONT-SIZE: 16px;
+    FONT-FAMILY: "Microsoft YaHei";
+    BACKGROUND-IMAGE: url(/images/govpublic/btn1.gif);
+    WHITE-SPACE: nowrap;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: center bottom;
+    COLOR: #4f87af;
+    PADDING-TOP: 6px;
+    PADDING-LEFT: 8px;
+    PADDING-RIGHT: 8px
+} .scrollBackGround_big {
+    BORDER-TOP: #ccc 1px solid;
+    BORDER-RIGHT: #ccc 1px solid;
+    BACKGROUND-IMAGE: url(/images/govpublic/bg.gif);
+    BACKGROUND-REPEAT: repeat-x;
+    BORDER-BOTTOM: #ccc 1px solid;
+    BORDER-LEFT: #ccc 1px solid;
+    WIDTH: 979px !important
+} .PagerWepart {
+    BORDER-TOP: #ccc 1px solid;
+    HEIGHT: 32px;
+    BORDER-RIGHT: #ccc 1px solid;
+    BORDER-BOTTOM: #ccc 1px solid;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 0px;
+    BORDER-LEFT: #ccc 1px solid;
+    PADDING-RIGHT: 0px;
+    WIDTH: 100%;
+    BACKGROUND-COLOR: #f1f1f1
+} .ButtonLink {
+    CURSOR: pointer;
+    FONT-SIZE: 14px;
+    BORDER-TOP: 0px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+    COLOR: #003399;
+    BORDER-LEFT: 0px;
+    BACKGROUND-COLOR: #f1f1f1
+} .ButtonLinkDisabled {
+    FONT-SIZE: 14px;
+    BORDER-TOP: 0px;
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+    COLOR: #003399;
+    BORDER-LEFT: 0px;
+    BACKGROUND-COLOR: #f1f1f1
+} .ImageButton {
+    BORDER-TOP: 0px;
+    BORDER-RIGHT: 0px;
+    BORDER-BOTTOM: 0px;
+    BORDER-LEFT: 0px
+} .noDateText {
+    FONT-FAMILY: "Microsoft YaHei", "微软雅黑", "Segoe UI", Arial;
+    font-size: 18px;
+    text-align: center;;
+    font-weight: 500;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+} .colColor1 {
+    text-align: center;
+    font-size: 16px;
+    border: #c0c0c0 1px solid;
+} .colColor2 {
+    text-align: center;
+    font-size: 16px;
+    background-color: #E1E1E1;
+    border: #c0c0c0 1px solid;
+} .colColor3 {
+    text-align: center;
+    font-size: 16px;
+    background-color: #C7DEEF;
+    border: #c0c0c0 1px solid;
+} .colColor4 {
+    text-align: center;
+    font-size: 16px;
+    background-color: #A7F0F0;
+    border: #c0c0c0 1px solid;
+} .colColor5 {
+    text-align: center;
+    font-size: 16px;
+    background-color: #A7FF69;
+    border: #c0c0c0 1px solid;
+} .colColor6 {
+	text-align: center;
+    font-size: 16px;
+    background-color: #F0A7DE;
+    border: #c0c0c0 1px solid;
+} .titleCol {
+    text-align: left;
+    font-size: 16px;
+    border: #c0c0c0 1px solid;
+} .numCol {
+    text-align: center;
+    font-size: 16px;
+    border: #c0c0c0 1px solid;
+}
+.pageLinkTd{
+	border-top:1px solid #c0c0c0;
+	text-align:center;
+}

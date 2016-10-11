@@ -1,0 +1,145 @@
+body{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	background:#fff;
+}
+ .BIZ_dotop {
+    background: url("/images/bizbankroll/bg_platetop.jpg") no-repeat 0px;
+    margin: 10px auto 0px auto;
+    width: 482px;
+    height: 7px;
+    line-height: 7px;
+}
+ .BIZ_domiddlein {
+    background: url("/images/bizbankroll/bg_platein.jpg") repeat-x 0px bottom rgb(254, 254, 254);
+    margin: 0px auto;
+    width: 472px;
+    height: 370px;
+	text-align:left;
+}
+.BIZ_domiddle {
+    background: url("/images/bizbankroll/bg_platemiddle2.gif") repeat-y 0px;
+    margin: 0px auto;
+    width: 483px;
+} 
+.BIZ_dobottom {
+    background: url("/images/bizbankroll/bg_platebottom.jpg") no-repeat 0px;
+    margin: 0px auto;
+    width: 482px;
+    height: 7px;
+    line-height: 7px;
+}
+.BIZ_domiddlein ul{
+	line-height:30px;
+	font-size:15px;
+	padding-left:30px;
+} 
+.BIZ_domiddlein ul li{
+	list-style:katakana ;
+	list-style-image:url(/images/bizbankroll/right_dian.jpg);
+}
+.BIZ_domiddlein ul li a{
+	color:#6688CC;
+}
+.BIZ_domiddlein ul li a:hover{
+	color:#FFB734;	
+	text-decoration:none;
+}
+.biz_l{
+	float:left;
+	padding-left:10px;
+}
+.biz_r{
+	float:right;
+	padding-right:10px;
+}
+.biz_title{
+	color:#2B2B2B;
+	height:35px;
+	font-size:16px;
+	font-weight:bold;
+	border-bottom:1px solid rgb(191,192,193);
+}
+.biz_more{
+	float:right;
+	margin-top:10px;
+	padding-right:10px;
+}
+.more_img{
+	background: url('/images/bizbankroll/more.gif') no-repeat 0px;
+	width:57px;
+	height:15px;
+	border:0px;
+	display:block;
+}
+.busi_dotop {
+    background: url("/images/bizbankroll/bg_platetop7.jpg") no-repeat 0px;
+    margin: 10px auto 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+	
+}
+ .busi_domiddlein {
+    background: url("/images/bizbankroll/bg_platein.jpg") repeat-x 0px bottom rgb(254, 254, 254);
+    margin: 0px auto;
+    width: 958px;
+    height: 370px;
+	text-align:left;
+}
+.busi_domiddle {
+    background: url("/images/bizbankroll/bg_platemiddle7.gif") repeat-y 0px;
+    margin: 0px auto;
+    width: 968px;
+} 
+.busi_dobottom {
+    background: url("/images/bizbankroll/bg_platebottom7.jpg") no-repeat 0px;
+    margin: 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+}
+ .more_domiddlein {
+    background: url("/images/bizbankroll/bg_platein.jpg") repeat-x 0px bottom rgb(254, 254, 254);
+    margin: 0px auto;
+    width: 958px;
+    height: auto;
+	text-align:center;
+}
+.more_title{
+	color:#2B2B2B;
+	height:10px;
+	font-size:16px;
+	font-weight:bold;
+	border-bottom:1px solid rgb(191,192,193);
+}
+.ProTypeImg{
+	vertical-align: middle; 
+	border-top 0px none; 
+}
+.clickHand{
+	cursor:hand;
+	background:#CEEAFF;
+}
+
+.div_l{
+	font-size:16px;
+	color:#b2b2b2;
+	padding-right:20px;
+	padding-top:20px;
+}
+.div_lf{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	text-align:right;
+	font-size:16px;
+	color:#b2b2b2;
+	padding-right:20px;
+}
+.step{
+		font-family:"微软雅黑";
+		font-size:16px;
+		float:left;
+		padding:12px;
+	}
+	.f{
+		color:#6688CC;
+	}

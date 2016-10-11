@@ -1,0 +1,14 @@
+#定义系统支持的时间显示格式
+# 参数分两部分
+# 参数1：长时间（显示时分秒之一） 1； 短时间 0
+# 参数2：时间格式表达式(yyyy-MM-dd)
+    
+0     yyyy-MM-dd
+0     yyyy/MM/dd
+0     yyyy年MM月dd日
+1     yyyy/MM/dd HH:mm
+1     yyyy-MM-dd HH:mm
+1     yyyy年MM月dd日 HH时mm分
+1     yyyy-MM-dd HH:mm:ss
+1     yyyy-MM-dd HH:mm:ss
+1     yyyy年MM月dd日 HH时mm分ss秒

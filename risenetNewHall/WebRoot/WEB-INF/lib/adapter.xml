@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NodeConfig>
+	<Node NodeName="adapter">
+		<!-- 业务系统编号 -->
+		<Key KeyValue="2910562APPSZ012c9043810edf155e010ee0b915512f8a" KeyName="appcode"/>
+		<!-- 对应前置机IP地址及端口号 -->
+		<Key KeyValue="203.91.46.157:8080" KeyName="ipaddress"/>
+	</Node>
+	<Node NodeName="database">
+		<Key KeyValue="0" KeyName="dbtype"/>
+		<Key KeyValue="jdbc:mysql://203.91.46.157/client?characterEncoding=utf8" KeyName="url"/>
+		<Key KeyValue="org.gjt.mm.mysql.Driver" KeyName="driver"/>
+		<Key KeyValue="root" KeyName="dbuser"/>
+		<Key KeyValue="szgovdb" KeyName="password"/>
+	</Node>
+	<Node NodeName="ftp">
+		<Key KeyValue="203.91.46.157" KeyName="ftpip"/>
+		<Key KeyValue="szgov" KeyName="ftpuser"/>
+		<Key KeyValue="password" KeyName="ftppassword"/>
+		<Key KeyValue="home/szgov" KeyName="user_root"/>
+		<Key KeyValue="UTF-8" KeyName="ftp_control_encode"/>
+	</Node>
+	<Node NodeName="download">
+		<Key KeyValue="/front/doc/ftptmp/" KeyName="filepath"/>
+		<Key KeyValue="true" KeyName="dounzip"/>
+		<Key KeyValue="false" KeyName="keepfileinfront"/>
+	</Node>
+</NodeConfig>

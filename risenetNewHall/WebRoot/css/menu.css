@@ -1,0 +1,89 @@
+body{
+	background-color:#fff;
+	background-image:url('/images/govpublic/background.jpg');
+	background-position:center top;
+	background-repeat:repeat-y; 
+	background-attachment:fixed;
+}
+a {
+	color: #6688CC;
+	text-decoration: none;
+	cursor: pointer;
+	cursor: hand;
+}
+
+a:hover {
+	text-decoration:none;
+	color: #FF9836;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Header */ /*  Nav */
+#dd-navigation {
+	background: #007dc3 url('/images/menu/navbar.png') no-repeat -50px 0;
+	clear: both;
+	height: 40px;
+}
+
+#nav-strip ul li.nav-item,#nav-strip ul li.nav-item.active  ,#nav-strip ul li.nav-item:hover
+	{
+	border-right: 1px #0F6BA7 solid;
+	border-left: 1px #69C solid;
+	height: 40px;
+}
+
+#nav-strip {
+	clear: both;
+	margin: 0 auto;
+	width: 944px;
+	height: 40px;
+	line-height: 15px;
+	position: relative;
+	z-index: 0;
+	border-right: 1px #69C solid;
+	border-left: 1px #0F6BA7 solid;
+}
+
+#nav-strip a:hover {
+	text-decoration: none;
+}
+
+#nav-strip ul li.nav-item {
+	display: inline;
+	float: left;
+	position: relative;
+	width: 116px;
+	height: 40px;
+	text-align: center;
+}
+
+#nav-strip ul li.nav-item.active {
+	background: url('/images/menu/navbar.png') no-repeat -100px -60px;
+}
+
+#nav-strip ul li.nav-item:hover,#nav-strip ul li.nav-item a:hover,#nav-strip ul li.nav-item.hover
+{
+	background: url('/images/menu/navbar.png') no-repeat -400px -122px;
+}
+
+#nav-strip ul li.nav-item:hover a,#nav-strip ul li.nav-item.hover a {
+	color: #fff;
+}
+
+#nav-strip ul li.nav-item.active a {
+	color: #fff;
+}
+
+#nav-strip ul li a {
+	font-weight: bold;
+	color: #FFFFFF;
+	display: block;
+	padding: 12px;
+	font-size: 14px;
+	outline: none;
+	height: 16px;
+}

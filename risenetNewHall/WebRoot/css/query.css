@@ -1,0 +1,190 @@
+body#search2result{
+	background:url(/xzql/img/bac.gif) repeat-x fixed;	
+	SCROLLBAR-FACE-COLOR: #C4E1FF;
+	SCROLLBAR-HIGHLIGHT-COLOR: #e4eaf1;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	SCROLLBAR-TRACK-COLOR: #D2E9FF;
+	SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+}
+body#leftbg{
+background:url(/xzql/images/me_leftbg.gif) repeat-y;
+}
+.menutitle_xzql{
+BORDER-LEFT: 0px solid #d0d0d0;
+BORDER-RIGHT: 0px solid #d0d0d0;
+font-size: 10pt;
+}
+#table_title {                  /*表格标题—所在TD样式——文字居中 //*/
+	background:url(/xzql/images/me_rightbg.gif);
+	background-repeat: repeat-x;	
+	BORDER-LEFT: 1px solid #d0d0d0;
+	BORDER-TOP: 1px solid #d0d0d0;	
+	BORDER-RIGHT: 1px solid #d0d0d0;
+	text-align: center;
+	height: 25px;
+}
+#table_title tr th{	
+	background:url(/xzql/images/me_rightbg.gif);
+	background-repeat: repeat-x;
+	font-weight: lighter ;
+	font:Verdana, Geneva, sans-serif; 
+	font-size:12px; 
+	text-align: left;
+	vertical-align: middle;
+	height: 25px;
+	width: 35%;
+}
+#table_content {                  /*表格标题—所在TD样式——文字居中 //*/
+	background:url(/xzql/images/me_rightbg1.gif);
+	background-repeat: repeat-x;	
+	text-align: center;
+	height: 25px;
+}
+#table_content tr td{	
+	font-weight: lighter ;
+	font:Verdana, Geneva, sans-serif; 
+	font-size:12px; 
+	color:#000002;	
+	text-align: left;
+	vertical-align: middle;
+	height: 25px;
+	width: 35%;
+}
+#table_content tr th{	
+	font-weight: lighter ;
+	font:Verdana, Geneva, sans-serif; 
+	font-size:12px; 
+	color:#000002;
+	text-align: right;
+	vertical-align: middle;
+	height: 25px;
+	width: 15%;
+}
+#table_content input{
+	font-size:12px;
+	background-image:url(/xzql/images/inputbg1.gif);
+	height:20px;
+	border:#91b0c5 1px solid;
+}
+.table_select {
+	font-size: 12px; 	
+	border:1px solid #91b0c5;	
+	background-color:rgb(255, 255, 255);  
+}
+
+#table_content2 {                  /*表格标题—所在TD样式——文字居中 //*/
+	background:url(/xzql/images/me_rightbg2.gif);
+	background-repeat: repeat-x;	
+	text-align: center;
+	height: 25px;
+}
+#table_content2 tr td{	
+	font-weight: lighter ;
+	font:Verdana, Geneva, sans-serif; 
+	font-size:12px; 
+	color:#000002;	
+	text-align: left;
+	vertical-align: middle;
+	height: 25px;
+	width: 35%;
+}
+#table_content2 tr th{	
+	font-weight: lighter ;
+	font:Verdana, Geneva, sans-serif; 
+	font-size:12px; 
+	color:#000002;
+	text-align: right;
+	vertical-align: middle;
+	height: 25px;
+	width: 15%;
+}
+#table_content2 input{
+	font-size:12px;
+	background-image:url(/xzql/images/inputbg1.gif);
+	height:20px;
+	border:#91b0c5 1px solid;
+}
+
+.table_left {
+	border: 2px solid #CCCCCC;
+}
+.table_title {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	background-color: #F6F6F6;
+	height: 30px;
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.table_left td {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: dashed;
+	border-bottom-style: solid;
+	border-right-color: #E1E1E1;
+	border-bottom-color: #E1E1E1;
+	height: 26px;
+	font-family: "宋体";
+	font-size: 12px;
+}
+.table_td_left {
+	text-align: left;
+	text-indent: 8px;
+}
+.table_td_center {
+	text-align: center;
+}
+.table_tr {
+	background-color: #FEF5EF;
+}
+.table_left a {
+	color: #000000;
+	text-decoration: none;
+}
+.table_left a:hover {
+	color: #DE5010;
+	text-decoration: underline;
+}
+.table_ss {
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	padding: 8px;
+}
+.table_ss input {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: solid;
+	border-left-style: dashed;
+	border-top-color: #E1E1E1;
+	border-right-color: #E1E1E1;
+	border-bottom-color: #E1E1E1;
+	border-left-color: #E1E1E1;
+}
+.table_ss span {
+	display: block;
+	float: left;
+	width: auto;
+	margin-right: 12px;
+	margin-bottom: 8px;
+}
+.table_cx {
+	border: 1px solid #CCCCCC;
+}
+

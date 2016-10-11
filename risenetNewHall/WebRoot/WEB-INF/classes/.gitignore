@@ -1,0 +1,12 @@
+/applicationContext.xml
+/applicationContext.xml.bak2
+/dataSource.properties
+/downFileTypeData.properties
+/globalMessages_zh_CN.properties
+/log4j.properties
+/net/
+/qjdbc.properties
+/resources/
+/struts.xml
+/test/
+/urlrewrite.xml

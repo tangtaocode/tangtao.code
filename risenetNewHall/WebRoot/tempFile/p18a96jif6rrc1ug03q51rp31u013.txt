@@ -1,0 +1,134 @@
+
+驱动精灵硬件检测报告			版本:2013.5.27.1052(7.0.527.1052)
+====================================================================================================
+
+硬件概要
+ 
+CPU:		AMD Athlon（速龙） 64 X2 4200+ (双核)
+主板:		华硕 M2N-X (NVIDIA（英伟达） nForce 520 (MCP65S))
+内存:		2 GBytes
+显卡:		NVIDIA（英伟达） GeForce 8400 GS (G86)
+硬盘:		希捷 ST3160815AS
+显示器:		PHILIPS 190CW
+网卡:		NVIDIA（英伟达） MCP65 - Ethernet 控制器
+声卡:		NVIDIA（英伟达） MCP65 - High Definition 音频设备
+
+处理器信息
+ 
+处理器:		AMD Athlon(tm) 64 X2 Dual Core Processor 4200+
+运行速度:		2200.0 MHz
+核心/线程:		双核, 双线程
+核心代号:		Brisbane
+功耗:		
+插座:		Socket AM2
+一级缓存:		指令: 2 x 64 KB, 数据: 2 x 64 KBytes
+二级缓存:		集成: 2 x 512 KB
+三级缓存:		
+特性:		MMX　3DNow　3DNow!-2　SSE　SSE-2　SSE-3　x86-64
+
+主板信息
+ 
+主板厂商:		华硕
+主板型号:		华硕 M2N-X
+芯片组:		NVIDIA（英伟达） nForce 520 (MCP65S)
+主板插槽:		3xPCI, 2xPCI Express x1, 1xPCI Express x2, 1xPCI Express x16
+USB支持:		v2.0
+PCI-E支持:		v1.1
+BIOS版本:		0701
+BIOS日期:		06/27/07
+
+内存信息(总计:2 GBytes)
+ 
+内存条1：
+内存大小:		1024 MB
+内存类型:		DDR2-SDRAM
+制造商:		金士顿
+制造日期:		2043年第7周
+ 
+内存条2：
+内存大小:		1024 MB
+内存类型:		DDR2-SDRAM
+制造商:		金士顿
+制造日期:		2043年第7周
+
+显卡信息
+ 
+显卡芯片:		NVIDIA（英伟达） GeForce 8400 GS (G86)
+显存大小:		256 MB of DDR2 SDRAM
+显卡型号:		NVIDIA（英伟达） GeForce 8400 GS (G86) []
+显卡BIOS版本:		60.86.50.00.00
+频率:		459.0 MHz
+频率:		459.0 MHz
+
+显示器信息
+ 
+显示器:		PHILIPS 190CW
+生产日期:		2007年第35周
+信号输入方式:		模拟 0.700 V / 0.300 V (1.000 V p-p)
+屏幕水平尺寸:		40 cm
+屏幕垂直尺寸:		25 cm
+屏幕对角尺寸:		19英寸
+
+存储信息
+ 
+控制器:		Serial ATA 1.5Gb/s
+型号:		希捷 ST3160815AS
+容量:		152,627 MB (160 GB)
+缓存:		8192 KB
+NCQ功能:		支持, Max. Depth: 32
+S.M.A.R.T.:		存在, 开启
+48bit LBA:		支持, 开启
+
+网卡信息
+ 
+硬件名称:		NVIDIA（英伟达） MCP65 - Ethernet 控制器
+MAC地址:		00-1D-60-77-1B-C6
+最大带宽:		100 Mbps
+
+声卡信息
+ 
+解码器:		NVIDIA（英伟达） MCP65 - High Definition 音频设备
+硬件名称:		瑞昱 ALC662
+
+电池信息
+
+USB设备
+ 
+USB设备1：
+厂商:		中星微 Corp.
+设备名称:		PC Camera
+USB版本:		1.10
+驱动描述:		中星微 USB PC Camera (ZC0301PL)
+驱动描述:		中星微 USB PC Camera (ZC0301PL)
+
+
+CPU：酷睿i5-3570K                                     1439
+显卡：七彩虹GTX660                                    1399
+
+主板：技嘉h77-DS3H                                    679
+电源：鑫谷GP550BH   /航嘉 WD500(319)                  429
+硬盘：西部数据 WD5000AAKX 500G  /希捷 ST500DM002 500G(348)                       353
+
+内存：金士顿 骇客神条DDR3 1600 8G                     375
+机箱：先马刺客1                                       154
+
+
+CPU：酷睿i5-3570K                                     
+显卡：七彩虹GTX660                                    
+主板：技嘉h77-DS3H                   
+电源：航嘉 WD500           
+硬盘：希捷 ST500DM002 500G                       
+内存：金士顿 骇客神条DDR3 1600 8G                     
+机箱：先马刺客1
+
+CPU：酷睿i5-3570K  散                   1355         1439     
+显卡：七彩虹GTX660                      1420         1188    1399
+主板：技嘉h77-DS3H                      690          650
+电源：航嘉 多核WD500                    340           319     319
+硬盘：希捷 ST500DM002 500G              325          328      328
+内存：金士顿 骇客神条DDR3 1600 8G 单条   350         479      429
+机箱：先马刺客1                         168	     139      128
+
+exp lhoa/1@10.8.2.2:1521/orcl file=e:\daochu.dmp tables=(questionnaire)
+imp lhoa/1@127.0.0.1:1521/orcl file=e:\daochu.dmp full=y ignore=yes
+xuchunnan3344XFL

@@ -1,0 +1,67 @@
+
+body {
+	background:#fff;
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+}
+
+.title66:link {
+	color: rgb(0, 88, 176); font-size: 16px; text-decoration: none;
+}
+.title66:visited {
+	color: rgb(0, 88, 176); font-size: 16px; text-decoration: none;
+}
+.title66:hover {
+	color: rgb(0, 88, 176); font-size: 16px; text-decoration: underline;
+}
+#scrollDiv {
+	margin: 0px; padding: 0px; height: 120px; overflow: hidden;
+}
+#scrollDiv ul {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+
+.scrollText li {
+	height: 24px; padding-left: 0px; font-size: 12px;
+}
+.scrollText td {
+	font-size: 12px;
+}
+.scrollText a {
+	font-size: 12px;
+}
+.scrollText a:hover {
+	font-size: 12px;
+}
+.scrollText1 table{
+	line-height:25px;
+}
+.scrollText1 td {
+	font-size: 12px;
+}
+.scrollText1 table tr td a{
+	text-decoration:none;
+	color:#0061b8;
+	font-size:14px;
+}
+.scrollText1 table tr td a:hover{
+	text-decoration:none;
+	color:#FFC125;
+	font-size:14px;
+}
+.index_text2{
+	color:#0061b8;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:text-bottom;
+}
+.index_text3{
+	color:#0061b8;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:text-bottom;
+}

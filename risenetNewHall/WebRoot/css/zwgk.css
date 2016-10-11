@@ -1,0 +1,145 @@
+/* 由 F12 开发人员工具生成。这可能不是原始源文件的准确表示形式。*/ 
+.rich-table {
+    BORDER-TOP: #c0c0c0 1px solid;
+    BORDER-COLLAPSE: collapse;
+    EMPTY-CELLS: show;
+    BORDER-LEFT: #c0c0c0 1px solid;
+	border-right: #c0c0c0 1px solid;
+    BACKGROUND-COLOR: rgb(255, 255, 255);
+	margin-left:auto;
+	margin-right:auto;
+	
+} 
+.listBotton{
+	border-top:#ccc solid 1px;
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.rich-table-cell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    COLOR: #000;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-subtable-cell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    COLOR: #000;
+    PADDING-BOTTOM: 4px;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-table-header {
+    BACKGROUND-IMAGE: url(/hcq/a4j/g/3_3_2.SR1org.richfaces.renderkit.html.GradientA/DATB/eAF7emTy1lIvJgASigOz);
+    BACKGROUND-REPEAT:repeat-x;
+    BACKGROUND-POSITION: left top;
+    BACKGROUND-COLOR: #4a75b5
+} .rich-table-header-continue {
+    BACKGROUND-COLOR: #4a75b5
+} .rich-table-headercell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    FONT-WEIGHT: bold;
+    COLOR: #fff;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-table-subheader {
+    BACKGROUND-COLOR: #eaf0f8
+} .rich-table-thead {
+    BORDER-BOTTOM: #c0c0c0 1px solid
+} .rich-table-subheadercell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    WHITE-SPACE: nowrap;
+    COLOR: #000;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-table-sortable-header {
+    WHITE-SPACE: nowrap;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: right center
+} .rich-table-cursor-pointer {
+    CURSOR: pointer
+} .rich-inplace-edit {
+    CURSOR: default
+} .rich-inplace-view {
+    CURSOR: default
+} .rich-sort-icon {
+    VERTICAL-ALIGN: middle
+} .rich-table-footer {
+    BACKGROUND-COLOR: #ccc
+} .rich-table-footer-continue {
+    BACKGROUND-COLOR: #ccc
+} .rich-table-footercell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    FONT-WEIGHT: bold;
+    COLOR: #000;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-table-subfooter {
+    BACKGROUND-COLOR: #f1f1f1
+} .rich-table-subfootercell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    COLOR: #000;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-subtable-header {
+    BACKGROUND-COLOR: #eaf0f8
+} .rich-subtable-headercell {
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    COLOR: #000;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-subtable-footer {
+    BACKGROUND-COLOR: #f1f1f1
+} .rich-subtable-footercell {
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    PADDING-BOTTOM: 4px;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 4px;
+    PADDING-LEFT: 4px;
+    PADDING-RIGHT: 4px
+} .rich-sort-asc {
+    BACKGROUND-IMAGE: url(/hcq/a4j/g/3_3_2.SR1org.richfaces.renderkit.html.iconimages.DataTableIconSortAsc/DATB/eAFjYGD49OkzAAWzAtg_)
+} .rich-sort-desc {
+    BACKGROUND-IMAGE: url(/hcq/a4j/g/3_3_2.SR1org.richfaces.renderkit.html.iconimages.DataTableIconSortDesc/DATB/eAFjYGD49OkzAAWzAtg_)
+}
+.noDateText {
+    font-size: 16px;
+    text-align: center;;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--系统全局配置文件-->
+<Config name="ft" saveExt="xml" contentEncoding="utf8" saveEncoding="gbk">
+ <Debug>true</Debug>
+ <OrganizeName>坪山新区</OrganizeName>
+ <!--通用代码的存储位置-->
+ <CodePath>D:\\workspace\\risenetpsxq\\defaultroot\\engine\\assistance</CodePath>
+ <WebServer>tomcat</WebServer>
+ <ContentLength></ContentLength>
+ <AppSubDir>/</AppSubDir>
+ <!--时间格式定义-->
+ <DateFormat>yyyy-MM-dd</DateFormat>
+ <!--权限接口实现类-->
+ <RoleClass>net.sysplat.access.external.PermissionAccess</RoleClass>
+ <!--模板采用数据绑定方式-->
+ <DataBind>true</DataBind>
+ <!--数据库的配置-->
+ <DataBase>
+   <DataBase-Type>oracle</DataBase-Type>
+   <Connection-Type>2</Connection-Type>
+   <Jndi>jdbc/smartcms</Jndi>
+   <DataBase-Driver>oracle.jdbc.driver.OracleDriver</DataBase-Driver>
+   <DataBase-Url><![CDATA[jdbc:oracle:thin:@10.1.160.168:1521:orcl]]></DataBase-Url>
+   <!--<DataBase-Url><![CDATA[jdbc:oracle:thin:@172.30.6.250:1521:zjjdb]]></DataBase-Url>-->
+   <DataBase-User>risenet</DataBase-User>
+   <DataBase-Password>risenet</DataBase-Password>
+ </DataBase>
+</Config>

@@ -1,0 +1,1885 @@
+/*网上申报外圈div*/
+.onlinewdiv{
+	width:740px;height:auto;border:#9dc3da solid 2px;
+}
+/*网上申报第一个table*/
+.onlineform_table {
+	width:730px;
+	font-size: 12px;
+}
+
+.onlineform_table  input,textarea{
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 1px #9DC3DA solid;
+}
+.onlineform_table th{
+	border-right:1px #9DC3DA solid;
+	border-left:1px #9DC3DA solid;
+	border-top:1px #9DC3DA solid;	
+	font-weight:normal;
+	text-align:center;
+}
+.onlineform_table td{		
+	border-top:1px #9DC3DA solid;
+	border-right:1px #9DC3DA solid;
+	padding: 5px;
+	line-height: 20px;
+	text-align:left;
+}
+.onlineform_table_button{
+	background-color: #F8FBFC;
+	padding: 3px;
+	border: 1px solid #EAF2F7;
+	height: 25px;
+	width: 50px;
+}
+.fontBg{
+	background:#CCC;
+	}
+/**没有线的表格**/
+.onlineform_noline {
+	width:730px;
+	font-size: 12px;
+}
+
+.onlineform_noline  input,textarea{
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 1px #9DC3DA solid;
+}
+.onlineform_noline th{
+	text-align:right;
+}
+.onlineform_noline td{		
+	padding: 5px;
+	line-height: 20px;
+	text-align:left;
+}
+.boldBorder{
+	 border-left:2px #9DC3DA solid;
+}
+/*网上申报最后一个table*/
+.onlineform_table_bottom {
+	width:730px;
+	border-bottom: 1px #9DC3DA solid;
+	font-size: 12px;
+}
+.onlineform_table_bottom input,textarea{
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 1px #9DC3DA solid;
+}
+.onlineform_table_bottom th{
+	border-right:1px #9DC3DA solid;
+	border-left:1px #9DC3DA solid;
+	border-top:1px #9DC3DA solid;
+	font-weight:normal;
+	text-align:center;
+}
+.onlineform_table_bottom td{		
+	border-top:1px #9DC3DA solid;
+	border-right:1px #9DC3DA solid;
+	padding: 5px;
+	line-height: 20px;
+	text-align:left;
+}
+
+body{
+	font: "12px 粗体";
+	background:#fff;
+}
+.BS_wrap {
+    margin: 0px auto;
+    width: 990px;
+}
+.BS_header {
+    background: url("/images/lineservice/bg_top.jpg") repeat-x 0px 0px;
+    padding: 0px 20px 0px 0px;
+    height: 35px;
+}
+.BS_returnS {
+    background: url("/images/lineservice/ico_returen.jpg") no-repeat 5px;
+    padding: 0px 0px 0px 38px;
+    line-height: 35px;
+}
+.BS_login {
+    background: url("/images/lineservice/ico_toplogin.jpg") no-repeat 5px;
+    padding: 0px 0px 0px 30px;
+    line-height: 35px;
+}
+.BS_nav {
+    margin: 0px 0px 0px 40px;
+}
+.BS_nav li {
+    float: left;
+}
+.BS_nav a:link {
+    margin: 0px;
+    padding: 5px 14px;
+    text-align: center;
+    line-height: 25px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    float: left;
+    display: block;
+}
+.BS_nav a:visited {
+    margin: 0px;
+    padding: 5px 14px;
+    text-align: center;
+    line-height: 25px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    float: left;
+    display: block;
+}
+.BS_nav a:hover {
+    margin: 0px;
+    padding: 5px 14px;
+    text-align: center;
+    line-height: 25px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    float: left;
+    display: block;
+}
+.BS_nav a:active {
+    margin: 0px;
+    padding: 5px 14px;
+    text-align: center;
+    line-height: 25px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    float: left;
+    display: block;
+}
+.BS_nav a.BS_c:link {
+    background: url("/images/lineservice/bg_topnav.jpg") no-repeat 0px 0px;
+}
+.BS_nav a.BS_c:visited {
+    background: url("/images/lineservice/bg_topnav.jpg") no-repeat 0px 0px;
+}
+.BS_nav a.BS_c:hover {
+    background: url("/images/lineservice/bg_topnav.jpg") no-repeat 0px 0px;
+}
+.BS_nav a.BS_c:active {
+    background: url("/images/lineservice/bg_topnav.jpg") no-repeat 0px 0px;
+}
+.BS_breadcrumbs {
+    background: url("/images/lineservice/bg_breadcrumb.jpg") repeat-x 0px 0px;
+    padding: 10px 0px 0px 20px;
+}
+.BS_subnav {
+    margin: 20px auto;
+    width: 570px;
+}
+.BS_subnav li {
+    margin: 0px 13px;
+    float: left;
+}
+.BS_subnav a:link {
+    margin: 0px;
+    padding: 0px;
+    width: 157px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    float: left;
+    display: block;
+}
+.BS_subnav a:visited {
+    margin: 0px;
+    padding: 0px;
+    width: 157px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    float: left;
+    display: block;
+}
+.BS_subnav a:hover {
+    margin: 0px;
+    padding: 0px;
+    width: 157px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    float: left;
+    display: block;
+}
+.BS_subnav a:active {
+    margin: 0px;
+    padding: 0px;
+    width: 157px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    float: left;
+    display: block;
+}
+.BS_subnav a.BS_c:link {
+    background: url("/images/lineservice/bg_subnav.jpg") no-repeat 0px 0px;
+}
+.BS_subnav a.BS_c:visited {
+    background: url("/images/lineservice/bg_subnav.jpg") no-repeat 0px 0px;
+}
+.BS_subnav a.BS_c:hover {
+    background: url("/images/lineservice/bg_subnav.jpg") no-repeat 0px 0px;
+}
+.BS_subnav a.BS_c:active {
+    background: url("/images/lineservice/bg_subnav.jpg") no-repeat 0px 0px;
+}
+.BS_star {
+    margin: 10px 40px 10px 0px;
+}
+.BS_dotop {
+    background: url("/images/lineservice/bg_platetop.jpg") no-repeat 0px;
+    margin: 66px auto 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+}
+.BS_dotop1 {
+    background: url("/images/lineservice/bg_platetop.jpg") no-repeat 0px;
+    margin: 0px auto 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+}
+.BS_dotops {
+    background: url("/images/lineservice/bg_platetop.jpg") no-repeat 0px;
+    margin: 5px auto 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+}
+.guid_dotop {
+    background: url("/images/lineservice/bg_platetop.jpg") no-repeat 0px;
+    margin: 10px auto 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+} 
+ .BS_domiddle {
+    background: url("/images/lineservice/bg_platemiddle2.gif") repeat-y 0px;
+    margin: 0px auto;
+    width: 968px;
+} .BS_domiddlein {
+    background: url("/images/lineservice/bg_platein.jpg") repeat-x 0px bottom rgb(254, 254, 254);
+    margin: 0px auto;
+    width: 956px;
+    min-height: 140px;
+    _height: 140px;
+} 
+ .BS_domiddlein1 {
+    background: url("/images/lineservice/bg_platein.jpg") repeat-x 0px bottom rgb(254, 254, 254);
+    margin: 0px auto;
+    width: 958px;
+    height: auto;
+}
+.BS_dobottom {
+    background: url("/images/lineservice/bg_platebottom.jpg") no-repeat 0px;
+    margin: 0px auto;
+    width: 968px;
+    height: 14px;
+    line-height: 14px;
+} .BS_doheader {
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+    padding: 0px 23px 0px 0px;
+    height: 40px;
+    border-bottom-color: rgb(191, 192, 193);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+} .BS_search {
+    background: url("/images/lineservice/bg_search.jpg") no-repeat 0px 0px;
+    margin: 4px 0px 0px;
+    padding: 4px 0px 0px;
+    width: 217px;
+    height: 28px;
+} .BS_search input {
+    border-width: 0px;
+    margin: 3px 3px 0px 5px;
+    width: 182px;
+    height: 16px;
+} .BS_search img {
+    margin: 3px 0px 0px;
+} .BS_title {
+    padding: 0px 0px 0px 20px;
+    color: rgb(64, 144, 220);
+    line-height: 35px;
+    font-size: 24px;
+    font-weight: normal;
+} .BS_nav3 {
+    margin: 0px 0px 0px 70px;
+} .BS_nav3 li {
+    float: left;
+} .BS_nav3 a:link {
+    margin: 0px;
+    padding: 0px 20px 6px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_nav3 a:visited {
+    margin: 0px;
+    padding: 0px 20px 6px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_nav3 a:hover {
+    margin: 0px;
+    padding: 0px 20px 6px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_nav3 a:active {
+    margin: 0px;
+    padding: 0px 20px 6px;
+    text-align: center;
+    line-height: 35px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_nav3 a.BS_c:link {
+    background: url("/images/lineservice/bg_subnav2.jpg") no-repeat bottom;
+    color: rgb(43, 118, 204);
+} .BS_nav3 a.BS_c:visited {
+    background: url("/images/lineservice/bg_subnav2.jpg") no-repeat bottom;
+    color: rgb(43, 118, 204);
+} .BS_nav3 a.BS_c:hover {
+    background: url("/images/lineservice/bg_subnav2.jpg") no-repeat bottom;
+    color: rgb(43, 118, 204);
+} .BS_nav3 a.BS_c:active {
+    background: url("/images/lineservice/bg_subnav2.jpg") no-repeat bottom;
+    color: rgb(43, 118, 204);
+} .BS_todos {
+    margin: 15px 0px 0px 30px;
+} .BS_todo {
+    margin: 0px 1px 5px 0px;
+    width: 100px;
+    text-align: center;
+    line-height: 36px;
+    float: left;
+    display: block;
+} .BS_todo a:link {
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 14px;
+} .BS_todo a:visited {
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 14px;
+} .BS_todo a:hover {
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 14px;
+} .BS_todo a:active {
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 14px;
+} .BS_todo img {
+    margin: 0px 15px;
+    width: 60px;
+} .BS_ass {
+    background: url("/images/lineservice/bg_bottom.jpg") no-repeat 0px 0px;
+    margin: 10px auto;
+    width: 960px;
+    height: 123px;
+} .BS_oneass {
+    margin: 15px 5px 0px 0px;
+    padding: 0px 10px 10px;
+    width: 160px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-width: 1px;
+    border-right-style: solid;
+    float: left;
+} .BS_oneass span {
+    display: block;
+} .BS_asstitle {
+    padding: 0px 0px 0px 40px;
+    line-height: 32px;
+    font-size: 14px;
+} .BS_que {
+    line-height: 21px;
+    font-size: 12px;
+} .BS_assimg01 {
+    background: url("/images/lineservice/ico_bottom1.jpg") no-repeat 0px 0px;
+} .BS_assimg02 {
+    background: url("/images/lineservice/ico_bottom2.jpg") no-repeat 0px 0px;
+} .BS_assimg03 {
+    background: url("/images/lineservice/ico_bottom3.jpg") no-repeat 0px 0px;
+} .BS_assimg04 {
+    background: url("/images/lineservice/ico_bottom4.jpg") no-repeat 0px 0px;
+} .BS_assimg05 {
+    background: url("/images/lineservice/ico_bottom5.png") no-repeat 0px 0px;
+} .BS_Footer {
+    background: url("/images/lineservice/bg_footer.jpg") repeat-x 0px 0px;
+    margin: 10px 0px 0px;
+    height: 63px;
+    line-height: 63px;
+} .BS_Copyright {
+    background: url("/images/lineservice/ico_logo.png") no-repeat 22px 12px;
+    padding: 0px 0px 0px 87px;
+} .BS_Copyright span {
+    margin: 0px 20px 0px 0px;
+} .BS_Service a:link {
+    margin: 0px 20px 0px 0px;
+} .BS_Service a:visited {
+    margin: 0px 20px 0px 0px;
+} .BS_Service a:hover {
+    margin: 0px 20px 0px 0px;
+} .BS_Service a:active {
+    margin: 0px 20px 0px 0px;
+} .BS_dep {
+    margin: 0px 15px 0px 0px;
+    width: 160px;
+    line-height: 40px;
+    float: left;
+	margin-left: 5px;
+	font-family:微软雅黑, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-align:left;
+} 
+.BS_dep a{
+   text-decoration:none;
+}
+.BS_dep a:hover{
+   text-decoration:none;
+   
+}
+.BS_depm {
+    padding: 0px 0px;
+} .BS_depm2 {
+    padding: 20px;
+} .BS_doheader2 {
+} .BS_title2 {
+    font: bold 22px / 150% "微软雅黑";
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_title3 {
+    font: 16px / 60px "微软雅黑";
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+.BS_title6 {
+    font-family:"微软雅黑";
+	font-size:16px;
+	line-height:40px;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+ .BS_title4 {
+    padding: 10px 20px 0px 0px;
+} .BS_list {
+	font-family:"微软雅黑";
+    line-height: 150%;
+    border-top-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+} .BS_list th {
+    background: url("/images/lineservice/bg_tabletitle.jpg") repeat-x 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) rgb(206, 206, 206) rgb(255, 255, 255) rgb(255, 255, 255);
+    padding: 0px 15px;
+    height: 42px;
+    line-height:20px;
+    font-size: 16px;
+    font-weight: bold;
+} .BS_list td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(206, 206, 206) rgb(206, 206, 206) rgb(255, 255, 255) rgb(255, 255, 255);
+    padding: 5px 15px;
+    line-height:18px;
+    height: 42px;
+    font-size: 16px;
+} 
+.BS_listInner{
+	border-left:0px;
+	border-top:0px;
+}
+.BS_listroll {
+    border-top-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+} .BS_listroll th {
+    background: url("/images/lineservice/bg_tabletitle.jpg") repeat-x 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) rgb(206, 206, 206) rgb(255, 255, 255) rgb(255, 255, 255);
+    padding: 0px 0px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+} .BS_listroll td {
+	font-family:"微软雅黑";
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(206, 206, 206) rgb(206, 206, 206) rgb(255, 255, 255) rgb(255, 255, 255);
+    padding: 0px 1px;
+    height: 30px;
+    font-size: 16px;
+} 
+.BS_list2 td.font12 {
+    font: 12px / 150% "宋体";
+    font-size-adjust: none;
+    font-stretch: normal;
+} .odd {
+    background: rgb(255, 255, 255);
+} .even {
+    background: rgb(241, 246, 254);
+}
+a.BS_btnblue:link {
+    background: url("/images/lineservice/bg_btnblue.png") no-repeat 0px 0px;
+    font: 12px / 21px "宋体";
+    width: 94px;
+    height: 21px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+	vertical-align:middle;
+}
+
+a.BS_btnblue:visited {
+    background: url("/images/lineservice/bg_btnblue.png") no-repeat 0px 0px;
+    font: 12px / 21px "宋体";
+    width: 94px;
+    height: 21px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+	vertical-align:middle;
+}
+
+a.BS_btnblue:hover {
+    background: url("/images/lineservice/bg_btnblue.png") no-repeat 0px 0px;
+    font: 12px / 21px "宋体";
+    width: 94px;
+    height: 21px;
+    text-align: center;
+    color: rgb(255, 102, 0);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+	vertical-align:middle;
+}
+
+a.BS_btnblue:active {
+    background: url("/images/lineservice/bg_btnblue.png") no-repeat 0px 0px;
+    font: 12px / 21px "宋体";
+    width: 94px;
+    height: 21px;
+    text-align: center;
+    color: rgb(255, 102, 0);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+	vertical-align:middle;
+} .new_pages {
+    margin: 15px 0px 0px;
+    float: right;
+} .new_pages a:link {
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 12px;
+    margin-left: 5px;
+    float: left;
+    display: block;
+} .new_pages a:visited {
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 12px;
+    margin-left: 5px;
+    float: left;
+    display: block;
+} .new_pages a:hover {
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 5px;
+    float: left;
+    display: block;
+} .new_pages a:active {
+    width: 60px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 5px;
+    float: left;
+    display: block;
+} .new_pages a.bt_pagesp:link {
+    background: url("/images/lineservice/bg_btnl.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 15px;
+    text-align: left;
+} .new_pages a.bt_pagesp:visited {
+    background: url("/images/lineservice/bg_btnl.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 15px;
+    text-align: left;
+} .new_pages a.bt_pagesp:hover {
+    background: url("/images/lineservice/bg_btnl.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 15px;
+    text-align: left;
+} .new_pages a.bt_pagesp:active {
+    background: url("/images/lineservice/bg_btnl.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 15px;
+    text-align: left;
+} .new_pages a.bt_pagesn:link {
+    background: url("/images/lineservice/bg_btnr.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+} .new_pages a.bt_pagesn:visited {
+    background: url("/images/lineservice/bg_btnr.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+} .new_pages a.bt_pagesn:hover {
+    background: url("/images/lineservice/bg_btnr.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+} .new_pages a.bt_pagesn:active {
+    background: url("/images/lineservice/bg_btnr.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+} .BS_titletxt {
+    margin: 15px 0px 0px 10px;
+    display: inline-block;
+} .BS_titleass {
+    margin: -80px 0px 0px;
+	font-family: "微软雅黑";
+} .BS_btnass1 {
+    background: url("/images/lineservice/bg_btn01.jpg") no-repeat center;
+    font: bold 18px / 57px "微软雅黑";
+    margin: 0px 20px 0px 0px;
+    width: 152px;
+    height: 57px;
+    text-align: center;
+    float: left;
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_btnass2 {
+    background: url("/images/lineservice/bg_btn02.jpg") no-repeat center;
+    font: bold 18px / 57px "微软雅黑";
+    margin: 0px 20px 0px 0px;
+    width: 200px;
+    height: 57px;
+    text-align: center;
+    float: left;
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_process {
+    background: url("/images/lineservice/bg_line.png") repeat-y 260px 0px;
+} .BS_prosnw {
+    margin: 75px 0px 0px 30px;
+    width: 203px;
+} .BS_prosubnav {
+    width: 100%;
+} .BS_prosubnav li {
+    width: 100%;
+} .BS_prosubnav a:link {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 40px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav a:visited {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 40px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav a:hover {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 40px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav a:active {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 40px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav a.BS_c:link {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_prosubnav a.BS_c:visited {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_prosubnav a.BS_c:hover {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_prosubnav a.BS_c:active {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_protable {
+    padding: 10px 5px;
+} .BS_prott {
+    font: bold 18px / 150% "微软雅黑";
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_protable li {
+    margin: 10px 0px;
+} .BS_protable a:link {
+    background: url("/images/lineservice/ico_list.png") no-repeat 0px 8px;
+    padding: 0px 0px 0px 30px;
+} .BS_protable a:visited {
+    background: url("/images/lineservice/ico_list.png") no-repeat 0px 8px;
+    padding: 0px 0px 0px 30px;
+} .BS_protable a:hover {
+    background: url("/images/lineservice/ico_list.png") no-repeat 0px 8px;
+    padding: 0px 0px 0px 30px;
+} .BS_protable a:active {
+    background: url("/images/lineservice/ico_list.png") no-repeat 0px 8px;
+    padding: 0px 0px 0px 30px;
+} .BS_processc {
+    padding: 10px 20px;
+    width: 650px;
+} .BS_prorsubnav {
+} .BS_prorsubnav li {
+    font: 12px / 29px "宋体";
+    margin: 0px 0px 0px 40px;
+    float: left;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_prorsubnav li img {
+    margin: 0px 5px 0px 0px;
+} .BS_procetitle {
+    font: bold 18px / 70px "微软雅黑";
+    text-align: center;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_prosubtitle {
+    text-align: center;
+} .BS_prosubtitle span {
+    font: 12px / 26px "宋体";
+    margin: 0px 20px;
+    color: rgb(121, 121, 121);
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_btnprocess:link {
+    background: url("/images/lineservice/bg_btnprocess.png") no-repeat center;
+    font: 21px / 35px "微软雅黑";
+    width: 115px;
+    height: 35px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_btnprocess:visited {
+    background: url("/images/lineservice/bg_btnprocess.png") no-repeat center;
+    font: 21px / 35px "微软雅黑";
+    width: 115px;
+    height: 35px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_btnprocess:hover {
+    background: url("/images/lineservice/bg_btnprocess.png") no-repeat center;
+    font: 21px / 35px "微软雅黑";
+    width: 115px;
+    height: 35px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_btnprocess:active {
+    background: url("/images/lineservice/bg_btnprocess.png") no-repeat center;
+    font: 21px / 35px "微软雅黑";
+    width: 115px;
+    height: 35px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_proP {
+    font: 14px / 26px "宋体";
+    margin: 0px 0px 10px;
+    text-indent: 2em;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_margin40 {
+    margin: 35px 40px;
+} .BS_probtns {
+    margin: 30px 40px;
+} .BS_paragraph {
+    margin: 0px 0px 25px;
+    line-height: 21px;
+} .BS_marginT20 {
+    margin: 20px 0px 0px;
+}
+
+a.BS_txtbtn:link {
+    background: url("/images/lineservice/bg_txtbtn.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    display: inline-block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn:visited {
+    background: url("/images/lineservice/bg_txtbtn.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    display: inline-block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn:hover {
+    background: url("/images/lineservice/bg_txtbtn.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    display: inline-block;
+    cursor: default;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn:active {
+    background: url("/images/lineservice/bg_txtbtn.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(195, 195, 195);
+    display: inline-block;
+    cursor: default;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn2:link {
+    background: url("/images/lineservice/bg_txtbtn2.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn2:visited {
+    background: url("/images/lineservice/bg_txtbtn2.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn2:hover {
+    background: url("/images/lineservice/bg_txtbtn2.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a.BS_txtbtn2:active {
+    background: url("/images/lineservice/bg_txtbtn2.png") no-repeat center;
+    font: 12px / 17px "微软雅黑";
+    margin: 0px 0px 0px 35px;
+    width: 94px;
+    height: 17px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_loginbox {
+    background: url("/images/lineservice/loginbg.png") no-repeat;
+    left: 50%;
+    top: 50%;
+    width: 386px;
+    height: 281px;
+    margin-top: -140px;
+    margin-left: -198px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+} .BS_colsebox {
+    height: 50px;
+} .BS_colse {
+    margin: 15px 20px 0px 0px;
+    width: 15px;
+    height: 15px;
+    float: right;
+} .BS_colse a {
+    background: url("/images/lineservice/close1.gif") no-repeat 0px 0px;
+    width: 15px;
+    height: 15px;
+    display: block;
+} .BS_colse a:link {
+} .BS_colse a:visited {
+} .BS_colse a:hover {
+    background-position: 0px -15px;
+} .BS_colse a:active {
+    background-position: 0px -15px;
+} .BS_loginm {
+    margin: 8px 0px 5px 15px;
+    width: 350px;
+} .BS_loginm dl {
+    height: 47px;
+} .BS_loginm dt {
+    width: 74px;
+    text-align: right;
+    line-height: 47px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+} .BS_loginm dd {
+    width: 270px;
+    line-height: 47px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    float: left;
+} .BS_loginm dd input {
+    border: 1px solid rgb(188, 188, 188);
+    height: 26px;
+    padding-left: 5px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin-top: 10px;
+} .BS_loginm li {
+    margin: 0px 15px;
+    line-height: 50px;
+    float: left;
+} .BS_logintl {
+    margin: 10px auto;
+    height: 50px;
+    text-align: center;
+    color: rgb(67, 149, 223);
+    line-height: 50px;
+    font-family: "微软雅黑";
+    font-size: 30px;
+} .BS_reg {
+    background: url("/images/lineservice/bg_platein.jpg") repeat-x 0px bottom;
+    margin: 0px auto;
+    width: 958px;
+} .BS_regfind {
+    margin: 0px auto;
+    width: 780px;
+    text-align: center;
+    line-height: 80px;
+    font-family: "微软雅黑";
+    font-size: 20px;
+} .BS_reglist {
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 780px;
+} .BS_reglist dl {
+    float: left;
+} .BS_reglist dt {
+    width: 200px;
+    text-align: right;
+    line-height: 47px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+} .BS_reglist dd {
+    width: 280px;
+    line-height: 47px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    float: left;
+} .BS_reglist dd p {
+    width: 280px;
+    line-height: 47px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+} .BS_reglist dd input {
+    border: 1px solid rgb(188, 188, 188);
+    width: 250px;
+    height: 26px;
+    padding-left: 5px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin-top: 10px;
+} .BS_reglist .info {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+} .BS_reglist dd span {
+    padding-top: 10px;
+    margin-top: 10px;
+} .BS_btnbox {
+    margin: 20px auto 10px;
+    height: 50px;
+    text-align: center;
+    padding-left: 200px;
+} .BS_btnbox1 {
+    margin: 20px auto 10px;
+    height: 50px;
+    text-align: center;
+    padding-left: 140px;
+} .BS_btreg {
+    background: url("/images/lineservice/btnregbg.png") no-repeat center;
+    font: bold 20px / 36px "微软雅黑";
+    margin: 0px 20px 0px 0px;
+    width: 116px;
+    height: 36px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    float: left;
+    display: block;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_btreg a:link {
+    color: rgb(255, 255, 255);
+} .BS_proce2 {
+    margin: 30px auto;
+} .BS_proce2 dl {
+    float: left;
+} .BS_proce2 dt {
+    width: 130px;
+    text-align: right;
+    color: rgb(50, 128, 212);
+    line-height: 60px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    float: left;
+} .BS_proce2 dd {
+    margin: 0px 10px;
+    width: 450px;
+    line-height: 60px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    float: left;
+} .BS_proce2 dd .inp {
+    border: 1px solid rgb(188, 188, 188);
+    width: 300px;
+    height: 26px;
+    padding-left: 5px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin-top: 15px;
+} .BS_proce2 dd .btn1 {
+    background: url("/images/lineservice/btn1.gif") no-repeat left top;
+    border: currentColor;
+    width: 68px;
+    height: 23px;
+    text-align: center;
+    font-size: 12px;
+} .BS_form {
+    margin: 10px 0px;
+} .BS_form td {
+    font: 14px / 40px "宋体";
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_text {
+    font: 14px / 40px "宋体";
+    width: 140px;
+    text-align: right;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_text2 {
+    font: 14px / 40px "宋体";
+    width: 80px;
+    text-align: left;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_text3 {
+    font: 14px / 40px "宋体";
+    width: 140px;
+    text-align: right;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_txtInput {
+    width: 165px;
+    height: 26px;
+} .BS_txtInput1 {
+    width: 160px;
+    height: 26px;
+} .BS_formtitle {
+    padding: 0px;
+    color: rgb(48, 123, 209);
+} .BS_formplate {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+}
+
+td.BS_checkbox {
+    padding: 0px 4%;
+    width: 25%;
+    line-height: 40px;
+} .BS_formRadio {
+    margin: 0px 50px 0px 0px;
+} .BS_subnav2 {
+    margin: 20px 0px 0px 30px;
+    color: rgb(204, 204, 204);
+} .BS_subnav2 li {
+    margin: 0px;
+    float: left;
+} .BS_subnav2 a:link {
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+    text-align: center;
+    line-height: 26px;
+    font-family: "宋体";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_subnav2 a:visited {
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+    text-align: center;
+    line-height: 26px;
+    font-family: "宋体";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_subnav2 a:hover {
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+    text-align: center;
+    line-height: 26px;
+    font-family: "宋体";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_subnav2 a:active {
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+    text-align: center;
+    line-height: 26px;
+    font-family: "宋体";
+    font-size: 18px;
+    float: left;
+    display: block;
+} .BS_subnav2 a.BS_c:link {
+    color: rgb(43, 118, 204);
+} .BS_subnav2 a.BS_c:visited {
+    color: rgb(43, 118, 204);
+} .BS_subnav2 a.BS_c:hover {
+    color: rgb(43, 118, 204);
+} .BS_subnav2 a.BS_c:active {
+    color: rgb(43, 118, 204);
+} .BS_domiddlein2 {
+    background: url("/images/lineservice/bg_platein.jpg") repeat-x 0px bottom rgb(254, 254, 254);
+    margin: 0px auto;
+    width: 958px;
+    min-height: 260px;
+    _height: 260px;
+} .BS_scenes {
+    margin: 25px 0px 0px 14px;
+} .BS_scene {
+    margin: 0px 9px 0px 0px;
+    width: 226px;
+    text-align: center;
+    float: left;
+    display: inline;
+} 
+.BS_wrap2 {
+    margin: 0px 15px 0px 15px;;
+}
+ .BS_search2 {
+    /*background: url("/images/lineservice/bg_platesearch.gif") no-repeat 0px 0px;*/
+    width: 642px;
+    height: 50px;
+} .BS_search2m {
+    margin: 0px 0px 0px 0px;
+    height: 50px;
+} .BS_fastitem {
+    /*background: url("/images/lineservice/bg_plateitem.gif") no-repeat 0px 0px;*/
+    width: 295px;
+    height: 50px;
+} .BS_fastitemm {
+    margin: 25px 0px 0px;
+} .BS_fastitem a:link {
+    background: url("/images/lineservice/bg_btnitem.png") center;
+    margin: 0px 0px 15px 10px;
+    padding: 0px;
+    width: 133px;
+    height: 41px;
+    line-height: 41px;
+    float: left;
+    display: block;
+    _margin: 0px 0px 15px 5px;
+} .BS_fastitem a:visited {
+    background: url("/images/lineservice/bg_btnitem.png") center;
+    margin: 0px 0px 15px 10px;
+    padding: 0px;
+    width: 133px;
+    height: 41px;
+    line-height: 41px;
+    float: left;
+    display: block;
+    _margin: 0px 0px 15px 5px;
+} .BS_fastitem a:hover {
+    background: url("/images/lineservice/bg_btnitem.png") center;
+    margin: 0px 0px 15px 10px;
+    padding: 0px;
+    width: 133px;
+    height: 41px;
+    float: left;
+    display: block;
+    _margin: 0px 0px 15px 5px;
+} .BS_fastitem a:active {
+    background: url("/images/lineservice/bg_btnitem.png") center;
+    margin: 0px 0px 15px 10px;
+    padding: 0px;
+    width: 133px;
+    height: 41px;
+    float: left;
+    display: block;
+    _margin: 0px 0px 15px 5px;
+} .BS_fastitem img {
+    margin: 0px 6px 0px 10px;
+    vertical-align: -10px;
+    _margin: 5px 6px 0px 10px;
+} .BS_subnavs {
+    margin: 0px 0px 0px 2px;
+    color: rgb(204, 204, 204);
+    overflow: hidden;
+} .BS_subnavs li {
+    margin: 0px;
+    float: left;
+} .BS_subnavs a:link {
+    margin: 0px;
+    padding: 3px 0px 0px;
+    width: 80px;
+    text-align: center;
+    line-height: 22px;
+    font-family: "宋体";
+    font-size: 14px;
+    float: left;
+    display: block;
+} .BS_subnavs a:visited {
+    margin: 0px;
+    padding: 3px 0px 0px;
+    width: 80px;
+    text-align: center;
+    line-height: 22px;
+    font-family: "宋体";
+    font-size: 14px;
+    float: left;
+    display: block;
+} .BS_subnavs a:hover {
+    margin: 0px;
+    padding: 3px 0px 0px;
+    width: 80px;
+    text-align: center;
+    line-height: 22px;
+    font-family: "宋体";
+    font-size: 14px;
+    float: left;
+    display: block;
+} .BS_subnavs a:active {
+    margin: 0px;
+    padding: 3px 0px 0px;
+    width: 80px;
+    text-align: center;
+    line-height: 22px;
+    font-family: "宋体";
+    font-size: 14px;
+    float: left;
+    display: block;
+} .BS_subnavs a.BS_c:link {
+    background: url("/images/lineservice/bg_searchtab.png") no-repeat center;
+    color: rgb(43, 118, 204);
+} .BS_subnavs a.BS_c:visited {
+    background: url("/images/lineservice/bg_searchtab.png") no-repeat center;
+    color: rgb(43, 118, 204);
+} .BS_subnavs a.BS_c:hover {
+    background: url("/images/lineservice/bg_searchtab.png") no-repeat center;
+    color: rgb(43, 118, 204);
+} .BS_subnavs a.BS_c:active {
+    background: url("/images/lineservice/bg_searchtab.png") no-repeat center;
+    color: rgb(43, 118, 204);
+} .BS_searchbg {
+    background: url("/images/lineservice/bg_searchbar.png") no-repeat top;
+    padding: 6px 0px 0px 7px;
+    width: 600px;
+    height: 35px;
+    float:left;
+    margin-left:2px;
+} .BS_searchin {
+    background: url("/images/lineservice/bg_inputc.png") repeat-x left;
+    width: 470px;
+    height: 28px;
+} .BS_searchin input {
+    margin: 4px 0px 0px;
+    border: 0px solid rgb(204, 204, 204);
+    width: 460px;
+    height: 20px;
+} .BS_search01 a:link {
+    background: url("/images/lineservice/bg_btnsearch01.png") center;
+    width: 95px;
+    height: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    float: left;
+    display: block;
+} .BS_search01 a:visited {
+    background: url("/images/lineservice/bg_btnsearch01.png") center;
+    width: 95px;
+    height: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    float: left;
+    display: block;
+} .BS_search01 a:hover {
+    background: url("/images/lineservice/bg_btnsearch01.png") center;
+    width: 95px;
+    height: 30px;
+    text-align: center;
+    color: rgb(255, 102, 0);
+    float: left;
+    display: block;
+} .BS_search01 a:active {
+    background: url("/images/lineservice/bg_btnsearch01.png") center;
+    width: 95px;
+    height: 30px;
+    text-align: center;
+    color: rgb(255, 102, 0);
+    float: left;
+    display: block;
+} .BS_margin15 {
+    margin: 15px 0px;
+} .BS_marginl10 {
+    margin: 0px 0px 0px 10px;
+} .BS_words {
+    margin: 20px 0px 0px 5px;
+	text-align:left;
+} .BS_words a:link {
+    font: 14px / normal "宋体";
+    margin: 0px 10px 0px 0px;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_words a:visited {
+    font: 14px / normal "宋体";
+    margin: 0px 10px 0px 0px;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_words a:hover {
+    font: 14px / normal "宋体";
+    margin: 0px 10px 0px 0px;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_words a:active {
+    font: 14px / normal "宋体";
+    margin: 0px 10px 0px 0px;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_marginT7 {
+    margin: 7px 0px 0px;
+} .BS_margin15 {
+    margin: 15px 0px;
+} .BS_marginlr10 {
+    margin: 0px 10px;
+} .BS_marginl5 {
+    margin-left: 5px;
+} .BS_smargin {
+    margin-top: 3px;
+} .BS_reglist dd.BS_inputradio {
+    font-size: 16px;
+} .BS_reglist dd.BS_inputradio input {
+    border: 0px solid rgb(188, 188, 188);
+    width: auto;
+    height: 26px;
+    padding-left: 5px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 15px;
+    vertical-align: -8px;
+} .BS_reglist .info {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+} .BS_userinfo {
+    line-height: 35px;
+    font-size: 12px;
+} .BS_prosnw1 {
+    margin: 20px 0px 0px 30px;
+    width: 203px;
+} .BS_prosubnav1 {
+    width: 100%;
+} .BS_prosubnav1 li {
+    width: 100%;
+} .BS_prosubnav1 a:link {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 10px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav1 a:visited {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 10px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav1 a:hover {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 10px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav1 a:active {
+    background: url("/images/lineservice/bg_btnsuboff.png") no-repeat center;
+    margin: 0px 0px 10px;
+    width: 100%;
+    text-align: center;
+    color: rgb(196, 196, 196);
+    line-height: 37px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    float: left;
+    display: block;
+    cursor: default;
+} .BS_prosubnav1 a.BS_c:link {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_prosubnav1 a.BS_c:visited {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_prosubnav1 a.BS_c:hover {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_prosubnav1 a.BS_c:active {
+    background: url("/images/lineservice/bg_btnsub.png") no-repeat 0px 0px;
+    color: rgb(255, 255, 255);
+} .BS_proce3 {
+    margin: 10px auto;
+} .BS_proce3 dl {
+    float: left;
+} .BS_proce3 dt {
+    width: 130px;
+    text-align: right;
+    color: rgb(102, 102, 102);
+    line-height: 40px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    float: left;
+} .BS_proce3 dd {
+    margin: 0px 10px;
+    width: 450px;
+    line-height: 40px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    float: left;
+} .BS_proce3 dd .inp {
+    border: 1px solid rgb(188, 188, 188);
+    width: 300px;
+    height: 26px;
+    padding-left: 5px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin-top: 8px;
+} .BS_proce3 dd .btn1 {
+    background: url("/images/lineservice/btn1.gif") no-repeat left top;
+    border: currentColor;
+    width: 68px;
+    height: 23px;
+    text-align: center;
+    font-size: 12px;
+} .inpu {
+    border: 1px solid rgb(188, 188, 188);
+    width: 95px;
+    height: 20px;
+    padding-left: 5px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    margin-top: 8px;
+    margin-right: 15px;
+    vertical-align: 2px;
+} .BS_processc1 {
+    padding: 10px 20px;
+    width: 700px;
+} .BS_prosnw2 {
+    margin: 20px 0px 0px 10px;
+    width: 203px;
+} .BS_process1 {
+    background: url("/images/lineservice/bg_line.png") repeat-y 220px 0px;
+} .BS_title5 {
+    font: 14px / 50px "微软雅黑";
+    font-size-adjust: none;
+    font-stretch: normal;
+} .BS_infolist {
+    border-top-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-left-style: solid;
+} .BS_infolist td {
+    padding: 5px;
+    line-height: 18px;
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+} .BS_infolist th {
+    padding: 5px;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    background-color: rgb(248, 248, 248);
+} .xdd_BS_btnbox1 {
+    margin: 10px auto 0px;
+    height: 38px;
+    text-align: center;
+} .xdd_BS_procetitle {
+    font: bold 18px / 20px "微软雅黑";
+    text-align: center;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .xdd_new_pages {
+    line-height: 22px;
+    font-size: 12px;
+    margin-right: 4px;
+    margin-left: 5px;
+    float: left;
+} .xdd_inpu {
+    border: 1px solid rgb(188, 188, 188);
+    width: 24px;
+    height: 18px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    vertical-align: 2px;
+} .bt_LastP:link {
+    background: url("/images/lineservice/bg_LastP.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+} .bt_LastP:visited {
+    background: url("/images/lineservice/bg_LastP.jpg") no-repeat 0px 0px;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+} .bt_LastP:hover {
+    background: url("/images/lineservice/bg_LastP.jpg") no-repeat 0px 0px;
+    text-align: left;
+} .bt_LastP:active {
+    background: url("/images/lineservice/bg_LastP.jpg") no-repeat 0px 0px;
+    text-align: left;
+} .xdd_BS_txtInput {
+    width: 466px;
+    height: 26px;
+} .xdd_BS_select {
+    width: 165px;
+    height: 26px;
+} .xdd_BS_formRadio {
+    margin: 0px 10px 0px 0px;
+} .xdd_BS_text {
+    font: 12px / 40px "宋体";
+    width: 100px;
+    text-align: right;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .xdd_BS_textarea {
+    width: 466px;
+    height: 52px;
+} .xdd_BS_formtitle {
+    text-align: center;
+    color: red;
+} .xdd_BS_form {
+    border-width: 1px;
+    border-style: solid;
+    margin: 10px 0px;
+    text-align: left;
+    font-weight: bold;
+    border-collapse: collapse;
+} .xdd_BS_form td {
+    font: 12px / 21px "宋体";
+    padding: 5px 5px 8px;
+    border: 1px solid rgb(204, 204, 204);
+    font-size-adjust: none;
+    font-stretch: normal;
+} .xdd_BS_text02 {
+    font: 14px / 40px "宋体";
+    width: 120px;
+    text-align: right;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .xdd_BS_txtInput {
+    width: 165px;
+    height: 20px;
+} .xdd_BS_textarea02 {
+    width: 680px;
+    height: 52px;
+} .xdd_BS_text03 {
+    font: 14px / 40px "宋体";
+    width: 50px;
+    text-align: right;
+    font-size-adjust: none;
+    font-stretch: normal;
+} .noDateText {
+    font-size: 16px;
+    text-align: center;;
+} .onlineApply {
+    vertical-align: middle;
+}
+.searchAppInfo{
+	font-family: "微软雅黑";
+	font-size:20px;
+	font-weight:bold;
+	margin-left:30px;
+	float:left;
+	color:#000;
+	line-height:30px;
+}
+.searchAppPara{
+	font-family: "微软雅黑";
+	font-size:16px;
+	font-weight:500;
+	margin-right:50px;
+	float:right;
+	color:#000;
+	line-height:30px;
+}
+.loginInput{
+	height:28px;
+	border:1px solid #CCCCCC;
+	font-size:14px;
+	background:#fff; 
+    padding:5px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+	color:#000;
+}
+.backButton{
+	font-family: "微软雅黑";
+	background:url(/images/lineservice/bg_btnitem.png);
+	border:0px;
+	width:133px;
+	height:41px;
+	font-size:16px;
+	cursor:hand;
+	margin-right:20px;
+}
+.stepButton{
+	font-family: "微软雅黑";
+	background:url(/images/lineservice/btnregbg.png);
+	border:0px;
+	width:116px;
+	height:36px;
+	font-size:16px;
+	cursor:hand;
+	margin-right:20px;
+}
+
+.tdCardOn{
+	font-family: "微软雅黑";
+	background:url("/images/investment/btn_invest_enabled.gif");
+	border:0px;
+	width:150px;
+	height:40px;
+	cursor:hand;
+	color:#fff;
+	text-align:center;
+	font-size:16px;
+	background-repeat:no-repeat;
+	display:block;
+	text-decoration:none;
+}
+.tdCardOff{
+	font-family: "微软雅黑";
+	background:url("/images/investment/btn_invest_disabled.gif");
+	border:0px;
+	width:150px;
+	height:40px;
+	cursor:hand;
+	color:#626262;
+	text-align:center;
+	font-size:16px;
+	background-repeat:no-repeat;
+	display:block;
+	text-decoration:none;
+	
+}
+.tdCardOff:hover{
+	font-family: "微软雅黑";
+	background:url("/images/investment/btn_invest_enabled.gif");
+	border:0px;
+	width:150px;
+	height:40px;
+	cursor:hand;
+	color:#fff;
+	text-align:center;
+	font-size:16px;
+	background-repeat:no-repeat;
+	display:block;
+	text-decoration:none;
+}
+.tdCardOn:hover{
+	text-decoration:none;
+}
+.tdCardOn span{
+	display:block;
+	padding-top:8px;
+}
+.tdCardOff span{
+	display:block;
+	padding-top:8px;
+}
+.imagefile{
+	width:38px;
+	height:38px;
+	border:0px;
+	cursor:hand;
+}
+.buttonOnline{
+	font-family: "微软雅黑";
+	font-size:16px;
+	color:#fff;
+	background:url(/images/govpublic/bigwtab1.png);
+	width:100px;
+	height:30px;
+	border:0px;
+	display:block; 
+	text-align:center;
+}
+.buttonOnline:hover{
+	text-decoration:none;
+}
+.hiddenDiv{
+	display:none;
+}
+.hiddenDivHeight{
+	height:200px;
+}

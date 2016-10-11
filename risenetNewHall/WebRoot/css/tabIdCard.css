@@ -1,0 +1,86 @@
+/* 由 F12 开发人员工具生成。这可能不是原始源文件的准确表示形式。*/ 
+#tabbed_box_1 {
+    margin: 0px auto;
+	padding-top:10px;
+	padding-left:1px;
+}
+
+ul.tabs {
+    margin: 5px 0px 6px;
+    padding: 1px;
+	text-align:left;
+}
+
+ul.tabs li {
+    list-style: none;
+    display: inline;
+	width:auto;
+}
+
+ul.tabs li a {
+    background-position: bottom;
+    padding: 4px 14px;
+    border: 1px solid rgb(70, 76, 84);
+    color: rgb(255, 235, 181);
+    text-transform: uppercase;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    background-image: url("/images/tabCard/tab_off.jpg");
+    background-repeat: repeat-x;
+    background-color: rgb(70, 76, 84);
+	
+}
+
+ul.tabs li a:hover {
+    border-color: rgb(47, 52, 58);
+    background-color: rgb(47, 52, 58);
+}
+
+ul.tabs li a.active {
+    background-position: top;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(70, 76, 84) rgb(70, 76, 84) rgb(255, 255, 255);
+    color: rgb(40, 46, 50);
+    background-image: url("/images/tabCard/tab_on.jpg");
+    background-repeat: repeat-x;
+    background-color: rgb(255, 255, 255);
+} 
+.content {
+    background-position: bottom;
+    padding: 10px;
+	border-top:1px solid rgb(70, 76, 84);
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/images/tabCard/content_bottom.jpg");
+    background-repeat: repeat-x;
+    background-color: rgb(255, 255, 255);
+} 
+#content_2 {
+    display: none;
+} 
+#content_3 {
+    display: none;
+} 
+#content_4 {
+    display: none;
+} 
+#content_5 {
+    display: none;
+} 
+#content_6 {
+    display: none;
+} 
+#content_7 {
+    display: none;
+} 
+#content_8 {
+    display: none;
+} 
+#content_9 {
+    display: none;
+} 
+#content_10 {
+    display: none;
+} 

@@ -1,0 +1,8 @@
+[DEBUG] 2013-10-29 14:24:22,392 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.local.LocalTransport@42b988a6
+[DEBUG] 2013-10-29 14:24:22,395 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.dead.DeadLetterTransport@66388993
+[DEBUG] 2013-10-29 14:24:22,399 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.http.SoapHttpTransport@2d8aaa1e
+[DEBUG] 2013-10-29 14:24:22,399 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.http.HttpTransport@6aa6aeed
+[DEBUG] 2013-10-29 14:27:28,864 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.local.LocalTransport@22ba6c83
+[DEBUG] 2013-10-29 14:27:28,865 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.dead.DeadLetterTransport@9d04653
+[DEBUG] 2013-10-29 14:27:28,867 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.http.SoapHttpTransport@6aa6aeed
+[DEBUG] 2013-10-29 14:27:28,867 org.codehaus.xfire.transport.DefaultTransportManager - Registered transport org.codehaus.xfire.transport.http.HttpTransport@6526804e

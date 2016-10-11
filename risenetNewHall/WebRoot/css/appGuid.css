@@ -1,0 +1,65 @@
+boby{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	background:#fff;
+}
+.title{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	font-weight:bold;
+	white-space:normal; 
+	word-break: break-all;
+	width: 500px;
+	font-size:20px;
+}
+table{
+	line-height:25px;
+	font-size:15px;
+	}
+.countFont{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	white-space: normal; 
+	word-break: break-all; 
+	width: 680px;
+	font-size:15px;
+}
+.countFont1{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	white-space: normal; 
+	word-break: break-all; 
+	width: 98%;
+	font-size:15px;
+	padding-left:30px;
+}
+.panelHead {
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	color: #008000;
+	font-size: 18px;
+	height: 30px;
+	padding-top: 18px;
+}
+.panelHead1 {
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	color: #008000;
+	font-size: 18px;
+	height: 30px;
+	padding-top: 18px;
+	padding-left:10px;
+}
+.tdfont{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	font-size: 14px;
+}
+.subjectContentPanelBg {
+	background-color: #F5F5FE;
+}
+.countDiv{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+	width: 100%; 
+	text-align: left; 
+	vertical-align: top; 
+	padding-right: 18px; 
+	padding-top: 0px;
+   height: 100%;
+}
+.tableLeftPadding18{
+	font-family: "Microsoft YaHei", "΢微软雅黑", "Segoe UI", Arial;
+}

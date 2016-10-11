@@ -1,0 +1,132 @@
+/* 由 F12 开发人员工具生成。这可能不是原始源文件的准确表示形式。*/ 
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background:#fff;
+}
+table{
+			line-height:25px;
+			font-size:15px;
+		}
+.topmenuword:link {
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight:bold;
+	color: #FFFfff;}
+.topmenuword:visited {
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight:bold;
+	color: #FFFfff;}
+.topmenuword:hover {
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight:bold;
+	color: #FFFfff;}
+
+a:link {
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+a:visited {
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+a:hover {
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+a:active {
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+
+
+
+.investTab {
+    OVERFLOW: hidden;
+    CURSOR: hand;
+    HEIGHT: 40px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND-IMAGE: url(/images/investment/btn_invest_disabled.gif);
+    BACKGROUND-POSITION: 0px 0px;
+    FONT-WEIGHT: 500;
+    COLOR: black;
+    TEXT-ALIGN: center;
+    WIDTH: 150px;
+	font-family: "微软雅黑";
+	font-size:14px;
+} 
+.investTab:hover {
+    OVERFLOW: hidden;
+    CURSOR: pointer;
+    HEIGHT: 40px;
+    VERTICAL-ALIGN: middle;
+    background:url(/images/investment/btn_invest_enabled.gif);
+    BACKGROUND-POSITION: 0px 0px;
+    FONT-WEIGHT: 900;
+    COLOR: white;
+    TEXT-ALIGN: center;
+    WIDTH: 150px;
+	font-family: "微软雅黑";
+	font-size:14px;
+	
+} 
+.investTabSelected {
+    OVERFLOW: hidden;
+    CURSOR: pointer;
+    HEIGHT: 40px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND-IMAGE: url(/images/investment/btn_invest_enabled.gif);
+    BACKGROUND-POSITION: 0px 0px;
+    FONT-WEIGHT: 900;
+    COLOR: white;
+    TEXT-ALIGN: center;
+    WIDTH: 150px;
+	font-family: "微软雅黑";
+	font-size:14px;
+}
+.titleTab {
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	background-position: 0px 0px;
+	width: 114px;
+	height: 27px;
+	cursor: hand;
+	color:black;
+	font-size:11pt;
+	background:url(/images/investment/btn_title_disabled.png);
+	text-decoration:none;
+}
+
+.titleTab:hover {
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	background-position: 0px 0px;
+	width: 114px;
+	height: 27px;
+	cursor:pointer;
+	color:red;
+	font-size:11pt;
+	text-decoration:none;
+	background:url(/images/investment/btn_title_enabled.gif);
+}
+
+.titleTabSelected {
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	background-image: url(/images/investment/btn_title_enabled.gif);
+	background-position: 0px 0px;
+	width: 114px;
+	height: 27px;
+	cursor:pointer;
+	color:white;
+	font-size:11pt;
+	font-family: "微软雅黑";
+	text-decoration:none;
+}

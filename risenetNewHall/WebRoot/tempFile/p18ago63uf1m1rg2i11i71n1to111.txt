@@ -1,0 +1,11 @@
+1.开机不断按F8，选择带命令的安全模式进入
+2.运行过程结束时，系统列出了系统超级用户“administrator”和本地用户“kay(自己电脑的用户名)”的选择菜单，鼠标单击“administrator”，进入命令行模式。 
+3.3、键入命令：“net user kay 123456 /add”，强制将“kay”用户的口令更改为“123456”。若想在此添加一新用户（如：用户名为kayrui，口令为123456）的话，请键入“net user kayrui 123456 /add”，添加后可用“net localgroup administrators kayrui /add”命令将用户提升为系统管理组“administrators”的用户，并使其具有超级权限。 
+4、输入shutdown -s -t 1,关闭并重新启动计算机，选择正常模式下运行，就可以用更改后的口令“123456”登录“kay”用户了。 
+
+
+
+
+net user [UserName [Password | *] [options]] [/domain] 
+net user [UserName  /add [options] [/domain] 
+net user [UserName [/删除] [/domain]] 
