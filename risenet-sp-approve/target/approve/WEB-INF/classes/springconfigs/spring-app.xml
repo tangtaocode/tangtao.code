@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+	http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.1.xsd">
+	
+	<!-- disconf配置 start -->
+	<context:component-scan base-package="net.risesoft.disconf" />
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<bean id="disconfMgrBean" class="com.baidu.disconf.client.DisconfMgrBean" destroy-method="destroy">
+		<property name="scanPackage" value="net.risesoft.disconf" />
+	</bean>
+	<bean id="disconfMgrBean2" class="com.baidu.disconf.client.DisconfMgrBeanSecond" init-method="init" destroy-method="destroy">
+	</bean>
+	<!-- disconf配置 end -->
+	
+	<util:properties id="commonProps" location="classpath:properties/application.properties" local-override="true"/>
+	
+	<context:property-placeholder ignore-unresolvable="true" properties-ref="commonProps" />
+	
+	<bean id="ContextUtil" class="net.risesoft.common.util.ContextUtil" />
+	
+	<context:component-scan base-package="net.risesoft.api,net.risesoft.fileflow.service,net.risesoft.approve.service">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+	
+	<bean name="casAuthenticationFilter" class="org.jasig.cas.client.authentication.Y9AuthenticationFilter" init-method="init">
+		<property name="casServerLoginUrl" value="${casServerLoginUrl}" />
+		<property name="serverName" value="${serverName}" />
+		<property name="ignoreUrlPatternType" value="${ignoreUrlPatternType}" />
+		<property name="ignorePattern" value="/static,/services,/mobile,/engine" />
+	</bean>
+
+	<bean name="casValidationFilter" class="org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter">
+		<property name="serverName" value="${serverName}" />
+		<property name="ticketValidator">
+			<bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<constructor-arg index="0" value="${casServerUrlPrefix}" />
+				<property name="encoding" value="UTF-8" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean name="casSSOutFilter" class="org.jasig.cas.client.session.SingleSignOutFilter">
+		<property name="casServerUrlPrefix" value="${casServerUrlPrefix}" />
+	</bean>
+	
+	<import resource="spring-jpa.xml"/>
+	<!-- <import resource="classpath:/springconfigs/spring-rs7public-es.xml"/>
+	<import resource="classpath:/springconfigs/spring-rs7public-async.xml"/> -->
+	<import resource="classpath:/springconfigs/spring-approve-jpa.xml"/>
+	<import resource="classpath:/springconfigs/spring-y9public-jpa.xml"/>
+	<import resource="classpath:/springconfigs/spring-y9public-hazelcast.xml"/>
+	<import resource="spring-bpm.xml"/>	
+	<!-- <import resource="spring-hazelcast.xml"/> -->
+	<import resource="spring-freemarker.xml"/>
+	<!-- <import resource="spring-mongo.xml"/> -->
+	<!-- <import resource="spring-shiro.xml"/> -->
+	<!-- <import resource="spring-solr.xml"/> -->
+	<!-- <import resource="quartz-config.xml"/> -->
+	
+</beans>

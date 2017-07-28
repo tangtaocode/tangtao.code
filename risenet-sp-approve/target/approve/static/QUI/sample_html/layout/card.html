@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<!--框架必需start-->
+<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../libs/js/framework.js"></script>
+<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script>
+function showCard(){
+	$("#userCard").fadeIn(200);
+}
+function changePass(){
+	$("#card_passtext").hide();
+	$("#card_passinput").show();
+	$("#card_passinput").find("input").val($.trim($("#card_passtext").text()))
+}
+function saveCard(){
+	closeCard();
+}
+function closeCard(){
+	$("#card_passtext").show();
+	$("#card_passinput").hide();
+	$("#userCard").hide();
+}
+</script>
+</head>
+<body>
+<input type="button" value="打开用户信息" onclick="showCard()"/><br/>
+可用于首页弹出用户信息进行编辑。
+	<div class="userCard" id="userCard" style="top:95px;left:100px;">
+		<div class="card_topcenter">
+		<div class="card_topleft">
+		<div class="card_topright">
+			<div class="card_content_left">
+				<div class="card_content_left_title">用户信息</div>
+				<div class="card_content_left_line"></div>
+				<div class="card_content_left_pic"></div>
+			</div>
+			<div class="card_content_right">
+				<table>
+					<tr>
+						<td class="ali03">用户名：</td>
+						<td>admin</td>
+					</tr>
+					<tr>
+						<td class="ali03">密 码：</td>
+						<td>
+							<div id="card_passtext">
+								123456
+								<span class="img_pencil hand" onclick="changePass()"></span>
+							</div>
+							<div id="card_passinput" style="display:none;">
+								<input type="text" class="textinput" style="width:100px;"/>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="ali03">姓 名：</td>
+						<td>张小三</td>
+					</tr>
+					<tr> 
+						<td class="ali03">职 务：</td>
+						<td>参谋</td>
+					</tr>
+				</table>
+			</div>
+			<div class="clear"></div>
+			<div class="card_btn">
+				<input type="button" value="确 定" class="button2" onclick="saveCard()"/>
+				<input type="button" value="取 消" class="button2" onclick="closeCard()"/>
+			</div>
+		</div>	
+		</div>	
+		</div>
+		<div class="card_bottomcenter">
+		<div class="card_bottomleft">
+		<div class="card_bottomright">
+			
+		</div>	
+		</div>	
+		</div>
+	</div>	
+</body>
+</html>

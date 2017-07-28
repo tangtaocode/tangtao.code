@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="GB2312"?>
+<RiseFile>
+	
+	<!-- filer的映射，常用的filter在此配置映射名称 -->
+	<filterMap>
+		<fileFilter name="officeFileboxfilter" class="net.risesoft.approve.risefile.filter.appfilter.OfficeFilter"></fileFilter>
+	</filterMap>
+	
+	<!-- streamHandle的映射，常用的streamHandleMap在此配置映射名称 -->
+	<streamHandleMap>
+		<streamHandler name="zipStreamHandle" 
+			inputclass="net.risesoft.approve.risefile.handler.sourcehandler.ZipSourceInputStreamHandle"
+			outputclass="net.risesoft.approve.risefile.handler.sourcehandler.ZipSourceOutputStreamHandle">
+		</streamHandler>
+		<streamHandler name="desCipherStreamHandle" 
+			inputclass="net.risesoft.approve.risefile.handler.filterhandler.DesInputStreamHandle"
+			outputclass="net.risesoft.approve.risefile.handler.filterhandler.DesOutStreamHandle">
+		</streamHandler>
+	</streamHandleMap>
+
+
+	<!-- 默认的存储方式，可选的方式有db和fs。 -->
+	<saveMode>fs</saveMode>
+	
+	<!-- 文件存储的路径，可以使用绝对路径，如：windows下使用d:/risefile或者Unix/Linux下使用/var/risefile，或者使用相对路径，如：data/risefile，只要没有/或盘符开头的将被认为是相对路径，相对路径会自动放在WEB-INF目录下。
+	注意，文件路径中\应该替换为/或者\\，另外，不要出现xml文件规定的转义符。-->
+	<!-- 缺省值为 data/risefile ，在实际项目中，一定要根据磁盘空间的规划修改。 D:\risefile-->
+	<!-- <fileRoot>\\172.25.180.251</fileRoot>-->
+	<fileRoot>\\E:</fileRoot>
+	
+	<fileFilters>
+		<!--
+		全局fileFilter
+		<fileFilter   name="makefileboxfilter"></fileFilter>
+		-->
+	</fileFilters>
+	<streamHandles>
+		<!-- 
+		全局streamHandle
+		<streamHandle  name="ziphandle"></streamHandle>
+		-->
+	</streamHandles>
+
+	
+	<app name="workflow">
+	
+		<saveMode>fs</saveMode>
+		
+		<fileRoot>gmoa\risefile\workflow</fileRoot>
+		
+		<!-- 如果isExtends为true就叠加上一级的filter或handle或streamHandle，否则覆盖上级-->
+		<fileFilters isExtends="true">	
+			<fileFilter   name="officeFileboxfilter"></fileFilter>
+		</fileFilters>
+		
+		<streamHandles isExtends="true">
+			<streamHandle  name="zipStreamHandle"></streamHandle>
+			<!--<streamHandle  name="desCipherStreamHandle"></streamHandle>-->
+		</streamHandles>
+		
+	</app>
+	
+	<app name="relative">
+	
+		<saveMode>fs</saveMode>
+		
+		<fileRoot>gmoa\risefile\relative</fileRoot>
+		
+		<!-- 如果isExtends为true就叠加上一级的filter或handle或streamHandle，否则覆盖上级-->
+		<fileFilters isExtends="true">	
+			<fileFilter   name="officeFileboxfilter"></fileFilter>
+		</fileFilters>
+		
+		<streamHandles isExtends="true">
+			<streamHandle  name="zipStreamHandle"></streamHandle>
+			<!--<streamHandle  name="desCipherStreamHandle"></streamHandle>-->
+		</streamHandles>
+		
+	</app>
+
+</RiseFile>

@@ -1,0 +1,171 @@
+/* CSS Document */
+body,td,th,ul,li {
+	margin: 0px;
+	padding: 0px;
+	font-family: 宋体;
+	font-size: 12px;
+}
+
+.table {
+	border: 2px solid #9DC3DA;
+}
+
+.title {
+	font-family: "黑体";
+	font-size: 28px;
+	font-weight: bold;
+	color: #333333;
+	height: 50px;
+	text-align: center;
+	padding-top: 10px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #EAF2F7;
+}
+
+.td_lt {
+	border-left: 1px #9DC3DA solid;
+	border-top: 1px #9DC3DA solid;
+	padding: 5px;
+	line-height: 20px;
+}
+
+.td_right {
+	border-right: 1px #9DC3DA solid;
+}
+
+.td_bottom {
+	border-bottom: 1px #9DC3DA solid;
+}
+
+.input01,.input03 {
+	background-color: #F8FBFC;
+	padding: 5px;
+	border: 1px solid #EAF2F7;
+}
+
+.input03 {
+	text-align: center;
+}
+
+.input02 {
+	border: none;
+	text-align: center;
+}
+
+input.input01:hover,input.input03:hover {
+	padding: 5px;
+	border: 1px solid #9DC3DA;
+}
+
+.text_center {
+	text-align: center;
+}
+
+/*-------------------页签样式开始---------------------*/
+#tabbar {
+	background-image: url(../images/page_back.jpg);
+	background-repeat: repeat-x;
+	height: 32px;
+}
+
+#tabbar ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#tabbar li {
+	float: left;
+}
+
+#tabbar li a {
+	display: block;
+	float: left;
+	height: 40px;
+	position: relative;
+	padding-right: 3px;
+}
+
+#tabbar li.page5 a {
+	background-image: url(../images/pageback5.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -34px;
+	text-align: center;
+	padding-top: 11px;
+	height: 20px;
+	width: 115px;
+}
+
+#tabbar li.page2 a {
+	background-image: url(../images/pageback2.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -34px;
+	text-align: center;
+	padding-top: 11px;
+	height: 20px;
+	width: 76px;
+	
+}
+
+#tabbar li.active a {
+	background-position: 0px 0px;
+	font-weight: bold;
+	color: #E66800;
+}
+
+#tabbar li a:hover {
+	background-position: 0px 0px;
+	text-decoration: none;
+}
+/*-------------------按钮样式开始---------------------*/
+.but1 , .but2 {
+	background-repeat: repeat-x;
+	height: 26px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-weight: bold;
+	color: #333333;
+	letter-spacing: 2px;
+}
+.but1 {
+	background-image: url(../images/but_back1.jpg);
+	border: 1px solid #B9DDF5;
+}
+.but2 {
+	background-image: url(../images/but_back2.jpg);
+	border: 1px solid #FFDC37;
+}
+ input.but1:hover ,  input.but2:hover {
+	border: 1px solid #666666;
+}
+/*--------------------WORD阴影效果页面样式文件-----------------------*/
+
+
+.back_top {
+	background-image: url(../images/word1225/top_back.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+.back_bot {
+	background-image: url(../images/word1225/bot_back.png);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.back_left {
+	background-image: url(../images/word1225/left_back.png);
+	background-repeat: repeat-y;
+	background-position: right;
+	width: 12px;
+}
+.back_right {
+	background-image: url(../images/word1225/right_back.png);
+	background-repeat: repeat-y;
+	background-position: left;
+	width: 12px;
+}
+.back_top_l {
+	background-image: url(../images/word1225/top_back_left.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}

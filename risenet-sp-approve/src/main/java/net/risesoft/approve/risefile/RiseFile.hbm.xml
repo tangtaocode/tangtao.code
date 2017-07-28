@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="net.risesoft.components.risefile.RiseFile"
+		table="RiseNet_File" dynamic-update="true" dynamic-insert="true"
+		lazy="true">
+
+		<id name="fileGUID" type="java.lang.String" length="38">
+			<column name="fileGUID" sql-type="varchar(38)" />
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="filename" type="java.lang.String" update="true" insert="true" column="filename" length="300" />
+		<property name="fileNameExt" type="java.lang.String" update="true" insert="true" column="fileNameExt" length="10" />
+
+		<property name="titile" type="java.lang.String" update="true" insert="true" column="titile" length="300" />
+		<property name="majorName" type="java.lang.String" update="true" insert="true" column="majorName" length="100" />
+		<property name="majorVersion" type="int" update="true" insert="true" column="majorVersion" />
+		<property name="minVersion" type="int" update="true" insert="true" column="minVersion" />
+		<property name="appName" type="java.lang.String" update="true" insert="true" column="appName" length="100" />
+		<property name="fileboxName" type="java.lang.String" update="true" insert="true" column="fileboxName" length="100" />
+		<property name="appInstGUID" type="java.lang.String" update="true" insert="true" column="appInstGUID" length="38" />	
+			
+		<property name="creatorGUID" type="java.lang.String" update="true" insert="true" column="creatorGUID" length="38" />
+		<property name="createDate" type="java.util.Date" update="true" insert="true" column="createDate" />
+		<property name="lastModified" type="java.util.Date" update="true" insert="true" column="lastModified" />
+		<property name="realFullPath" type="java.lang.String" update="true" insert="true" column="realFullPath" length="300" />
+		<property name="contentUniqueCode" type="java.lang.String" update="true" insert="true" column="contentUniqueCode" length="100" />
+
+		<property name="fileType" type="java.lang.String" update="true" insert="true" column="fileType" length="10" />
+		<property name="saveType" type="java.lang.String" update="true" insert="true" column="saveType" length="10" />
+		<property name="preFile" type="java.lang.String" update="true" insert="true" column="preFile" length="10" />
+		<property name="handles" type="java.lang.String" update="true" insert="true" column="handles" length="500" />
+		<property name="content" type="blob" update="true" insert="true" column="content" />
+		<property name="fileSize" type="double" update="true" insert="true" column="fileSize" />
+	</class>
+
+</hibernate-mapping>

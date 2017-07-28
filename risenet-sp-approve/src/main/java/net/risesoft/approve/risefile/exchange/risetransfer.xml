@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+<app name="risetransfer" table="DOCEXCHANGE_DOCATTACHMENT_bak" wheresql="attachment_guid not in (select fileguid from risenet_file)">
+
+	<!-- 应用系统的名称，对应历史数据所在的表 -->
+	<FILEGUID>attachment_guid</FILEGUID><!-- 文件的GUID -->
+	<FILENAME>attachment_name</FILENAME><!-- 文件的名称 -->
+	<FILENAMEEXT>attachment_extension</FILENAMEEXT><!--文件的扩展名-->
+	<FILETYPE>attachment_type</FILETYPE><!--文件的类型-->
+	<TITILE>attachment_title</TITILE><!--文件的标题-->
+	<MAJORNAME>6</MAJORNAME><!-- 文件的大版本名称 -->
+	<MAJORVERSION>6</MAJORVERSION><!-- 文件的大版本号 -->
+	<MINVERSION>1</MINVERSION><!-- 文件的小版本号 -->
+	<FILEBOXNAME>risetransfer_fujian</FILEBOXNAME><!-- 文件框的名称  涉及到移植数据的Tag的fileboxname应该从该字段取值 -->
+	<APPINSTGUID>instance_guid</APPINSTGUID><!-- 附件所属的业务实例的GUID -->
+	<CREATORGUID>CREATER_GUID</CREATORGUID><!-- 创建人GUID -->
+	<DEPTGUID></DEPTGUID><!-- 创建人所在部门GUID -->
+	<CREATEDATE></CREATEDATE><!--  创建日期-->
+	<LASTMODIFIED></LASTMODIFIED><!-- 最后修改日期 -->
+	<SUBAPPNAME>fujian</SUBAPPNAME><!-- 该实例说属于的子系统的名称。 涉及到移植数据的Tag的subappname应该从该字段取值-->
+	<CONTENT>attachment_content</CONTENT><!-- 文件blob数据 -->
+</app>

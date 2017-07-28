@@ -1,0 +1,643 @@
+String.prototype.trim = function() {
+	return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+var NTKO = document.getElementById("riseOffice");
+var isSaveAs = false;
+var wordTitle;
+var RowGUID = "null";
+function checkSaved() {
+	if (0 != 1) {
+		if (!NTKO.ActiveDocument.Saved || wordTitle != document.getElementById("WordTitle").value) {
+			if (confirm('是否保存对文档的修改？')) {
+				saveDocument(0);
+			}
+		}
+	}
+}
+
+function newDocument(type) {
+	try {
+		if (type == "newWord") {
+			NTKO.CreateNew("Word.Document");
+		} else if (type == "newExcel") {
+			NTKO.CreateNew("Excel.Sheet");
+		}
+	} catch (e) {
+		alert('无法新建文件！');
+	}
+	documentInit(0);
+}
+
+function openDocument() {
+	try {
+		NTKO.OpenFromURL("/riseoffice/OfficeTagDownloadServlet?templateGUID={0A080191-FFFF-FFFF-AA37-84D700000013}", false);
+	} catch (e) {
+	}
+	documentInit(0);
+	var riseObj = NTKO;
+	enableReviewBar(true);
+	riseObj.IsShowToolMenu = true;
+	var vw = riseObj.ActiveDocument.ActiveWindow.View;
+	var doc = NTKO.ActiveDocument;
+	var app = doc.Application;
+	var cmdbars = app.CommandBars;
+	doc.TrackRevisions = true;
+	cmdbars("Reviewing").Enabled = true;
+	cmdbars("Reviewing").Visible = true;
+	cmdbars(40).Enabled = true;
+	cmdbars(40).Visible = true;
+	vw.RevisionsView = 0;
+	vw.ShowRevisionsAndComments = false;
+	setFont();
+	showToolbars(false);
+	getBookmarkData('{BFA80B14-0000-0000-444A-9EEE00000061}', '{0A080191-FFFF-FFFF-AA37-84D700000013}', 'huifuzhengwen');
+	fillBookMarkData('huifuzhengwen');
+}
+
+function getBookmarkData(instanceGUID, templateGUID, templateName) {
+	try {
+		var url = "/riseoffice/OfficeTagXMLIslandServlet?instanceGUID=" + instanceGUID + "&templateGUID=" + templateGUID + "&templateName=" + templateName;
+		var obj = document.all(templateName + "_MainXML");
+		if (obj != null) {
+			document.body.removeChild(obj);
+		}
+		var num = 0;
+		obj = document.all(templateName + "_DetailXML" + num);
+		while (obj != null) {
+			document.body.removeChild(obj);
+			num++;
+			obj = document.all(templateName + "_DetailXML" + num);
+		}
+		var XMLData = NTKO.DoWebGet(url);
+		if (XMLData == null || XMLData == '' || XMLData == ' ') {
+			return;
+		}
+		var island = XMLData.split("</XML>");
+		var size = island.length - 1;
+		if (size < 1) {
+			alert('获得书签数据出错，请联系管理员！');
+			return;
+		}
+		for (i = 0; i < size; i++) {
+			var temp = island[i].split("<Data>");
+			var elem = temp[0] + '</XML>';
+			var cont = '<Data>' + temp[1];
+			obj = document.createElement(elem);
+			document.body.appendChild(obj);
+			obj.XMLDocument.loadXML(cont);
+		}
+	} catch (e) {
+	}
+}
+
+function documentInit(right) {
+	wordTitle = document.getElementById("WordTitle").value;
+	SetDocUser();
+	enableFileNewMenu(false);
+	enableFileOpenMenu(true);
+	if (right == 1) {
+		setReadOnly(true);
+		enableFileSaveMenu(false);
+	} else {
+		showRevisions(false);
+		printRevisions(false);
+		if (true) {
+			setMarkModify(true);
+		} else {
+			setMarkModify(false);
+		}
+	}
+	NTKO.ActiveDocument.Saved = true;
+}
+
+function saveDocument(istaohong) {
+	var info;
+	var ntko = NTKO;
+	var docType = ntko.DocType; // 6= WPS Doc；
+	wordTitle = document.getElementById("WordTitle").value;
+	if (wordTitle == "") {
+		alert("正文标题不能为空！");
+		return;
+	}
+	try {
+		if (docType == 6) {
+			info = ntko
+					.SaveToURL(
+							"/riseoffice/OfficeTagUploadServlet?instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}&templateGUID={0A080191-FFFF-FFFF-AA37-84D700000013}&imgID=&step=3&fileName=C:\Users\lzx\Desktop\3.doc&templateName=huifuzhengwen&DocumentRowGUID="
+									+ RowGUID + "&istaohong=" + istaohong + "&documentTitle=" + wordTitle, "currentDoc", "", "huifuzhengwen", 0);
+		} else {
+			info = ntko
+					.SaveAsOtherFormatToURL(
+							5,
+							"/riseoffice/OfficeTagUploadServlet?instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}&templateGUID={0A080191-FFFF-FFFF-AA37-84D700000013}&imgID=&step=3&fileName=C:\Users\lzx\Desktop\3.doc&templateName=huifuzhengwen&DocumentRowGUID="
+									+ RowGUID + "&istaohong=" + istaohong + "&documentTitle=" + wordTitle, "currentDoc", "", "huifuzhengwen", 0);
+		}
+		updateDocumentInfo(info);
+	} catch (e) {
+		alert('无法保存文件！');
+	}
+}
+
+function saveEFileAndTopdf() {
+	wordTopdf();
+}
+
+function wordTopdf() {
+	wordTitle = document.getElementById("WordTitle").value;
+	if (wordTitle == "") {
+		alert("正文标题不能为空！");
+		return;
+	}
+	try {
+		riseOffice.PublishAsPDFToURL("/riseoffice/OfficeWordToPdfServlet", "currentDoc", "instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}", "", "", "", "", "", "");
+	} catch (e) {
+		alert('转换失败！');
+		return;
+	}
+}
+
+function checkToPdf() {
+	$.post('/riseoffice/lh/checkTaohong.jsp?instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}', function(data) {
+		if (data.success) {
+			wordTopdf();
+		} else {
+			alert(data.msg);
+		}
+	});
+}
+function showMenubar(bool) {
+	NTKO.Menubar = bool;
+}
+
+function showStatusbar(bool) {
+	NTKO.Statusbar = bool;
+}
+
+function showToolbars(da) {
+	var s = da.value;
+	if (s == '显示工具栏') {
+		NTKO.Toolbars = true;
+		da.value = '隐藏工具栏';
+	} else {
+		NTKO.Toolbars = false;
+		da.value = '显示工具栏';
+	}
+}
+
+function upComeDocument() {
+	window.showModalDialog("/../../riseoffice/default/upDiagerisefile.jsp?instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}", window, "dialogHeight:300px;dialogWidth:605px;center:1 ");
+}
+function upSaoMiaoDocument() {
+	window.showModalDialog("/../../riseoffice/default/uploadDiagePdffile.jsp?instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}", window, "dialogHeight:300px;dialogWidth:605px;center:1 ");
+}
+function setReviewMode(bool) {
+	NTKO.ActiveDocument.TrackRevisions = bool;
+}
+
+function showRevisions(da) {
+	var s = da.value;
+	if (s == '显示痕迹') {
+		NTKO.ActiveDocument.ShowRevisions = true;
+		printRevisions(true);
+		da.value = '隐藏痕迹';
+	} else {
+		NTKO.ActiveDocument.ShowRevisions = false;
+		printRevisions(false);
+		da.value = '显示痕迹';
+	}
+}
+
+function printRevisions(bool) {
+	NTKO.ActiveDocument.PrintRevisions = bool;
+}
+
+function acceptAllRevisions() {
+	NTKO.ActiveDocument.AcceptAllRevisions();
+}
+
+function rejectAllRevisions() {
+	NTKO.ActiveDocument.RejectAllRevisions();
+}
+
+function setNoCopy() {
+	NTKO.IsNoCopy = true;
+}
+
+function setReadOnly(bool) {
+	var i;
+	try {
+		if (bool) {
+			NTKO.IsShowToolMenu = false;
+		}
+		with (NTKO.ActiveDocument) {
+			if (NTKO.DocType == 1) { // word
+				if ((ProtectionType != -1) && !bool) {
+					Unprotect();
+				}
+				if ((ProtectionType == -1) && bool) {
+					Protect(1, true, "");
+				}
+			} else if (NTKO.DocType == 2) { // excel
+				for (i = 1; i <= Application.Sheets.Count; i++) {
+					if (bool) {
+						Application.Sheets(i).Protect("", true, true, true);
+					} else {
+						Application.Sheets(i).Unprotect("");
+					}
+				}
+				if (bool) {
+					Application.ActiveWorkbook.Protect("", true);
+				} else {
+					Application.ActiveWorkbook.Unprotect("");
+				}
+			}
+		}
+	} catch (err) {
+		alert("文档读写状态错误！");
+	} finally {
+	}
+}
+
+function enableReviewBar(bool) {
+	try {
+		NTKO.ActiveDocument.CommandBars("Reviewing").Enabled = bool;
+		NTKO.ActiveDocument.CommandBars("Track Changes").Enabled = bool;
+		NTKO.IsShowToolMenu = bool;
+	} catch (e) {
+		var doc = NTKO.ActiveDocument;
+		var app = doc.Application;
+		var doctype = NTKO.DocType;
+		if (6 != doctype) {
+			return;
+		}
+		var cmdbars = app.CommandBars;
+		NTKO.IsShowToolMenu = !bool;
+		doc.TrackRevisions = bool;
+		cmdbars("Reviewing").Enabled = !bool;
+		cmdbars("Reviewing").Visible = !bool;
+		cmdbars(40).Enabled = !bool;
+		cmdbars(40).Visible = !bool;
+	}
+}
+
+function setMarkModify(bool) {
+	setReviewMode(bool);
+	enableReviewBar(!bool);
+}
+
+function showToolMenu(bool) {
+	NTKO.IsShowToolMenu = bool;
+}
+
+function enableFileNewMenu(bool) {
+	NTKO.EnableFileCommand(0) = bool;
+}
+
+function enableFileOpenMenu(bool) {
+	NTKO.EnableFileCommand(1) = bool;
+}
+
+function enableFileCloseMenu(bool) {
+	NTKO.EnableFileCommand(2) = bool;
+}
+
+function enableFileSaveMenu(bool) {
+	NTKO.EnableFileCommand(3) = bool;
+}
+
+function enableFileSaveAsMenu(bool) {
+	NTKO.EnableFileCommand(4) = bool;
+}
+
+function enableFilePrintMenu(bool) {
+	NTKO.EnableFileCommand(5) = bool;
+}
+
+function enableFilePrintPreviewMenu(bool) {
+	NTKO.EnableFileCommand(6) = bool;
+}
+
+function updateDocumentInfo(info) {
+	var ok;
+	var guid;
+	var alt;
+	var ext;
+	var file;
+	if (info == "" || info.length < 40 || info.indexOf(";") == -1) {
+		alert("保存文件错误！");
+		return;
+	} else {
+		var arr = info.split(";");
+		if (arr.length != 5) {
+			alert("保存文件错误！");
+			return;
+		}
+		ok = arr[0];
+		file = arr[1];
+		guid = arr[2];
+		ext = arr[3];
+		alt = arr[4];
+	}
+	try {
+		if (ok == "OK") {
+			alert("保存文件成功！");
+			NTKO.ActiveDocument.Saved = true;
+		} else {
+			alert("保存文件错误，请联系管理员！");
+			return;
+		}
+		opener.document.getElementById('').tooltip = alt;
+		opener.resetImg('', ext);
+		opener.document.getElementById('').oncontextmenu = '';
+		opener.document.getElementById('docTitle').innerText = wordTitle;
+		opener.url = '/riseoffice/OfficeTagServlet?imgID=&instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}&readonly=false&markmodify=true&stamp=&TAG_SYNCHRONIZER_TOKEN={BFA83801-FFFF-FFFF-BC39-D4A100000003}&step=3&DocumentRowGUID='
+				+ guid + '&fileName=' + file + '&templateGUID={0A080191-FFFF-FFFF-AA37-84D700000013}&templateName=huifuzhengwen';
+	} catch (e) {
+	}
+}
+
+function fillBookMarkData(templateName) {
+	try {
+		var riseOfficeObj = NTKO.ActiveDocument;
+		var DXMLcount = 0;
+		var obj = document.all(templateName + "_MainXML");
+		if (obj != null) {
+			rs_bookmark = obj.recordset;
+			var count = rs_bookmark.Fields.Count;
+			if (count > 1) {
+				for (i = 0; i < count - 1; i++) {
+					var bkmkName = rs_bookmark.fields(i).name;
+					var bkmkValue = rs_bookmark.fields(i).value;
+					var bkmkObj = riseOfficeObj.BookMarks(bkmkName);
+					if (!bkmkObj) {
+						alert("模板中不存在名称为：bkmkName 的书签！");
+					} else {
+						var saverange = bkmkObj.Range;
+						saverange.Text = bkmkValue;
+						riseOfficeObj.Bookmarks.Add(bkmkName, saverange);
+					}
+				}
+			}
+		}
+		obj = document.all(templateName + "_DetailXML" + DXMLcount);
+		while (obj != null) {
+			rs_bookmark = obj.recordset;
+			rs_bookmark.moveFirst();
+			count = rs_bookmark.Fields.Count;
+			if (count > 0) {
+				var markname = rs_bookmark.Fields(0).name;
+				var point = markname.indexOf("__");
+				var markrange = markname.substring(2, point);
+				for (j = 0; j < rs_bookmark.recordcount; j++) {
+					riseOfficeObj.bookmarks("DT" + markrange).Range.Tables(1).rows(j + 2).Select();
+					riseOfficeObj.Application.Selection.InsertRowsBelow();
+					for (k = 0; k < count - 1; k++) {
+						markname = rs_bookmark.Fields(k).name;
+						markvalue = rs_bookmark.Fields(k).value;
+						riseOfficeObj.bookmarks("DT" + markrange).Range.bookmarks("DR" + markrange).Range.bookmarks(markname).Select();
+						ColumnIndex = riseOfficeObj.Application.Selection.Information(17);
+						riseOfficeObj.bookmarks("DT" + markrange).Range.Tables(1).rows(j + 3).cells(ColumnIndex).Select();
+						riseOfficeObj.Application.Selection.text = markvalue;
+					}
+					rs_bookmark.moveNext();
+				}
+				riseOfficeObj.bookmarks("DT" + markrange).Range.Tables(1).rows(2).Delete();
+				riseOfficeObj.Application.Selection.HomeKey(6, 0);
+			}
+			DXMLcount++;
+			obj = document.all(templateName + "_DetailXML" + DXMLcount);
+		}
+	} catch (e) {
+		alert(e);
+	}
+}
+
+function HideTaoHong(bkmk, bool) {
+	var bkmks = NTKO.ActiveDocument.BookMarks;
+	if (bkmks.Exists(bkmk)) {
+		var bkmkObj = bkmks.Item(bkmk);
+		var range = bkmkObj.Range;
+		var words = range.Characters;
+		var size = words.Count;
+		try {
+			var shaperange = range.ShapeRange;
+		} catch (err) {
+		}
+		if (bool) {
+			for (i = 1; i <= size; i++) {
+				if (words(i).Font.Color == 16777215 || words(i).Font.Color == 16777214) {
+					return;
+				}
+				if (words(i).Font.Color == 255) {
+					words(i).Font.Color = 16777215;
+				} else {
+					words(i).Font.Color = 16777214;
+				}
+			}
+		} else {
+			for (i = 1; i <= size; i++) {
+				if (words(i).Font.Color == 255 || words(i).Font.Color == 0) {
+					return;
+				}
+				if (words(i).Font.Color == 16777215) {
+					words(i).Font.Color = 255;
+				} else {
+					words(i).Font.Color = 0;
+				}
+			}
+		}
+		if (shaperange.Count > 0) {
+			shaperange.Visible = !bool;
+		}
+	}
+}
+
+function MyDoHandSign() {
+	try {
+		NTKO.DoHandSign2("乐知", "{BFA80B14-0000-0000-444A-9EEE00000061}", 0, 0, 0, 100);
+	} catch (e) {
+		alert(e);
+	}
+}
+
+function MyCheckSign() {
+	var result = NTKO.DoCheckSign(true, "{BFA80B14-0000-0000-444A-9EEE00000061}");
+	alert(trimResult(result));
+}
+
+function trimResult(info) {
+	var Rstr = "";
+	Rstr = info.replace(/#|\s使用者:手写签名/g, '');
+	Rstr = Rstr.replace(/印章:/g, '操作:');
+	Rstr = Rstr.replace(/使用者/g, '印章隶属');
+	return (Rstr);
+}
+
+function MyAddSignFromURL(file) {
+	NTKO.AddSignFromURL("乐知", "/commons/stamp/" + file + ".esp", 0, 0, "{BFA80B14-0000-0000-444A-9EEE00000061}", 1, 100, 0);
+}
+
+function SetDocUser() {
+	with (NTKO.ActiveDocument.Application) {
+		UserName = "乐知";
+	}
+}
+
+function SaveAsEFile() {
+	try {
+		executeAction(100);
+		NTKO.ActiveDocument.Saved = true;
+	} catch (e) {
+		alert('保存电子稿失败,请重试!');
+	}
+}
+function executeAction(saveflag) {
+	try {
+		setMarkModify(false);
+		var BookMarkName = "RiseOffice_body";
+		var bmObj = NTKO.ActiveDocument.BookMarks(BookMarkName);
+		var curSel = NTKO.ActiveDocument.Application.Selection;
+		try {
+			NTKO.ActiveDocument.Shapes(1).Select();
+			curSel.ShapeRange.Delete();
+		} catch (e) {
+		}
+		var saverange = bmObj.Range;
+		bmObj.Delete();
+		saverange.Copy();
+		curSel.WholeStory();
+		curSel.Delete();
+		curSel.HomeKey(6, 0);
+		NTKO.AddTemplateFromURL("/riseoffice/OfficeTagDownloadServlet?templateGUID={0A080191-FFFF-FFFF-AA37-84D700000013}");
+		saverange.Paste();
+		saveDocument(saveflag);
+		if (true) {
+			setMarkModify(true);
+		} else {
+			setMarkModify(false);
+		}
+	} catch (err) {
+		if (true) {
+			setMarkModify(true);
+		} else {
+			setMarkModify(false);
+		}
+	}
+}
+
+function UndoTaoHong() {
+	var BookMarkName = "RiseOffice_body";
+	if (!NTKO.ActiveDocument.BookMarks.Exists(BookMarkName)) {
+		alert("没有发现套红模板或者模板中不存在RiseOffice_body书签。");
+		return;
+	}
+	executeAction(3);
+}
+
+function DoTaoHong(guid) {
+	try {
+		setMarkModify(false);
+		var BookMarkName = "RiseOffice_body";
+		var bkCount = NTKO.ActiveDocument.BookMarks.Count;
+		var curSel = NTKO.ActiveDocument.Application.Selection;
+		var saverange;
+		var bmObj;
+		if (bkCount != 0 && NTKO.ActiveDocument.BookMarks.Exists(BookMarkName)) {
+			alert('当前模板已套红,请先撤销红头!');
+			return false;
+			bmObj = NTKO.ActiveDocument.BookMarks(BookMarkName);
+			saverange = bmObj.Range;
+			saverange.Copy();
+			curSel.WholeStory();
+			curSel.Delete();
+		} else {
+			curSel.WholeStory();
+			curSel.Cut();
+		}
+		NTKO.AddTemplateFromURL("/riseoffice/OfficeTagDownloadServlet?templateGUID=" + guid);
+		var ex = NTKO.ActiveDocument.BookMarks.Exists("RiseOffice_bottom");
+		var num = 0;
+		if (ex) {
+			bmObj = NTKO.ActiveDocument.BookMarks("RiseOffice_bottom");
+			num = bmObj.End - bmObj.Start + 1;
+		}
+		if (!NTKO.ActiveDocument.BookMarks.Exists(BookMarkName)) {
+			alert("套红模板中不存在RiseOffice_body书签,请联系管理员。");
+		} else {
+			bmObj = NTKO.ActiveDocument.BookMarks(BookMarkName);
+			saverange = bmObj.Range;
+			saverange.Paste();
+			NTKO.ActiveDocument.Bookmarks.Add(BookMarkName, saverange);
+			if (ex) {
+				curSel.MoveLeft(1, num, 1);
+				NTKO.ActiveDocument.Bookmarks.Add("RiseOffice_bottom", curSel.Range);
+			}
+		}
+		curSel.HomeKey(6, 0);
+		if (true) {
+			setMarkModify(true);
+		} else {
+			setMarkModify(false);
+		}
+		setFont();
+	} catch (err) {
+		if (true) {
+			setMarkModify(true);
+		} else {
+			setMarkModify(false);
+		}
+	}
+}
+
+function openTaohong(instanceGUID) {
+	alert('请填写并保存文件基本信息表！');
+	return;
+	var rval = window.showModalDialog('http://localhost:8080/riseoffice/default/taohong.jsp?instanceGUID=' + instanceGUID + "&templateName=tongyonghuiyitongzhi", 'null',
+			'dialogHeight:400px;dialogWidth:500px;center:1');
+	if (!rval)
+		return;
+	var taohongTip = DoTaoHong(rval.guid);
+	if (taohongTip == false)
+		return;
+	getBookmarkData('{BFA80B14-0000-0000-444A-9EEE00000061}', rval.guid, rval.name);
+	fillBookMarkData(rval.name);
+	saveDocument(1);
+}
+function undo(t) {
+	$.post('/riseoffice/lh/undo.jsp?instanceGUID={BFA80B14-0000-0000-444A-9EEE00000061}&documentRowGUID=null&type=' + t, function(data) {
+		if (data.success) {
+			alert(data.msg);
+		} else {
+			alert(data.msg);
+		}
+	});
+}
+function initCustomMenus() {
+	try {
+		var riseObj = NTKO;
+	} catch (er) {
+		alert(er.description);
+	}
+}
+
+function AddMyMenuItems() {
+	try {
+		var riseObj = NTKO;
+		riseObj.AddCustomMenuItem('显示修订', false, false, 1);
+		riseObj.AddCustomMenuItem('隐藏修订', false, false, 2);
+		riseObj.AddCustomMenuItem('');
+		riseObj.AddCustomMenuItem('显示眉首', false, false, 3);
+		riseObj.AddCustomMenuItem('隐藏眉首', false, false, 4);
+		riseObj.AddCustomMenuItem('');
+		riseObj.AddCustomMenuItem('显示版记', false, false, 5);
+		riseObj.AddCustomMenuItem('隐藏版记', false, false, 6);
+		riseObj.AddCustomMenuItem('');
+		riseObj.AddCustomMenuItem('手写签名', false, false, 7);
+		riseObj.AddCustomMenuItem('');
+		riseObj.AddCustomMenuItem('签章验证', false, false, 8);
+	} catch (err) {
+		alert("不能创建新对象：" + err.number + ":" + err.description);
+	} finally {
+	}
+}

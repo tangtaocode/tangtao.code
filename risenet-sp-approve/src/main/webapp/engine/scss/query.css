@@ -1,0 +1,66 @@
+A:active 
+{
+  COLOR: #FF0000; text-decoration: none;
+}
+A:link 
+{
+  COLOR: #0000EF; TEXT-DECORATION: none
+}
+A:visited 
+{
+  COLOR: #0000EF; TEXT-DECORATION: none
+}
+A:hover 
+{
+  COLOR: #FF0000; TEXT-DECORATION: none
+}
+.selectedRow{background-color:#AAAAAA}
+
+.queryTitle
+{
+  height: 27;
+  valign: middle;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.rsTitle
+{
+  height: 23;
+  valign: middle;
+  font-size: 13px;
+  background-image: url(../simg/tabtitlebg.gif);
+}
+
+.rs0
+{
+  background-color: #F4F4F4;
+  color: #000000;
+  font-size:12px;
+  letter-spacing: 1px;
+  padding-left: 2px;
+}
+
+.rs1,.rs2
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size:12px;
+  letter-spacing: 1px;
+  padding-left: 2px;
+}
+
+.queryBtn
+{
+  font-size: 12px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: #909090;
+  border-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  padding-left: 3px;
+  padding-top: 1px;
+}

@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0
+}
+body {
+	background-color: #F0f7ff;
+}
+.header {
+	background: url("../images/tree011.jpg") repeat-x;
+	height: 29px;
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 28px;
+	text-indent: 20px;
+	letter-spacing: 1px;
+	margin-bottom: 3px;
+}
+#accordion {
+	margin: 0;
+	border-top: none
+}
+.ddboder{
+	border:1px;
+	background:#60C4FF;
+	margin-top:-8px;
+}
+.accordion {
+	font: 12px Verdana, Arial;
+}
+
+.accordion dt {
+	padding-top: 6px;
+	padding-left: 5px;
+	height: 29px;
+	font-weight: bold;
+	cursor: pointer;
+	background-image: url(../images/tree02.jpg);
+	background-repeat: no-repeat;
+	color: #000;
+}
+
+.accordion dt:hover {
+	
+}
+
+.accordion .open {
+	background-image: url(../images/tree022.jpg)
+}
+
+.accordion dd {
+	overflow: hidden;
+	background: #fff;
+}
+
+.accordion span {
+	display: block;
+	border-top: none;
+}
+
+.accordion ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-left:2px;
+	margin-right:2px;
+}
+   
+.accordion li {
+	background-color: #D0E7FF;
+	background-image: url("../images/icon_tree.jpg");
+	background-position: 20px 10px;
+	background-repeat: no-repeat;
+	height: 26px;
+	letter-spacing: 1px;
+	line-height: 22px;
+	margin-bottom: 3px;
+	text-indent: 35px;
+}
+
+.accordion li:hover {
+	background-color: #F7FBFF;
+}
+.accordion li.active {
+	background-color: #F7FBFF;
+}
+
+#li_help{
+	padding:0px;
+	margin:0px;
+	height: 29px;
+	font-weight: bold;
+	cursor: pointer;
+	background-image: url(../images/tree02.jpg);
+	background-repeat: no-repeat;
+	color: #000;
+}

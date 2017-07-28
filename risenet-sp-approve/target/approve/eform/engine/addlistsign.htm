@@ -1,0 +1,41 @@
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<title>新增字典</title>
+<style>
+body td{font-size:13px}
+</style>
+<script>
+function doAdd()
+{
+    var v = document.getElementById('content').value.replace(/(^\s*)|(\s*$)/g, "");
+    if(v == "")
+    {
+        alert("请输入内容");
+        return;
+    }
+	  opener.setValue(v, document.getElementById("lc").checked?1:0)
+	  self.close();
+}
+self.focus();
+</script>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+	<tr>
+	  <td>1、辅助输入内容:</td>
+	<tr>  
+	  <td><input type="text" id="content" size="37"></td>
+	</tr>
+	<tr>
+	  <td height="10"></td>
+	</tr>
+	<tr>  
+	  <td>2、<input type="checkbox" id="lc">只用于本流程</td>
+	</tr>
+	<tr>  
+	  <td align="center" height="40"><input type="button" value="确 定" onclick="doAdd()"></td>
+	</tr>
+</table>
+</body>
+</html>

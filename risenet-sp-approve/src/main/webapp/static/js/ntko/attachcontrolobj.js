@@ -1,0 +1,14 @@
+﻿document.write(' <object id="NTKOATTACH_OCX" classid="clsid:E8FD8E76-203A-48ed-9C39-481479080C34" codebase="http://www.ntko.com/control/attachcontrol/ntkofman.cab#version=5,0,1,0" width="100%" height="200" > ');
+document.write(' <param name="IsUseUTF8URL" value="-1"> ');
+document.write(' <param name="IsUseUTF8Data" value="-1"> ');
+document.write(' <param name="ViewType" value="3"> ');
+document.write(' <param name="IsPermitAddDelFiles" value="-1"> ');
+document.write(' <param name="DelFileField" value="DELATTNAME"> ');
+document.write(' <param name="IsConfirmSaveModified" value="0"> ');
+document.write(' <param name="ScannerPicFileName" value="NTKO扫描文件"><!--默认扫描仪添加文件的文件名前缀 --> ');
+document.write(' <param name="ScannerPicType" value="1">   <!--默认扫描仪添加文件的类型  0,TIFF, 1:JPEG,  2:GIF, 3:BMP --> ');
+document.write(' <param name="IsAllowSelScannerPicType" value="-1">  <!--是否允许选择文件类型 --> ');
+document.write(' <param name="IsCloseScannerUI" value="-1"> <!--扫描完毕之后是否关闭扫描仪--> ');
+document.write(' <param name="IsSelScannerIfOnlyOne" value="0"> <!--如果只有一个扫描仪，是否提示选择。--> ');
+document.write(' <SPAN STYLE="color:red">不能装载附件管理控件。请在检查浏览器的选项中检查浏览器的安全设置。</SPAN> ');
+document.write(' </object> ');

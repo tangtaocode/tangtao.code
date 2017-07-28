@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>承元协同办公系统标准版</title>
+<link href="../innet/images/chysoft.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="xians_width">
+<!--头部页面开始-->
+<table class=top id=top cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <tr>
+    <td>
+      <table class=topback1 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <tr>
+          <tr><td>&nbsp;</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!--快捷操作方式 模块 开始-->
+<!--版权栏目 开始-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <TR style="display:none" id="r1">
+    <TD class=min_font_top height=40 id="redTitle"></TD></TR>
+  <TR style="display:none" id="r2">
+    <TD>
+      <HR class=min_font_top width="98%" noShade color="#FF0000" SIZE=2>
+    </TD></TR>
+  <tr>
+    <td class="xians_title"><span id="title"></span></td>
+  </tr>
+</table>
+<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="xians_time">发布时间：XXXX年XX月XX日&nbsp;&nbsp;&nbsp;信息来源：<span id="source"></span>&nbsp;&nbsp;&nbsp;阅读次数：XX</td>
+  </tr>
+  <tr>
+    <td class="xians_text" height=220 id=content valign="top"></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="copy"><script src="../common/inc/footjs.jsp"></script></td>
+  </tr>
+</table>
+</div>
+</body>
+<script>
+var o = opener;
+if(o.document.getElementById("ReadTitle_2").value != "")
+{
+    document.getElementById("r1").style.display = "";
+    document.getElementById("r2").style.display = "";
+    document.getElementById("redTitle").innerHTML = o.document.getElementById("ReadTitle_2").value;
+}
+document.getElementById("title").innerHTML = o.document.getElementById("Title_1").value;
+document.title = o.document.getElementById("Title_1").value;
+document.getElementById("source").innerHTML = o.document.getElementById("Source_5").value;
+document.getElementById("content").innerHTML = opener.window.CKEDITOR.instances.txt_c_465_902.getData();
+self.focus();
+</script>
+</html>

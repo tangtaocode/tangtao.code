@@ -1,0 +1,303 @@
+/* CSS Document */
+body{
+	padding:0 0 0 0; margin:0 0 0 0;
+		FONT-FAMILY: 宋体; 
+	SCROLLBAR-FACE-COLOR: #58A9DB;
+	SCROLLBAR-HIGHLIGHT-COLOR: #e4eaf1;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	SCROLLBAR-TRACK-COLOR: #AFCFE3;
+	SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+}
+
+body, input, select, td, textarea,th{
+	font-family: 宋体;
+	color: #000000;
+	vertical-align: center;
+	font-size: 10pt;
+}
+
+.application{
+	font-size: 10pt;
+    color: #000000;
+}
+.copyright{
+	font-size: 10pt;
+    font-color: #ffffff;
+	text-align: center;
+}
+
+.swin_title{
+	font-size: 9pt;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+.office {
+	font-size: 10pt;
+    color: #000000;
+    background-color: #ffffff;
+	text-align: center;
+}
+A.a1:link {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+}
+A.a1:visited {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+}
+A.a1:hover {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+  background-color: #FF0000;
+}
+
+
+A.a06:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.a06:visited {
+	COLOR: black;	font-size: 10pt; TEXT-DECORATION: none
+}
+A.a06:hover {
+	COLOR: #ff0000; font-size: 10pt;TEXT-DECORATION: none
+}
+A.more:link {
+	font-size: 10pt;
+	COLOR: #398B39; TEXT-DECORATION: none;
+}
+A.more:visited {
+
+	COLOR: #398B39; TEXT-DECORATION: none;
+}
+A.more:hover {
+	COLOR: #398B39; TEXT-DECORATION: underline;
+
+
+}
+A.photo:link {
+	COLOR: #930B0B; font-size:12px;TEXT-DECORATION: none
+}
+A.photo:visited {
+	COLOR:#930B0B; font-size:12px;TEXT-DECORATION: none
+}
+A.photo:hover {
+	COLOR: #000000; font-size:12px;TEXT-DECORATION: none
+}
+
+A.leadyap:link {
+	COLOR: #ff0000; font-size:10pt;TEXT-DECORATION: underline
+}
+A.leadyap:visited {
+	COLOR: #ff0000; font-size:10pt;TEXT-DECORATION: underline
+}
+A.leadyap:hover {
+	COLOR: black; font-size:10pt;TEXT-DECORATION: underline
+}
+
+A:link {
+	COLOR:#000000; TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none;
+
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none;
+}
+.n04 {
+	FONT-SIZE: 10pt; COLOR: #c0c0c0
+}
+TD {
+	FONT-SIZE: 10pt; LINE-HEIGHT: 150%
+}
+.xlp {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 150%
+}
+.xlp_title{font-size:18px;COLOR: #000000; LINE-HEIGHT: 150%}
+.f7 {
+	FONT-SIZE: 7pt
+}
+td.listleadact{
+  font-size: 10pt;
+  color:#000000;
+}
+.date{font-size:10pt;color:#c0c0c0}
+TR.xlp_tr
+{
+   background-color:#fff7e5;
+}
+TR.xlp_trclick
+{
+   background-color:#c3d6e6;
+}
+INPUT.delbttn
+{
+    BACKGROUND: #eff7ff;
+    BORDER-BOTTOM: #104a7b 1pt solid;
+    BORDER-LEFT: #afc4d5 1pt solid;
+    BORDER-RIGHT: #104a7b 1pt solid;
+    BORDER-TOP: #afc4d5 1pt solid;
+    COLOR: #000066;
+    CURSOR: hand;
+    FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif;
+    FONT-SIZE: 9pt;
+    HEIGHT: 19pt;
+    TEXT-DECORATION: none
+}
+
+.taskremind{font-size:15px}
+.taskitem{font-size:14px}
+.taskmemo{font-size:13px;line-height:130%}
+
+/*在主导航条加菜单  */
+.divx {
+	POSITION: relative;
+}
+
+.clsCursor {
+	CURSOR: hand
+}
+.appline{
+  color: #FEDBC5;
+}
+.bottomitem{
+  color: #FFFFFF;
+}
+.treehead{
+  background-color: #004B75;
+  width:100%;
+  height:24px;
+  text-align: right;
+}
+.leftframeborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #004B75 3px;
+	border-left: solid #008FDE 3px;
+	border-bottom: solid #008FDE 1px;
+}
+.rightframeborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 3px;
+}
+.topbg{
+	background-color:#C1E4F8;
+}
+.topline{
+	background-color:#C1E4F8;
+}
+.swin_bgcolor{
+	background-color:#008FDE;
+}
+.banner_bgcolor{
+	background-color:#80CBE4;	
+}
+table.risenet thead tr {
+  background-color: #FEEADF;
+  font-size: 10pt;
+
+}
+table.risenet tr.even {
+  background-color: #fff;
+
+}
+table.risenet {
+    width:100%;
+	border: 1px solid #B8DFFC;
+	border-collapse: collapse;
+	text-align: center;
+	vertical-align:middle;
+	height:30;
+    font-size: 10pt;
+	margin: 0px 0 0px 0;
+}
+table.risenet td,table.risenet th{
+
+	border: 1px solid #B8DFFC;
+	padding: 2px 4px 2px 4px;
+	margin: -10px 0 10px 0;
+    font-size: 10pt;
+
+}
+table.risenet td.riseblue {
+	background-color: #F2F9FF;
+	color: black;
+	height:30px;
+}
+.title{
+  background-color: #F2F9FF;
+  font-size: 10pt;
+}
+
+/*开始：门户相关的CSS*/
+.popupmenuborder{
+    BORDER-bottom: 3pt solid #004B75 ;
+    BORDER-top: 3pt solid #004B75 ;	
+    BORDER-right: 3pt solid #004B75 ;	
+    BORDER-left: 3pt solid #004B75 ;
+    color: #004B75;
+}
+
+.popupmenu{
+    BORDER-bottom: 0pt solid #004B75 ;
+    BORDER-top: 0pt solid #004B75 ;	
+    BORDER-right: 0pt solid #004B75 ;	
+    BORDER-left: 0pt solid #004B75 ; 
+}
+A.tabmenu:link {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+}
+A.tabmenu:visited {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+}
+A.tabmenu:hover {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+  	background-color: #00529B;
+}
+.tabmenu{
+	line-height:25px;
+	width: 70pt;
+    BORDER-bottom: 0pt solid #004B75 ;
+    BORDER-top: 0pt solid #004B75 ;	
+    BORDER-right: 0pt solid #004B75 ;	
+    BORDER-left: 0pt solid #004B75 ;
+	text-align: center;
+	padding:1pt 1pt;
+}
+A.popMenuLink:link {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #00529B; TEXT-DECORATION: none;
+}
+A.popMenuLink:visited {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #00529B; TEXT-DECORATION: none;
+}
+A.popMenuLink:hover {
+	font-family: 宋体;
+	font-size: 10pt;
+	COLOR: #ffffff; TEXT-DECORATION: none;
+  	background-color: #80CBE4; 	
+}
+.popMenuLink{
+	line-height:35px;
+	width: 50pt;
+    BORDER-bottom: 0pt solid #004B75 ;
+    BORDER-top: 0pt solid #004B75 ;	
+    BORDER-right: 0pt solid #004B75 ;	
+    BORDER-left: 0pt solid #004B75 ;
+	text-align: center;
+}
+
+/*结束：门户相关的CSS*/

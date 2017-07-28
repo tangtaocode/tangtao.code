@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:util="http://www.springframework.org/schema/util" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+	http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd 
+	http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd">
+
+	<context:property-placeholder ignore-unresolvable="true" location="classpath:/properties/application.properties" />
+
+	<jee:jndi-lookup id="y9PublicDS" jndi-name="y9PublicDS" />
+
+	<context:component-scan base-package="net.risesoft.fileflow.service,net.risesoft.tenant.service">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController" />
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+	
+	<!-- Jpa Entity Manager 配置 -->
+	<bean id="approveEntityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="y9PublicDS" />
+		<property name="packagesToScan" value="net.risesoft.fileflow.entity.jpa,net.risesoft.tenant.entity" />
+		<property name="jpaVendorAdapter" ref="approveHibernateJpaVendorAdapter" />
+		<property name="jpaProperties">
+			<map>
+				<entry key="hibernate.dialect" value="${hibernate.dialect.oracle}" />
+				<entry key="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.DefaultNamingStrategy" />
+				<!-- <entry key="hibernate.default_schema" value="${jdbc.schema}"/> -->
+				<entry key="hibernate.hbm2ddl.auto" value="update" /> 
+				<entry key="hibernate.show_sql" value="true" />
+				<entry key="hibernate.jdbc.batch_size" value="100" />
+
+				<entry key="hibernate.cache.use_second_level_cache" value="false" />
+				<entry key="hibernate.cache.use_query_cache" value="false" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="approveHibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+
+	<!-- Jpa 事务配置 -->
+	<bean id="approveTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="approveEntityManagerFactory" />
+	</bean>
+
+	<!-- Spring Data Jpa配置 -->
+	<jpa:repositories base-package="net.risesoft.fileflow.repository.jpa,net.risesoft.tenant.repository" transaction-manager-ref="approveTransactionManager" entity-manager-factory-ref="approveEntityManagerFactory" />
+
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="approveTransactionManager" proxy-target-class="true" mode="aspectj" />
+</beans>

@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: C39P48DlTt;
+    src: url(/riseoffice/default/CPDLTT0.eot);
+}
+/**
+.Code39Class{
+   width:175px;
+   height:45px;
+   font-family:"C39HrP24DlTt";
+   font-size:40;
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none;
+}
+**/
+@font-face {
+    font-family: C39HrP24DlTt;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(/riseoffice/default/CHRPDLT0.eot);
+}
+
+.inputClassSN{
+   width:125px;
+   height:18px;
+   font-weight:bold;
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.code39Img{
+   width:170px;
+   height:45px;
+}
+.inputClass{
+   width:398px;
+   height:16px;
+   font-size:12px;
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.textareaClass{
+   width:378px;
+   font-size:12px;
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: visible; BORDER-LEFT: medium none; BORDER-BOTTOM: solid 1px;
+   max-width:350px;
+}
+.STYLE1 {
+	font-family: "ËÎÌו";
+	font-size:18px;
+	font-weight:bold;
+    color:#000000;
+}
+.STYLE4 {
+	font-size: 12px;
+	font-weight:200
+}
+div {
+	word-wrap: break-word; word-break: break-all;
+}
+.table1 {
+	width:556px;
+	height:120px;
+}
+.table2 {
+	width:520px;	
+}
+.th1 {
+	width:120px;
+}
+.td1 {
+	height:18px;
+}
+.displayInput {	
+   width: 85px;
+   font-size:12px;
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: visible; BORDER-LEFT: medium none; BORDER-BOTTOM: solid 1px;
+}
+.tab_lt{ BORDER-LEFT: black 1px solid;BORDER-TOP: black 1px solid;font-size:12pt;}
+.td_rb{text-align:center;BORDER-RIGHT: black 1px solid;BORDER-BOTTOM: black 1px solid;height:35px;}
+.td_rb1{BORDER-RIGHT: black 1px solid;BORDER-BOTTOM: black 1px solid;height:35px;}
+.inputClass1{
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.textareaClass1{
+	font-size:12pt;
+   BORDER-RIGHT: medium none; BORDER-TOP: medium none; OVERFLOW: visible; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none;
+   width:523px;
+}
+.tab_remark{
+   FONT-SIZE: 12pt; BORDER-LEFT: black 1px solid;
+}

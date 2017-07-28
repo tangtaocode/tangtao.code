@@ -1,0 +1,172 @@
+body{
+	background-color: #ffffff; padding:0 0 0 0;
+	SCROLLBAR-FACE-COLOR: #58A9DB;
+	SCROLLBAR-HIGHLIGHT-COLOR: #e4eaf1;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	SCROLLBAR-TRACK-COLOR: #AFCFE3;
+	SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+}
+
+body, input, select, td, textarea,th{
+	font-family: 宋体;
+	color: #000000;
+	font-size: 10pt;
+	vertical-align: center;
+}
+
+A:link {
+	COLOR:#000000; TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none;
+
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION: none;
+        background-color:#DAF1F9;
+}
+
+A.bar:link
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.bar:visited
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.bar:active
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.bar:hover
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+    background-color:#DAF1F9;
+}
+
+A.filelist:visited
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.filelist:active
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.filelist:hover
+{
+    color:#000000;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+    background-color:#DAF1F9;
+}
+
+
+
+
+
+INPUT.retrieve
+{
+      border:#B8DFFC solid; font-size:9pt; background-color:#FFFFFF
+; border-width: 0px 0px 1px
+}
+font.Title
+{
+    font-size: 12px;COLOR:#040404;  WIDTH: 100%;
+}
+TABLE.List TD {
+  border-BOTTOM: 1px solid #B8DFFC;
+  border-left:1px solid #B8DFFC;
+  font-size: 10pt;
+  color:#040404;
+  vertical-align:middle;
+}
+
+TABLE.ListSort TD {
+  border: 0px solid #B8DFFC;
+  color:#040404;
+}
+
+
+TR.ListTitle
+{
+   background-color:#F2F9FF;
+   color:#040404;
+   height:30px;
+}
+TR.ListData
+{
+   background-color:#ffffff;
+   height:30px;
+   font-family: "宋体"; font-size: 12px; color: #666666;
+}
+TR.even{
+	background-color: #FEEDE3;
+}
+
+TR.ListDataClick
+{
+   background-color:#99CCFF;
+}
+Input.delbttn {
+	BACKGROUND: #ffffff; BORDER-BOTTOM: #B8DFFC 1px solid; BORDER-LEFT: #B8DFFC 1px solid; BORDER-RIGHT: #B8DFFC 1px solid; BORDER-TOP: #B8DFFC 1px solid; COLOR: #000000; CURSOR: hand; FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif; FONT-SIZE: 9pt; HEIGHT: 19px; TEXT-DECORATION: none
+}
+Input.actbttn {
+	BACKGROUND: #ffffff; BORDER-BOTTOM: #B8DFFC 1px solid; BORDER-LEFT: #B8DFFC 1px solid; BORDER-RIGHT: #B8DFFC 1px solid; BORDER-TOP: #B8DFFC 1px solid; COLOR: #000000; CURSOR: hand; FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif; FONT-SIZE: 9pt; HEIGHT: 19px; Width:65px;TEXT-DECORATION: none
+}
+Input.sbttn {
+	BACKGROUND: #ffffff; BORDER-BOTTOM: #B8DFFC 1px solid; BORDER-LEFT: #B8DFFC 1px solid; BORDER-RIGHT: #B8DFFC 1px solid; BORDER-TOP: #B8DFFC 1px solid; COLOR: #000000; CURSOR: hand; FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif; FONT-SIZE: 9pt; HEIGHT: 22px; TEXT-DECORATION: none
+}
+.swin_title{
+	font-size: 9pt;
+    color: #000000;
+}
+
+table.query{
+	background-color: #ffffff;
+
+}
+table#listborder{
+  border-top: 1px solid #B8DFFC;
+  border-right: 1px solid #B8DFFC;
+}
+
+A.title_fullscreen:link
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.title_fullscreen:visited
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.title_fullscreen:active
+{
+    color:#666666;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+A.title_fullscreen:hover
+{
+    color:#000000;text-decoration:none; font-size: 12px; font-family: "宋体", "Times New Roman"
+}
+
+.leftframeborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 3px;
+	border-left: solid #008FDE 3px;
+	border-bottom: solid #008FDE 1px;
+}
+.rightframeborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 3px;
+}
+.transfertopborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 0px;
+	border-left: solid #008FDE 0px;
+	border-bottom: solid #008FDE 0px;
+}
+
+.topbg{
+	background-color:#C1E4F8;
+}
+.topline{
+	background-color:#C1E4F8;
+}

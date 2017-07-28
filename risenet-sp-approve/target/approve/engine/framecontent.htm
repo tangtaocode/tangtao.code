@@ -1,0 +1,246 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+td{font-size:10pt;cursor:pointer}
+body
+{
+   background-color:#F0F0F0;
+   border:1px solid #505050;
+}
+-->
+</style>
+</head>
+<body leftmargin="1" rightmargin="0" topmargin="1"  onselectstart="return false" oncontextmenu="return false" ondblclick="setValue()" onclick="setColor()">
+</body>
+<div id="x3" style="width:280px;height:139px; overflow:auto"></div>
+<SCRIPT LANGUAGE="javascript">
+<!--
+var selectedObject = null;
+var nextXmlNode = null;
+var orignalXml  = null;
+
+function clearNextXmlNode()
+{
+    nextXmlNode = null;
+}
+
+function __getEvent()
+{
+    if(window.event)
+    {
+        return window.event.srcElement;
+    }
+
+    var _caller = __getEvent.caller;
+    while(_caller != null)
+    {
+        var _argument = _caller.arguments[0];
+        if(_argument)
+        {
+            var _temp = _argument.constructor;
+            if(_temp.toString().indexOf("Event") != -1)
+            {
+                return _argument.target;
+            }
+        }
+        _caller = _caller.caller;
+    }
+    return null;
+}
+
+function setColor()
+{
+    var objElement = __getEvent();
+    var tempObject = null;
+    
+    if(objElement.tagName == "TD")
+    {
+        tempObject = objElement.parentNode;
+        if(tempObject.rowIndex >0)
+        {
+            if(selectedObject != null )
+            {
+                selectedObject.cells[0].style.color = "#000000";
+                selectedObject.cells[0].style.backgroundColor = "#F0F0F0";
+                selectedObject.cells[1].style.color = "#000000";
+                selectedObject.cells[1].style.backgroundColor = "#F0F0F0";
+            }
+            selectedObject = tempObject;
+            selectedObject.cells[0].style.color = "#FFFFFF";
+            selectedObject.cells[0].style.backgroundColor = "#505050";
+            selectedObject.cells[1].style.color = "#FFFFFF";
+            selectedObject.cells[1].style.backgroundColor = "#505050";
+        }
+    }
+}
+
+function __loadXML(xmlUrl)
+{
+    var xmlDoc = null; 
+    if(window.ActiveXObject)
+    { 
+        xmlDoc = new ActiveXObject('Msxml2.DOMDocument'); 
+        xmlDoc.async = false; 
+        xmlDoc.load(xmlUrl); 
+    } 
+    else if (document.implementation && document.implementation.createDocument)
+    { 
+        var xmlhttp = new window.XMLHttpRequest(); 
+        xmlhttp.open("GET", xmlUrl, false); 
+        xmlhttp.send(null); 
+        xmlDoc = xmlhttp.responseXML.documentElement; 
+    } 
+    
+    return xmlDoc; 
+}
+
+function writeTable(xmlID, inputString, theType)
+{
+    var xmlTopNode;
+    var xmlElementNode;
+    var strCode = "";
+    var strValue ="";
+    var aTable = document.createElement("TABLE");   
+    var aRow;
+    var aCell,aCell_1;  
+    var selectedValue = "";
+    var selectedCode = "";
+    var strFilter =(inputString == null || inputString == "")?"":inputString;
+    var isLevel = false;
+    var tempXmlNode = null;
+    var isMatch = false;
+
+    aTable.border = 0;
+    aTable.cellPadding = 1;
+    aTable.cellSpacing = 1;
+	aTable.style.backgroundColor = "#FFFFFF";
+    aTable.width = "100%"
+    aRow = aTable.insertRow(aTable.rows.length);
+    aCell = document.createElement("td");
+    aCell.align = "center";
+    aCell.noWrap = true;
+    aCell.innerHTML = "代码 ";
+	aCell.style.backgroundColor = "#D0D0D0";
+    aCell.style.fontWeight = "bold";
+    aRow.appendChild(aCell);
+
+    aCell_1 = document.createElement("td");
+    aCell_1.align = "center";
+    aCell_1.innerHTML = " 数值 ";
+	aCell_1.style.backgroundColor = "#D0D0D0";
+    aCell_1.style.fontWeight = "bold";
+    aRow.appendChild(aCell_1);
+
+    if(nextXmlNode != null && strFilter != "") 
+    {
+        xmlID = nextXmlNode;
+        theType = 1;
+    }
+    if(xmlID == null || xmlID.childNodes == null || xmlID.childNodes.length == null) return;
+
+    if(xmlID.childNodes.length <2 )
+    {
+        xmlTopNode = __loadXML(xmlID.getAttribute("src"));
+    }
+    else
+    {
+    	  xmlTopNode = xmlID.childNodes[1];
+    }
+
+    if(xmlTopNode.childNodes.length > 1 && xmlTopNode.childNodes[1].getAttribute("levelLen") != null)
+    {
+        isLevel = true;
+    }
+    orignalXml = xmlTopNode; 
+
+	var els = xmlTopNode.getElementsByTagName("Element");
+    for(var i=0; i<els.length; i++)
+    {
+        xmlElementNode = els[i].firstChild; 
+        strValue = xmlElementNode.nodeValue;
+        strCode = ((strCode=els[i].getAttribute("code"))!=null)?strCode:" ";
+        
+        if(strFilter =="" || strCode.substring(0,strFilter.length) ==strFilter)
+        {
+            if(strFilter != "") isMatch = true;
+            if(isLevel)
+            {
+                strValue = ((strValue=els[i].getAttribute("itemName"))!=null && strValue != "")?strValue:" ";
+            }
+            else
+            {
+                strValue = ((strValue=xmlElementNode.nodeValue)!=null && strValue != "")?strValue:" ";                
+            }
+            aRow = aTable.insertRow(aTable.rows.length);
+            aCell = document.createElement("td");
+			aCell.style.backgroundColor = "#F0F0F0";
+            //aCell.width = tdWidth - 40;
+            //aCell.height = tdHeight;
+            //aCell.style.paddingLeft = "5px";
+            if(selectedCode != "" && strCode.substr(0,selectedCode.length) == selectedCode) 
+            {
+                selectedValue = "";
+                selectedCode  = ""
+            }
+            if(strFilter==strCode)
+            {                
+                selectedCode  = strCode
+                selectedValue = strValue;
+                if(isLevel) 
+                {
+                    tempXmlNode = xmlElementNode;
+                    nextXmlNode = xmlElementNode;
+                }
+            }
+            aCell.innerHTML = strCode;
+            aRow.appendChild(aCell);
+           
+            aCell_1 = document.createElement("td");
+			aCell_1.style.backgroundColor = "#F0F0F0";
+            aCell_1.innerHTML = strValue;
+            aRow.appendChild(aCell_1);
+        }
+    }
+    //if(!isMatch) nextXmlNode = null;
+    document.getElementById("x3").innerHTML = aTable.outerHTML;
+    if(selectedValue != "")
+    {
+        parent.setValue(selectedCode, selectedValue, tempXmlNode);
+    }
+}
+
+function clearTable()
+{
+    selectedObject = null
+    document.getElementById("x3").innerHTML = "";
+}
+
+function setValue()
+{
+    var objElement = __getEvent();
+    var tempXml = null;
+
+    if(objElement.tagName == "TD")
+    { 
+        var rowIndex = objElement.parentNode.rowIndex;
+        if(rowIndex == 0) return;
+        if(orignalXml.childNodes.length > 1 && orignalXml.childNodes[1].childNodes.length >=2 && orignalXml.childNodes[1].getAttribute("levelLen") != null)
+        {
+            for(var i=0; i<orignalXml.childNodes[1].childNodes.length; i++)
+            {
+                if(objElement.parentNode.cells[0].innerHTML == orignalXml.childNodes[1].childNodes[i].getAttribute("code"))
+                {
+                    nextXmlNode = orignalXml.childNodes[1].childNodes[i];
+                    tempXml = nextXmlNode;
+                    break;
+                }
+            }
+        }
+        parent.setValue(objElement.parentNode.cells[0].innerHTML, objElement.parentNode.cells[1].innerHTML, tempXml);
+    }
+}
+//-->
+</SCRIPT>
+</html>

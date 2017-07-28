@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+	http://www.springframework.org/schema/oxm
+	http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd">
+	
+	<!--增加下面的注解后@value在@Controller里也可获取到-->
+	<context:property-placeholder ignore-unresolvable="true" location="classpath:/properties/application.properties" />
+
+	<context:component-scan base-package="net.risesoft.approve.controller,net.risesoft.fileflow.controller" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController" />
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+
+	<mvc:annotation-driven>
+		<!--enableMatrixVariables="true">-->
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg value="UTF-8" />
+			</bean>
+			<bean class="org.springframework.http.converter.json.GsonHttpMessageConverter" />
+			<!-- <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper">
+					<bean class="com.fasterxml.jackson.databind.ObjectMapper">
+						<property name="locale">
+							<bean class="java.util.Locale">
+								<constructor-arg index="0" value="zh" />
+								<constructor-arg index="1" value="CN" />
+							</bean>
+						</property>
+						<property name="timeZone">
+							<bean class="java.util.TimeZone" factory-method="getTimeZone">
+								<constructor-arg index="0" value="GMT+8" />
+							</bean>
+						</property>
+					</bean>
+				</property>
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+						<value>application/*+json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean> -->
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	<!-- 当在web.xml中，DispatcherServlet使用“/”映射（不是“/*”）时， -->
+	<!-- css、image、html等静态资源都不能访问，因为没有Controller映射这些资源。-->
+	<!-- 因此需要开启缺省servlet处理器， 将无法mapping到Controller的url交给default servlet handler处理 -->
+	<mvc:default-servlet-handler />
+	
+	<!-- 静态资源映射，spring做了优化，这些资源可以放在jar包中，或者某个目录下。 -->
+	<!-- <mvc:resources mapping="/static/**" location="/static"/> -->
+    
+	<!-- 默认的视图解析器。 -->
+	<bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="order" value="100" />
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="contentType" value="text/html" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+    
+	<!-- 支持上传文件 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="UTF-8" p:uploadTempDir="dynamicfile/uploadtemp" />
+
+	<!-- 控制器异常处理 -->
+	<bean id="exceptionHandlerExceptionResolver" class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver" />
+    
+   <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+	<bean id="riseLogAdvice" class="net.risesoft.tenant.aop.RiseLogAdvice"/>
+	<bean class="net.risesoft.tenant.aop.RiseLogAdvisor">
+		<property name="advice" ref="riseLogAdvice"/>
+	</bean>
+	<bean id="risePermissionAdvice" class="net.risesoft.tenant.aop.RisePermissionAdvice"/>
+	<bean class="net.risesoft.tenant.aop.RisePermissionAdvisor">
+		<property name="advice" ref="risePermissionAdvice"/>
+	</bean>
+	
+	<!-- 定义无Controller的path<->view直接映射 -->
+	<mvc:view-controller path="/" view-name="main/index" />
+
+</beans>

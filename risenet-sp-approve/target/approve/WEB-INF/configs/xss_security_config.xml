@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XSSConfig>
+	<isCheckHeader>true</isCheckHeader>
+	<isCheckParameter>true</isCheckParameter>
+	<isLog>true</isLog>
+	<isChain>true</isChain>
+	<replace>true</replace>
+	<isCheckUrl>true</isCheckUrl>
+	<regexList>
+		<regex><![CDATA[.*[A|a][L|l][E|e][R|r][T|t]\s*.*]]></regex>
+		<regex><![CDATA[.*[W|w][I|i][N|n][D|d][O|o][W|w]\.[L|l][O|o][C|c][A|a][T|t][I|i][O|o][N|n]\s*=.*]]></regex>
+		<regex><![CDATA[.*[S|s][T|t][Y|y][L|l][E|e]\s*=.*[X|x]:[E|e][X|x].*[P|p][R|r][E|e][S|s]{1,2}[I|i][O|o][N|n]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*[D|d][O|o][C|c][U|u][M|m][E|e][N|n][T|t]\.[C|c][O|o]{2}[K|k][I|i][E|e].*]]></regex>
+		<regex><![CDATA[.*[E|e][V|v][A|a][L|l]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*[U|u][N|n][E|e][S|s][C|c][A|a][P|p][E|e]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*[E|e][X|x][E|e][C|c][S|s][C|c][R|r][I|i][P|p][T|t]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*[M|m][S|s][G|g][B|b][O|o][X|x]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*[C|c][O|o][N|n][F|f][I|i][R|r][M|m]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*[P|p][R|r][O|o][M|m][P|p][T|t]\s*(\(|&#x28;|&#40;).*(\)|&#x29;|&#41).*]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)\s*(/|%2F)?[S|s][C|c][R|r][I|i][P|p][T|t]\s*(/|%2F)?(>|%3E|&#62;).*]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)[I|i][M|m][G|g]\s*.*(>|%3E|&#62;)]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)[I|i]*[F|f][R|r][A|a][M|m][E|e]\s*.*(>|%3E|&#62;)]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)[I|i][N|n][P|p][U|u][T|t]\s*.*(>|%3E|&#62;)]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)[F|f][O|o][R|r][M|m]\s*.*(>|%3E|&#62;)]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)[H|h][I|i][D|d]{2}[E|e][N|n]\s*.*(>|%3E|&#62;)]]></regex>
+		<regex><![CDATA[.*[J|j][A|a][V|v][A|a][S|s][C|c][R|r][I|i][P|p][T|t]\s*:\s*.*]]></regex>
+		<regex><![CDATA[.*(<|%3C|&#60;)(/|%2F)?\s*[a-zA-Z]{1,8}\s*[^\u4e00-\u9fa5]*\s*(/|%2F)?\s*(>|%3E|&#62;)]]></regex>
+	</regexList>
+</XSSConfig>

@@ -1,0 +1,60 @@
+.div1 {
+	background-color: #F6F6F6;
+	border: 1px solid #CCCCCC;
+	height: 170px;
+	padding: 10px;
+	display: none;
+	position:absolute;
+	z-index:120;
+	top:0;left:0;
+	text-align:center;
+	width: 100%;
+	/*
+	filter:alpha(Opacity=80);
+	-moz-opacity:0.5;
+	acity:0.5;*/
+}
+.div2 {
+	height: 120px;
+	text-align:center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 900px;
+}
+.div2 ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	text-align:center;
+}
+.div2 li {
+	float: left;
+	height: 120px;
+	width: 140px;
+	margin-right: 10px;
+}
+.div3 {
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+}
+.div4 {
+	font-family: "ËÎÌו";
+	font-size: 14px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+.div5 {
+	height: 20px;
+	text-align: center;
+	padding-top: 20px;
+}
+.but1 {
+	background-image: url(images/but_back1.jpg);
+	border: 1px solid #B9DDF5;
+	height: 26px;
+	padding-right: 10px;
+	padding-left: 10px;
+	letter-spacing: 2px;
+}

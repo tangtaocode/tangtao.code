@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hazelcast-client xsi:schemaLocation="http://www.hazelcast.com/schema/client-config hazelcast-client-config-3.6.xsd"
+	xmlns="http://www.hazelcast.com/schema/client-config"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <group>
+        <name>riserc8_platform</name>
+        <password>riserc8_platform</password>
+    </group>
+    
+    <properties>
+        <property name="hazelcast.client.shuffle.member.list">true</property>
+        <property name="hazelcast.client.heartbeat.timeout">60000</property>
+        <property name="hazelcast.client.heartbeat.interval">5000</property>
+        <property name="hazelcast.client.event.thread.count">5</property>
+        <property name="hazelcast.client.event.queue.capacity">1000000</property>
+        <property name="hazelcast.client.invocation.timeout.seconds">120</property>
+    </properties>
+
+    <network>
+        <cluster-members>
+            <!--  <address>192.168.1.118:7710</address>  -->
+             <address>127.0.0.1:7710</address> 
+        </cluster-members>
+        
+        <smart-routing>true</smart-routing>
+        
+        <redo-operation>true</redo-operation>
+        <connection-timeout>60000</connection-timeout>
+        <connection-attempt-period>3000</connection-attempt-period>
+        <connection-attempt-limit>2</connection-attempt-limit>
+        
+        <socket-options>
+            <tcp-no-delay>false</tcp-no-delay>
+            <keep-alive>true</keep-alive>
+            <reuse-address>true</reuse-address>
+            <linger-seconds>3</linger-seconds>
+            <timeout>-1</timeout>
+            <buffer-size>32</buffer-size>
+        </socket-options>
+    </network>
+</hazelcast-client>

@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+/**
+*设置表格表头加黑
+*/
+.l-grid-hd-cell-inner span{
+	font-weight:bolder;
+	font-family: SimSun;
+	font-size:80%;
+}
+
+/*
+.box_middleright div{
+	margin-left:5px;
+	margin-right:5px;
+	background-color:#F0F9FE;
+}*/
+
+.l-grid-body table{
+	font-family: SimSun;
+	font-size:100%;
+}
+
+.datagrid-htable{
+	font-weight:bold;
+	font-family: SimSun;
+	font-size:80%;
+}
+
+.aColor{
+	color:#0066CC;
+}
+
+

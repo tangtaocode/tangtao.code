@@ -1,0 +1,48 @@
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.3020" name=GENERATOR></HEAD>
+
+<script language="javascript" src="sinc/inputassistance.js"></script>
+<script language="JavaScript" src="sinc/validInput.js"></script>
+<script language="javascript" src="sinc/calendar.js"></script>
+<script language="javascript">
+<!--
+function validInput(mv_)
+{
+    if(!limitStringLenth("性别",document.frm_Edit_104.b1_name,document.frm_Edit_104.b1_name,20)) return false;
+    try
+    {
+        if(typeof(other_Valid) == "function" && !other_Valid()) return false;
+    }
+    catch(e){alert("other_Valid error:" + e);return false}
+    return true;
+}
+//-->
+</script>
+<BODY>
+<form name="frm_Edit_104" action="postdata.jsp" method="post">测试 <INPUT id="b1_id" type="hidden" name="b1_id"> 
+<P>性别：<INPUT id="b1_name" name="b1_name" onclick="click_b1_name(this);"><div id="_assis_b1_name" style="display:none;position:absolute;1px solid #303030;width:300px;height:220px"><iframe scrolling="no" frameBorder="0" src="gettemplate.jsp?temp_Id12&assis=6"></iframe></div></P><input type="hidden" name="temp_Id" value="104">
+<input type="hidden" name="action_Type" value="0">
+</form>
+<div align="center"><input type="button" id="button" value=" 保存 " onclick="confirmSubmit(document.frm_Edit_104)"></div></BODY>
+<script language="javascript">
+<!--
+function click_b1_name(e)
+{
+    var o = document.getElementById("_assis_b1_name").style;if(o.display!="none") return;
+    var t = e.offsetTop,  h = e.clientHeight, l = e.offsetLeft, p = e.type;
+    while (e = e.offsetParent){t += e.offsetTop; l += e.offsetLeft;}
+    var cw = 300, ch = 220;
+    var dw = document.body.clientWidth, dl = document.body.scrollLeft, dt = document.body.scrollTop;
+    if (document.body.clientHeight + dt - t - h >= ch) o.top = (p=="textarea" || p=="input")? t + h : t + h + 6;
+    else o.top  = (t - dt < ch) ? ((p=="textarea" || p=="input")? t + h : t + h + 6) : t - ch;
+    if (dw + dl - l >= cw) o.left = l; else o.left = (dw >= cw) ? dw - cw + dl : dl;
+	o.display = "";
+}
+
+
+
+//-->
+</script>
+
+</HTML>

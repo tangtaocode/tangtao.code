@@ -1,0 +1,29 @@
+<input id="t1">
+<!--引用/engine/sinc目录下的js-->
+<script src="sinc/formcode.js"></script>
+<script language="javascript">
+<!--
+/*
+  三个参数：
+    as  与变量名一定要相同
+    test 调用的函数
+    width 下拉菜单显示的宽度 可选
+*/
+var as = new Assistance("as", "test");
+
+/**
+    三个参数：
+    t1    输入框的ID
+    a.sex  数据字典
+	contextPath,  可选
+**/
+as.setBasePara("tid=93&cid=c_272_597");
+as.createMenu("t1", "a.sex");
+
+//这个函数需要自己写，传入(v--名称, c--代码)
+function test(v, c)
+{
+    alert(v + "," + c)
+}
+//-->
+</script>

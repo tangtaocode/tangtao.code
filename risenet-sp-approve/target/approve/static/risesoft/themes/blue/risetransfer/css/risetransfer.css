@@ -1,0 +1,243 @@
+body{
+	padding:0 0 0 0; margin:0 0 0 0;
+	SCROLLBAR-FACE-COLOR: #58A9DB;
+	SCROLLBAR-HIGHLIGHT-COLOR: #e4eaf1;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	SCROLLBAR-TRACK-COLOR: #AFCFE3;
+	SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+}
+
+body, input, select, td, textarea,th{
+	font-family: 宋体;
+	color: #000000;
+	font-size: 9pt;
+	vertical-align: center;
+}
+A:link {
+	COLOR: rgb(0,125,255); FONT-FAMILY: "宋体", "Times New Roman"; FONT-SIZE: 12px
+}
+A:visited {
+	COLOR: rgb(0,160,210); FONT-FAMILY: "宋体", "Times New Roman"; FONT-SIZE: 12px
+}
+A:active {
+	COLOR: rgb(255,0,0); FONT-FAMILY: "宋体", "Times New Roman"; FONT-SIZE: 12px
+}
+A:hover {
+	COLOR: rgb(220,100,0); FONT-FAMILY: "宋体", "Times New Roman"; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+
+table.simple thead tr {
+  background-color: #EAEAEA;
+}
+table.simple tr.even {
+  background-color: #fff;
+}
+table.simple {
+	border: 0px solid #ccc;
+	border-collapse: collapse;
+}
+ table.simple td,table.simple th{
+    border: 1px solid #EAEAEA;
+	padding: 0px 0px 0px 0px;
+	margin: -10px 0 10px 0; 
+
+}
+INPUT.retrieve
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #9a9999 1px solid;
+    BORDER-LEFT: #9a9999 1px solid;
+    BORDER-RIGHT: #9a9999 1px solid;
+    BORDER-TOP: #9a9999 1px solid;
+    FONT-SIZE: 9pt;
+}
+FONT.Title
+{
+    COLOR: #000050;
+    FILTER: dropshadow(color=FEF8DF, offx=1, offy=1);
+    FONT-SIZE: 12px;
+    WIDTH: 97%
+}
+TABLE.List TD
+{
+    BORDER-BOTTOM: #FFFFFF 1px solid
+}
+TABLE.ListSort TD
+{
+    BORDER-BOTTOM: #FFFFFF 1px solid;
+    COLOR: #000000
+}
+TR.ListTitle
+{
+    BACKGROUND-COLOR: #EAEAEA;
+    COLOR: #000000
+}
+TR.ListData
+{
+    BACKGROUND-COLOR: #F6F6F6
+}
+TR.ListDataClick
+{
+    BACKGROUND-COLOR: #c3d6e6
+}
+.transfertopborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 0px;
+	border-left: solid #008FDE 0px;
+	border-bottom: solid #008FDE 0px;
+}
+.leftbg{
+	background-color:#E8F5FD;
+}
+.rightbg{
+	background-color:#EAEAEA;
+}
+.days{
+	color:#004B75;
+}
+.xlpbg{
+	background-color:#E0F2FC;
+}
+A.xlpbg:link {font-size:14px;text-decoration: none;color:#000000;TEXT-DECORATION: underline}
+A.xlpbg:visited {font-size:14px;text-decoration: none;color:#000000;TEXT-DECORATION: underline}
+A.xlpbg:hover {font-size:14px;text-decoration: underline;color:#ff0000;TEXT-DECORATION: none}
+.nLink {  font-size: 9pt; line-height: 1.5; color: #000000; text-decoration: none}
+.nLink:link {  font-size: 9pt; color: #000000; text-decoration: none}
+.nLink:visited {  font-size: 9pt; color: #000000; text-decoration: none}
+.nLink:hover {  font-size: 9pt; color: #0066CC; text-decoration: underline}
+.nLink {  font-size: 9pt; color: #000000; text-decoration: none}
+.9pwhite {  font-size: 9pt; color: #FFFFFF; text-decoration: none}
+.9pwhite:link {  font-size: 9pt; color: #FFFFFF; text-decoration: none}
+.9pwhite:visited {  font-size: 9pt; color: #FFFFFF; text-decoration: none}
+.9pwhite:hover {  font-size: 9pt; color: #FFFFFF; text-decoration: underline}
+select {  background-color: #F3F3F3; border: 1px #999999 solid}
+input.texts {  background-color: #F3F3F3; border: #999999; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+textarea {  background-color: #F3F3F3; border: #999999; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+td.ModTitle { color: #000000; font-family: "宋体", "Times New Roman"; font-size: 14px; font-weight: bold; text-decoration: none}
+  .tab {
+    position:absolute;
+    width:90;
+    height:25px;
+    top:3px;
+    left:2;
+    z-index:1;
+    cursor:hand;
+    font-family:verdana;
+    font-size:9pt;
+    font-weight:normal;
+    color:white;
+    text-align:center;
+    padding-top:4px;
+    background-image: url(../../images/blue/ui_graytab.gif);
+    background-repeat:no-repeat;
+  }
+  .tabPanel {
+    position:absolute;
+    top:20;
+    left:0;
+    width:526;
+    height:565;
+    background-color:#6699CC;
+    z-index:1;
+    border:1px solid #EAEAEA;
+    border-right:1px solid #000000;
+    border-bottom:1px solid #000000;
+    padding:2px;
+    padding-top:5px;
+    text-align:left;
+  }
+  .tabContent {
+    position:absolute;
+    width:520;
+    height:555;
+    background-color:white;
+    z-index:1;
+    border:2px solid #336699;
+    border-bottom:2px solid #EAEAEA;
+    font-family:verdana;
+    font-size:10pt;
+    font-weight:normal;
+    padding:0px;
+    text-align:left;
+    overflow:hidden;
+    scrollbar-base-color:#cccccc;
+    display:none;
+  }
+  INPUT.delbttn
+{
+    BACKGROUND: #eff7ff;
+    BORDER-BOTTOM: #104a7b 1px solid;
+    BORDER-LEFT: #afc4d5 1px solid;
+    BORDER-RIGHT: #104a7b 1px solid;
+    BORDER-TOP: #afc4d5 1px solid;
+    COLOR: #000066;
+    CURSOR: hand;
+    FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif;
+    FONT-SIZE: 9pt;
+    HEIGHT: 19px;
+    TEXT-DECORATION: none
+}
+INPUT.actbttn
+{
+    BACKGROUND: #eff7ff;
+    BORDER-BOTTOM: #104a7b 1px solid;
+    BORDER-LEFT: #afc4d5 1px solid;
+    BORDER-RIGHT: #104a7b 1px solid;
+    BORDER-TOP: #afc4d5 1px solid;
+    COLOR: #000066;
+    CURSOR: hand;
+    FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif;
+    FONT-SIZE: 9pt;
+    HEIGHT: 19px;
+    TEXT-DECORATION: none;
+}
+INPUT.sbttn
+{
+    BACKGROUND: #eff7ff;
+    BORDER-BOTTOM: #104a7b 1px solid;
+    BORDER-LEFT: #afc4d5 1px solid;
+    BORDER-RIGHT: #104a7b 1px solid;
+    BORDER-TOP: #afc4d5 1px solid;
+    COLOR: #000066;
+    CURSOR: hand;
+    FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif;
+    FONT-SIZE: 9pt;
+    HEIGHT: 22px;
+    TEXT-DECORATION: none
+}
+SELECT
+{
+    BORDER-BOTTOM: 0px inset;
+    BORDER-LEFT: 0px solid;
+    BORDER-RIGHT: 0px inset;
+    BORDER-TOP: thin inset;
+    COLOR: #000080;
+    FONT-FAMILY: "宋体", "Times New Roman";
+    FONT-SIZE: 12px;
+    MARGIN: 1px
+}
+.manager{
+	color: #4E9BCE;
+}
+.welcome{
+	color: #007DFF;
+}
+.welcome{
+	color: #007DFF;
+	font-size: 12pt;
+}
+.leftframeborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 3px;
+	border-left: solid #008FDE 3px;
+	border-bottom: solid #008FDE 1px;
+}
+.rightframeborder{
+	border-top: solid #004B75 2px;
+	border-right: solid #008FDE 3px;
+}
+.linkbg{
+	background-color: :#EAF4F9;
+}

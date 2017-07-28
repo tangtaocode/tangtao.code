@@ -1,0 +1,503 @@
+/* 网站链接总的CSS定义－－可定义内容为链接字体颜色、样式等 */
+a {text-decoration: underline;} /* 链接无下划线,有为underline */ 
+a:link {color: #223B82;text-decoration: none;} /* 未访问的链接 */
+a:visited {color: #000000;text-decoration: none;} /* 已访问的链接 */
+a:hover {color: #223B82;text-decoration: none;} /* 鼠标在链接上 */ 
+a:active {color: #000000;text-decoration: none;} /* 点击激活链接 */
+/* 左边频道文字链接的CSS定义－－将顶部频道文字链接与网站链接总的CSS定义分开，以后可以制作深底浅字的格式，如果要保持原来的设计样式，将此定义内容删除或定义成与网站链接总的CSS相同即可。调用代码为<a class='Channel' ***>***</a> */
+a.Channel:link {color: #006666;font-size: 12px;font-weight: bold;}
+a.Channel:visited {color: #006666;font-size: 12px;font-weight: bold;}
+a.Channel:hover {color: #223B82;font-size: 12px;font-weight: bold;}
+a.Channel:active {color: #006666;font-size: 12px;font-weight: bold;
+}
+/* 顶部辅助文字链接的CSS定义－－与顶部频道文字链接定义的想法相同。可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。调用代码为<a class='Top' ***>***</a> */
+a.Top:link {color: #ffffff;font-size: 12px;font-weight: bold;}
+a.Top:visited {color: #ffffff;font-size: 12px;font-weight: bold;}
+a.Top:hover {color: #ffffff;font-size: 12px;font-weight: bold;}
+a.Top:active {color: #FFFFFF;font-size: 12px;font-weight: bold;}
+/* 底部管理文字链接的CSS定义－－与顶部频道文字链接定义的想法相同。可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。调用代码为<a class='Bottom' ***>***</a> */
+a.Bottom:link {color: #555555;}
+a.Bottom:visited {color: #555555;}
+a.Bottom:hover {color: #ffffff;}
+a.Bottom:active {color: #ffffff;}
+/* 栏目标题文字链接的CSS定义－－可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。要相同可不设置。调用代码为<a class='Class' ***>***</a> */
+a.Class:link {color: #ffffff;}
+a.Class:visited {color: #ffffff;}
+a.Class:hover {color: #ffff00;}
+a.Class:active {color: #ffff00;}
+
+/* 字体的发光风格   wedypei */
+.fontshadow12-1 {
+	FONT-SIZE: 9pt; FILTER: glow(color=ffbc30, strength=2); WIDTH: 100%; FONT-FAMILY: "宋体"; LETTER-SPACING: 3px
+}
+
+/* 表单风格   wedypei */
+.textbox {
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica";
+	TEXT-ALIGN: center;
+	SCROLLBAR-FACE-COLOR: #42bee2;
+	SCROLLBAR-HIGHLIGHT-COLOR: #33B8E1;
+	SCROLLBAR-SHADOW-COLOR: #33B8E1;
+	SCROLLBAR-3DLIGHT-COLOR: #33B8E1;
+	SCROLLBAR-ARROW-COLOR: #33B8E1;
+	SCROLLBAR-TRACK-COLOR: #33B8E1;
+	SCROLLBAR-DARKSHADOW-COLOR: #33B8E1;
+	border: 1px solid #ADD0F8;
+}
+
+.checkbox {
+	FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica";
+	TEXT-ALIGN: center;
+	border: 1px solid #FFFFFF;
+}
+
+/* Body的CSS定义－－对应CSS中“BODY”，可定义内容为网页字体颜色、背景、浏览器边框等 */
+Body
+{
+	margin: 0px;
+	font-family: Verdana, Arial, "宋体";
+	font-size: 9pt;
+	background-color: #FFFFff;
+	background-image: url(images/body.gif);
+: none;
+	scrollbar-face-color: #3D9EDB;
+	scrollbar-highlight-color: #FFffff;
+	scrollbar-shadow-color: #FFffff;
+	scrollbar-3dlight-color: #FFffff;
+	scrollbar-darkshadow-color: #FFffff;
+	scrollbar-arrow-color: #FFffff;
+	scrollbar-track-color: #E8E8E8;
+	color: 00000;
+}
+/* 单元格的CSS定义－－对应CSS中的“TD”，这里为总的表格定义，为一般表格的的单元格风格设置，可定义内容为背景、字体颜色、样式等 */
+Td
+{	
+	font-family: Verdana, Arial, "宋体";
+	font-size: 9pt;
+	color: #213f67;
+	line-height: 160%;
+}
+
+/* 文本框的CSS定义－－对应CSS中的“INPUT”，这里为文本框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+Input
+{
+	font-family: Verdana, Arial, 宋体;
+	border-top: #42bee2 1px solid;
+	border-bottom: #42bee2 1px solid;
+	border-left: #42bee2 1px solid;
+	border-right: #42bee2 1px solid;	
+	color: #333333;
+	height: 18px;
+	font-size: 9pt;
+}
+
+.Input_hand
+{
+	font-family: Verdana, Arial, 宋体;
+	border-top: #42bee2 1px solid;
+	border-bottom: #42bee2 1px solid;
+	border-left: #42bee2 1px solid;
+	border-right: #42bee2 1px solid;
+	color: #333333;
+	height: 18px;
+	font-size: 9pt;
+	cursor:hand;
+	width: 100px;
+
+}
+/* 按钮的CSS定义－－对应CSS中的“BUTTON”，这里为按钮的风格设置，可定义内容为背景、字体、颜色、边框等 */
+Button
+{
+	font-family: Verdana, Arial, 宋体;
+	font-size: 9pt;
+	height: 20px;
+	background-color: #E9F7FF;
+}
+/* 下拉列表框的CSS定义－－对应CSS中的“SELECT”，这里为下拉列表框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+Select
+{
+	font-family: Verdana, Arial, 宋体;
+	border-top: #42bee2 1px solid;
+	border-bottom: #42bee2 1px solid;
+	border-left: #42bee2 1px solid;
+	border-right: #42bee2 1px solid;
+        background-color: #E9F7FF;	
+	color: #333333;
+	height: 18px;
+	font-size: 9pt;
+}
+
+.Select1
+{
+	font-family: Verdana, Arial, "宋体";
+	color: #305B96;
+	height: 16px;
+	width: 14px;
+	text-align: center;
+	
+}
+
+.Select2
+{
+	font-family: Verdana, Arial, "宋体";
+	color: #305B96;
+
+
+
+
+.px;
+	font-size: 12px;
+	border: 1px solid #AED1EC;
+	height: 20px;
+	width: 20px;
+	list-style-position: inside;
+	list-style-type: decimal;
+	position: 固定;
+	visibility: visible;
+	text-align: center;
+}
+
+/* ==Top.asp中的CSS定义开始== */
+.Top_tdbgall /* 顶部表格总背景颜色定义 */
+{
+	background-color: #ffffff;
+	border-right: 1px solid #aaaaaa;
+	border-left: 1px solid #aaaaaa;
+}
+.top_link /* 顶部辅助链接表格定义 */
+{
+	color: #FFFFFF;
+	text-align: right;
+	padding: 0px 6px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.top_main /* 顶部背景大图 */
+{
+	background-color: #0045D5;	
+	background-image:  url(../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/IUEMTQDW/Skin/51zh01/Top_pic_01.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+}
+.top_UserLogin /* 用户登录表格背景、文字颜色定义定义 */
+{
+	background-color: #FF9900;
+	color: #555555;
+	padding: 4px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ffffffff', gradientType='0');
+}
+.top_Channel /* 频道表格背景、文字颜色定义 */
+{
+	background-color: #cccccc;
+	color: #555555;
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #cccccc;
+	border-bottom: 1px solid #555555;
+	padding: 0px 4px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ffffffff', gradientType='0');
+}
+.top_Channela /* 频道表格焦点背景、文字颜色定义 */
+{
+	background: #eeeeee;
+	color: #555555;
+	text-align: right;
+	border-left: 1px dashed #999999;
+	padding: 0px 4px;
+}
+.top_Channelb /* 频道表格底部背景、文字颜色定义 */
+{
+	background-color: #cccccc;
+	border-left: 1px solid #555555;
+	border-bottom: 1px solid #555555;
+}
+.top_Announce /* 公告表格背景、文字颜色定义 */
+{
+	color: #555555;
+	background-color: #cccccc;
+	border-top: 6px solid #ffffff;
+	border-left: 6px solid #ffffff;
+	border-right: 6px solid #ffffff;
+	padding: 2px 4px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ffffffff', gradientType='0');
+}
+.top_Nav_menu /* 导航栏表格背景、文字颜色定义 */
+{
+	background-color: #dddddd;
+	color: #333333;
+	padding: 0px 4px;
+	border-top: 6px solid #aaaaaa;
+	border-left: 1px solid #888888;
+	border-bottom: 1px solid #555555;
+}
+.top_Path /* 您现在的位置表格背景、文字颜色定义 */
+{
+	font-family: Verdana, Arial, 宋体;
+	color: #333333;	
+	padding: 0px 4px;
+}
+/* ==top.asp中的CSS定义结束== */
+
+/* ==网页中部的CSS定义开始== */
+.center_tdbgall /* 中部表格总背景颜色定义 */
+{
+	background-color: #ffffff;
+	border-right: 1px solid #aaaaaa;
+	border-left: 1px solid #aaaaaa;
+}
+
+/* --网页中部左栏的CSS定义开始-- */
+.Left_tdbgall /* 左栏表格总背景颜色定义 */
+{
+
+}
+.left_title /* 左栏标题表格背景、文字颜色定义 */
+{
+	border-top: 1px solid #bbbbbb;
+	border-left: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+}
+.left_tdbg1 /* 左栏内容表格背景、文字颜色定义 */
+{
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ffffffff', gradientType='0');
+}
+.left_tdbg2 /* 左栏底部表格背景、文字颜色定义 */
+{
+	background-color: #dddddd;
+	color: #333333;
+	line-height: 150%;
+	padding: 4px 8px;
+}
+/* --网页中部左栏的CSS定义结束-- */
+
+/* --网页中部中栏的CSS定义开始-- */
+.boder1
+{
+	border-bottom: 1px dashed #aaaaaa;
+}
+.boder2
+{
+	border-left: 1px dashed #aaaaaa;
+	border-bottom: 1px dashed #aaaaaa;
+}
+.form_Item
+{
+	background-image:  url(../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/IUEMTQDW/Skin/51zh01/bg_txt2.gif);
+	border: 1px solid #7F9DB9;
+	height: 15px;
+}
+.main_Search /* 中栏搜索表格背景、文字颜色定义 */
+{
+	background-color: #6699FF;
+	color: #555555;
+	padding: 0px 4px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ff336699', gradientType='0');
+}
+.main_button /* 功能按钮表格背景、文字颜色定义 */
+{
+	background-color: #cccccc;
+	color: #555555;
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ffffffff', gradientType='0');
+}
+.pic1 /* 图片边框颜色定义 */
+{
+	border: 5px solid #CCCCCC;
+}
+.main_title1 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #cccccc;
+}
+.main_title2 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #FF6060;
+}
+.main_title3 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #99CC33;
+}
+.main_title4 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #6699CC;
+}
+.main_title5 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #FFAA33;
+}
+.main_title6 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #FF99CC;
+}
+.main_title7 /* 中栏标题表格背景、文字颜色定义 */
+{
+	background-color: #ffffff;
+	color: #555555;
+	border-bottom: 4px solid #555555;
+}
+.main_tdbg1 /* 中栏内容表格背景、文字颜色定义 */
+{
+	background-color: #f5f5f5;
+	color: #555555;
+	line-height: 150%;
+	padding: 4px;
+}
+.main_tdbg2 /* 中栏内容表格背景、文字颜色定义 */
+{
+	background-color: #333333;
+	color: #cccccc;
+	line-height: 150%;
+	padding: 2px 4px;
+}
+.main_tdbg3 /* 中栏内容表格背景、文字颜色定义 */
+{
+	background-color: #f5f5f5;
+	color: #333333;
+	line-height: 150%;
+	padding: 2px 4px;
+	border-right: 2px solid #ffffff;
+}
+.main_class /* 中栏分类表格背景、文字颜色定义 */
+{
+	color: #000000;
+	line-height: 150%;
+	padding: 2px 4px;
+	border-left: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#00000000', endColorStr='#ffffffff', gradientType='1');
+}
+.class_title1 /* 栏目标题表格背景、文字颜色定义 */
+{
+	background-image:  url(../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/IUEMTQDW/Skin/51dsn02/TitleC_Ar01.gif);
+	background-repeat: repeat-x;
+	background-color: #dddddd;
+	color: #ffffff;
+	padding: 0px 4px;
+	border-right: 2px solid #ffffff;
+	height: 28px;
+}
+.listbg /* --栏目文章列表内容间隔颜色的定义1-- */
+{
+	background-color: #f5f5f5;
+}
+.listbg2 /* --栏目文章列表内容间隔颜色的定义2-- */
+{
+	background-color: #eeeeee;
+}
+/* --网页中部中栏的CSS定义结束-- */
+
+/* --文章显示页的CSS定义开始-- */
+.main_ArticleTitle /* 主标题文字颜色定义 */
+{
+color: #ff0000;
+font-weight: bold;
+font-size: 18;
+line-height: 150%;
+}
+.main_ArticleSubheading /* 主标题文字颜色定义 */
+{
+color: 0099CC;
+font-weight:bold;
+line-height: 150%;
+}
+
+.main_title_760 /* 标题导航表格背景、文字颜色定义(760) */
+{
+background:  url(../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/IUEMTQDW/skin/blue/main_title_760.gif);
+border: 1px solid #8cc3de;
+padding-left: 5;
+height: 25;
+color: #0099cc;
+}
+.main_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
+{
+border: 1px solid #8cc3de;
+padding: 8;
+}
+/* --文章显示页的CSS定义结束-- */
+/* ==网页中部中的CSS定义结束== */
+
+/* ==Bottom.asp中的CSS定义开始== */
+.Bottom_tdbgall /* 底部表格总背景颜色定义 */
+{
+	background: #ffffff;
+	border-right: 1px solid #aaaaaa;
+	border-left: 1px solid #aaaaaa;
+}
+.bottom_Admin /* 管理链接表格背景、文字颜色定义 */
+{
+	background: #cccccc;
+	color: #555555;
+	padding: 0px 6px;
+}
+.bottom_SiteInfo /* 网站信息表格背景、文字颜色定义 */
+{
+	background-color: #eeeeee;
+	color: #555555;
+	padding: 4px 6px;
+}
+.bottom_Copyright /* 版权信息表格背景、文字颜色定义 */
+{
+	background: #555555;
+	color: #cccccc;
+	padding: 0px 4px;
+}
+/* ==Bottom.asp中的CSS定义结束== */
+
+/* ==自选风格中的CSS定义开始== */
+.menu
+{
+	width: 0%;
+	border: 1px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #305B96;
+}
+.menuBody
+{
+	background-color: #ffffff;
+	font-size: 12px;
+	height:30px;
+}
+
+.nodis {
+	display:none;
+	border: thin none #666666;
+}
+/* ==自选风格中的CSS定义结束== */
+.input {
+	height: 18px;
+	width: 100px;
+}
+.xiala {
+	height: 180px;
+	width: 450px;
+}
+.box {
+	width: 45px;
+}
+.hsbt {
+	font-size: 12px;
+	font-weight: bold;
+	color: #990000;
+}
+.unnamed1 {
+	color: #FFFFFF;
+}
