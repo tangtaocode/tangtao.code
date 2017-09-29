@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="invengo.cn.pay.mapper.StockExMapper" >
+
+  <resultMap id="BaseResultMap" type="invengo.cn.pay.model.entity.StockEx" extends="invengo.cn.pay.mapper.StockMapper.BaseResultMap">
+        <result column="count" property="count" jdbcType="INTEGER"/>
+        <result column="classifyName" property="classifyName" jdbcType="VARCHAR"/>
+        <result column="parentClassifyName" property="parentClassifyName" jdbcType="VARCHAR"/>
+        <result column="warehouseName" property="warehouseName" jdbcType="VARCHAR" />
+	  	<result column="storageZoneName" property="storageZoneName" jdbcType="VARCHAR" />
+	  	<result column="storageLocationName" property="storageLocationName" jdbcType="VARCHAR" />
+  </resultMap>
+ 
+  
+<sql id="Base_Column_List" >
+    stock.id, stock.status, stock.asset_classify_id, stock.asset_id, stock.asset_item_id, stock.name, stock.num, stock.batch_num, stock.tag_id, 
+    stock.rfid, stock.epc, stock.barcode, stock.qr_code, stock.erp, stock.unit, stock.pic_url, stock.specification as specification, stock.model, stock.material, 
+    stock.color, stock.length, stock.width, stock.height, stock.weight, stock.density, stock.volume, stock.price01, stock.price02, stock.warehouse_id, 
+    stock.storage_zone_id, stock.storage_location_id, stock.storage_location_tag_id, stock.remark, stock.attr01, stock.attr02, 
+    stock.attr03, stock.create_date, stock.last_update, stock.client_id
+  </sql>
+   <select id="selectByTags" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />,
+	     w.`name` as warehouseName,
+	     classify2.name as parentClassifyName,
+	     classify.name as classifyName
+	     from t_stock stock
+	     left join t_asset_classify classify on classify.id=stock.asset_classify_id
+	     left join t_asset_classify classify2 on classify2.id=classify.parent_id
+	     left join t_warehouse w on w.id = stock.warehouse_id
+    	where 1=1
+       <if test="status != null">
+       	and stock.status=#{status,jdbcType=VARCHAR}
+       </if>     
+      <if test="tags != null" >
+      	and 
+        <foreach collection="tags" item="tagId" index="index" open="(" close=")" separator="or">
+        	stock.epc=#{tagId}
+        </foreach>
+      </if>
+  </select>
+    <update id="batchUpdateByParams"  parameterType="java.util.Map" >
+         update t_stock
+        <set>
+         <if test="status != null and status != ''">
+  			 status = #{status,jdbcType=VARCHAR},
+  		</if>
+        <if test="warehouseId != null and warehouseId != ''">
+  			 warehouse_id=#{warehouseId,jdbcType=BIGINT},
+  		</if>
+  		<if test="warehouseCode != null and warehouseCode != ''">
+  			 warehouse_code=#{warehouseCode,jdbcType=VARCHAR},
+  		</if>
+         last_update=now()
+         </set>
+      	where 
+         <foreach item="item" index="index" collection="list" open="(" separator="or" close=")">
+                 epc=#{item}
+         </foreach>
+    </update>
+  
+  <select id="selectByParams" resultMap="BaseResultMap" >
+   select 
+    <include refid="Base_Column_List" />
+    	from t_stock stock where 1=1 
+    	<if test="id != null">
+    	and stock.id = #{id,jdbcType=BIGINT}
+    	</if>
+    	<if test="status != null" >
+        and stock.status = #{status,jdbcType=VARCHAR}
+      </if>
+      <if test="tagId != null" >
+        and stock.tag_id = #{tagId,jdbcType=VARCHAR}
+      </if>
+      <if test="rfid != null" >
+        and stock.rfid = #{rfid,jdbcType=VARCHAR}
+      </if>
+      <if test="epc != null" >
+        and stock.epc = #{epc,jdbcType=VARCHAR}
+      </if>
+      <if test="barcode != null" >
+        and stock.barcode = #{barcode,jdbcType=VARCHAR}
+      </if>
+      <if test="qrCode != null" >
+        and stock.qr_code = #{qrCode,jdbcType=VARCHAR}
+      </if>
+      <if test="erp != null" >
+        and stock.erp = #{erp,jdbcType=VARCHAR}
+      </if>
+      <if test="creater != null" >
+        and stock.creater = #{creater,jdbcType=BIGINT}
+      </if>
+      <if test="clientId != null" >
+        and stock.client_id = #{clientId,jdbcType=BIGINT}
+      </if>
+  </select>
+</mapper>

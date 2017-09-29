@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="invengo.cn.pay.mapper.StockMapper" >
+  <resultMap id="BaseResultMap" type="invengo.cn.pay.model.entity.Stock" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="asset_classify_id" property="assetClassifyId" jdbcType="BIGINT" />
+    <result column="asset_id" property="assetId" jdbcType="BIGINT" />
+    <result column="asset_item_id" property="assetItemId" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="num" property="num" jdbcType="VARCHAR" />
+    <result column="batch_num" property="batchNum" jdbcType="VARCHAR" />
+    <result column="tag_id" property="tagId" jdbcType="VARCHAR" />
+    <result column="rfid" property="rfid" jdbcType="VARCHAR" />
+    <result column="epc" property="epc" jdbcType="VARCHAR" />
+    <result column="barcode" property="barcode" jdbcType="VARCHAR" />
+    <result column="qr_code" property="qrCode" jdbcType="VARCHAR" />
+    <result column="erp" property="erp" jdbcType="VARCHAR" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="pic_url" property="picUrl" jdbcType="VARCHAR" />
+    <result column="specification" property="specification" jdbcType="VARCHAR" />
+    <result column="model" property="model" jdbcType="VARCHAR" />
+    <result column="material" property="material" jdbcType="VARCHAR" />
+    <result column="color" property="color" jdbcType="VARCHAR" />
+    <result column="length" property="length" jdbcType="DECIMAL" />
+    <result column="width" property="width" jdbcType="DECIMAL" />
+    <result column="height" property="height" jdbcType="DECIMAL" />
+    <result column="weight" property="weight" jdbcType="DECIMAL" />
+    <result column="density" property="density" jdbcType="DECIMAL" />
+    <result column="volume" property="volume" jdbcType="DECIMAL" />
+    <result column="price01" property="price01" jdbcType="DECIMAL" />
+    <result column="price02" property="price02" jdbcType="DECIMAL" />
+    <result column="warehouse_id" property="warehouseId" jdbcType="BIGINT" />
+    <result column="storage_zone_id" property="storageZoneId" jdbcType="BIGINT" />
+    <result column="storage_location_id" property="storageLocationId" jdbcType="BIGINT" />
+    <result column="storage_location_tag_id" property="storageLocationTagId" jdbcType="BIGINT" />
+    <result column="department_id" property="departmentId" jdbcType="BIGINT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="attr01" property="attr01" jdbcType="VARCHAR" />
+    <result column="attr02" property="attr02" jdbcType="VARCHAR" />
+    <result column="attr03" property="attr03" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+    <result column="creater" property="creater" jdbcType="BIGINT" />
+    <result column="client_id" property="clientId" jdbcType="BIGINT" />
+    <result column="warehouse_code" property="warehouseCode" jdbcType="VARCHAR" />
+    <result column="indate" property="indate" jdbcType="TIMESTAMP" />
+    <result column="box_code" property="boxCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, status, asset_classify_id, asset_id, asset_item_id, name, num, batch_num, tag_id, 
+    rfid, epc, barcode, qr_code, erp, unit, pic_url, specification, model, material, 
+    color, length, width, height, weight, density, volume, price01, price02, warehouse_id, 
+    storage_zone_id, storage_location_id, storage_location_tag_id, department_id, remark, 
+    attr01, attr02, attr03, create_date, last_update, creater, client_id, warehouse_code, 
+    indate, box_code
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_stock
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_stock
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="invengo.cn.pay.model.entity.Stock" useGeneratedKeys="true" keyProperty="id">
+    insert into t_stock (id, status, asset_classify_id, 
+      asset_id, asset_item_id, name, 
+      num, batch_num, tag_id, 
+      rfid, epc, barcode, 
+      qr_code, erp, unit, 
+      pic_url, specification, model, 
+      material, color, length, 
+      width, height, weight, 
+      density, volume, price01, 
+      price02, warehouse_id, storage_zone_id, 
+      storage_location_id, storage_location_tag_id, 
+      department_id, remark, attr01, 
+      attr02, attr03, create_date, 
+      last_update, creater, client_id, 
+      warehouse_code, indate, box_code
+      )
+    values (#{id,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, #{assetClassifyId,jdbcType=BIGINT}, 
+      #{assetId,jdbcType=BIGINT}, #{assetItemId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, 
+      #{num,jdbcType=VARCHAR}, #{batchNum,jdbcType=VARCHAR}, #{tagId,jdbcType=VARCHAR}, 
+      #{rfid,jdbcType=VARCHAR}, #{epc,jdbcType=VARCHAR}, #{barcode,jdbcType=VARCHAR}, 
+      #{qrCode,jdbcType=VARCHAR}, #{erp,jdbcType=VARCHAR}, #{unit,jdbcType=VARCHAR}, 
+      #{picUrl,jdbcType=VARCHAR}, #{specification,jdbcType=VARCHAR}, #{model,jdbcType=VARCHAR}, 
+      #{material,jdbcType=VARCHAR}, #{color,jdbcType=VARCHAR}, #{length,jdbcType=DECIMAL}, 
+      #{width,jdbcType=DECIMAL}, #{height,jdbcType=DECIMAL}, #{weight,jdbcType=DECIMAL}, 
+      #{density,jdbcType=DECIMAL}, #{volume,jdbcType=DECIMAL}, #{price01,jdbcType=DECIMAL}, 
+      #{price02,jdbcType=DECIMAL}, #{warehouseId,jdbcType=BIGINT}, #{storageZoneId,jdbcType=BIGINT}, 
+      #{storageLocationId,jdbcType=BIGINT}, #{storageLocationTagId,jdbcType=BIGINT}, 
+      #{departmentId,jdbcType=BIGINT}, #{remark,jdbcType=VARCHAR}, #{attr01,jdbcType=VARCHAR}, 
+      #{attr02,jdbcType=VARCHAR}, #{attr03,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{lastUpdate,jdbcType=TIMESTAMP}, #{creater,jdbcType=BIGINT}, #{clientId,jdbcType=BIGINT}, 
+      #{warehouseCode,jdbcType=VARCHAR}, #{indate,jdbcType=TIMESTAMP}, #{boxCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="invengo.cn.pay.model.entity.Stock" useGeneratedKeys="true" keyProperty="id">
+    insert into t_stock
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="assetClassifyId != null" >
+        asset_classify_id,
+      </if>
+      <if test="assetId != null" >
+        asset_id,
+      </if>
+      <if test="assetItemId != null" >
+        asset_item_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="num != null" >
+        num,
+      </if>
+      <if test="batchNum != null" >
+        batch_num,
+      </if>
+      <if test="tagId != null" >
+        tag_id,
+      </if>
+      <if test="rfid != null" >
+        rfid,
+      </if>
+      <if test="epc != null" >
+        epc,
+      </if>
+      <if test="barcode != null" >
+        barcode,
+      </if>
+      <if test="qrCode != null" >
+        qr_code,
+      </if>
+      <if test="erp != null" >
+        erp,
+      </if>
+      <if test="unit != null" >
+        unit,
+      </if>
+      <if test="picUrl != null" >
+        pic_url,
+      </if>
+      <if test="specification != null" >
+        specification,
+      </if>
+      <if test="model != null" >
+        model,
+      </if>
+      <if test="material != null" >
+        material,
+      </if>
+      <if test="color != null" >
+        color,
+      </if>
+      <if test="length != null" >
+        length,
+      </if>
+      <if test="width != null" >
+        width,
+      </if>
+      <if test="height != null" >
+        height,
+      </if>
+      <if test="weight != null" >
+        weight,
+      </if>
+      <if test="density != null" >
+        density,
+      </if>
+      <if test="volume != null" >
+        volume,
+      </if>
+      <if test="price01 != null" >
+        price01,
+      </if>
+      <if test="price02 != null" >
+        price02,
+      </if>
+      <if test="warehouseId != null" >
+        warehouse_id,
+      </if>
+      <if test="storageZoneId != null" >
+        storage_zone_id,
+      </if>
+      <if test="storageLocationId != null" >
+        storage_location_id,
+      </if>
+      <if test="storageLocationTagId != null" >
+        storage_location_tag_id,
+      </if>
+      <if test="departmentId != null" >
+        department_id,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="attr01 != null" >
+        attr01,
+      </if>
+      <if test="attr02 != null" >
+        attr02,
+      </if>
+      <if test="attr03 != null" >
+        attr03,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="lastUpdate != null" >
+        last_update,
+      </if>
+      <if test="creater != null" >
+        creater,
+      </if>
+      <if test="clientId != null" >
+        client_id,
+      </if>
+      <if test="warehouseCode != null" >
+        warehouse_code,
+      </if>
+      <if test="indate != null" >
+        indate,
+      </if>
+      <if test="boxCode != null" >
+        box_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="assetClassifyId != null" >
+        #{assetClassifyId,jdbcType=BIGINT},
+      </if>
+      <if test="assetId != null" >
+        #{assetId,jdbcType=BIGINT},
+      </if>
+      <if test="assetItemId != null" >
+        #{assetItemId,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="batchNum != null" >
+        #{batchNum,jdbcType=VARCHAR},
+      </if>
+      <if test="tagId != null" >
+        #{tagId,jdbcType=VARCHAR},
+      </if>
+      <if test="rfid != null" >
+        #{rfid,jdbcType=VARCHAR},
+      </if>
+      <if test="epc != null" >
+        #{epc,jdbcType=VARCHAR},
+      </if>
+      <if test="barcode != null" >
+        #{barcode,jdbcType=VARCHAR},
+      </if>
+      <if test="qrCode != null" >
+        #{qrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="erp != null" >
+        #{erp,jdbcType=VARCHAR},
+      </if>
+      <if test="unit != null" >
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="picUrl != null" >
+        #{picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null" >
+        #{specification,jdbcType=VARCHAR},
+      </if>
+      <if test="model != null" >
+        #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null" >
+        #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null" >
+        #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="length != null" >
+        #{length,jdbcType=DECIMAL},
+      </if>
+      <if test="width != null" >
+        #{width,jdbcType=DECIMAL},
+      </if>
+      <if test="height != null" >
+        #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null" >
+        #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="density != null" >
+        #{density,jdbcType=DECIMAL},
+      </if>
+      <if test="volume != null" >
+        #{volume,jdbcType=DECIMAL},
+      </if>
+      <if test="price01 != null" >
+        #{price01,jdbcType=DECIMAL},
+      </if>
+      <if test="price02 != null" >
+        #{price02,jdbcType=DECIMAL},
+      </if>
+      <if test="warehouseId != null" >
+        #{warehouseId,jdbcType=BIGINT},
+      </if>
+      <if test="storageZoneId != null" >
+        #{storageZoneId,jdbcType=BIGINT},
+      </if>
+      <if test="storageLocationId != null" >
+        #{storageLocationId,jdbcType=BIGINT},
+      </if>
+      <if test="storageLocationTagId != null" >
+        #{storageLocationTagId,jdbcType=BIGINT},
+      </if>
+      <if test="departmentId != null" >
+        #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="attr01 != null" >
+        #{attr01,jdbcType=VARCHAR},
+      </if>
+      <if test="attr02 != null" >
+        #{attr02,jdbcType=VARCHAR},
+      </if>
+      <if test="attr03 != null" >
+        #{attr03,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdate != null" >
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creater != null" >
+        #{creater,jdbcType=BIGINT},
+      </if>
+      <if test="clientId != null" >
+        #{clientId,jdbcType=BIGINT},
+      </if>
+      <if test="warehouseCode != null" >
+        #{warehouseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="indate != null" >
+        #{indate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="boxCode != null" >
+        #{boxCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="invengo.cn.pay.model.entity.Stock" >
+    update t_stock
+    <set >
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="assetClassifyId != null" >
+        asset_classify_id = #{assetClassifyId,jdbcType=BIGINT},
+      </if>
+      <if test="assetId != null" >
+        asset_id = #{assetId,jdbcType=BIGINT},
+      </if>
+      <if test="assetItemId != null" >
+        asset_item_id = #{assetItemId,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null" >
+        num = #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="batchNum != null" >
+        batch_num = #{batchNum,jdbcType=VARCHAR},
+      </if>
+      <if test="tagId != null" >
+        tag_id = #{tagId,jdbcType=VARCHAR},
+      </if>
+      <if test="rfid != null" >
+        rfid = #{rfid,jdbcType=VARCHAR},
+      </if>
+      <if test="epc != null" >
+        epc = #{epc,jdbcType=VARCHAR},
+      </if>
+      <if test="barcode != null" >
+        barcode = #{barcode,jdbcType=VARCHAR},
+      </if>
+      <if test="qrCode != null" >
+        qr_code = #{qrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="erp != null" >
+        erp = #{erp,jdbcType=VARCHAR},
+      </if>
+      <if test="unit != null" >
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="picUrl != null" >
+        pic_url = #{picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null" >
+        specification = #{specification,jdbcType=VARCHAR},
+      </if>
+      <if test="model != null" >
+        model = #{model,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null" >
+        material = #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null" >
+        color = #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="length != null" >
+        length = #{length,jdbcType=DECIMAL},
+      </if>
+      <if test="width != null" >
+        width = #{width,jdbcType=DECIMAL},
+      </if>
+      <if test="height != null" >
+        height = #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null" >
+        weight = #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="density != null" >
+        density = #{density,jdbcType=DECIMAL},
+      </if>
+      <if test="volume != null" >
+        volume = #{volume,jdbcType=DECIMAL},
+      </if>
+      <if test="price01 != null" >
+        price01 = #{price01,jdbcType=DECIMAL},
+      </if>
+      <if test="price02 != null" >
+        price02 = #{price02,jdbcType=DECIMAL},
+      </if>
+      <if test="warehouseId != null" >
+        warehouse_id = #{warehouseId,jdbcType=BIGINT},
+      </if>
+      <if test="storageZoneId != null" >
+        storage_zone_id = #{storageZoneId,jdbcType=BIGINT},
+      </if>
+      <if test="storageLocationId != null" >
+        storage_location_id = #{storageLocationId,jdbcType=BIGINT},
+      </if>
+      <if test="storageLocationTagId != null" >
+        storage_location_tag_id = #{storageLocationTagId,jdbcType=BIGINT},
+      </if>
+      <if test="departmentId != null" >
+        department_id = #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="attr01 != null" >
+        attr01 = #{attr01,jdbcType=VARCHAR},
+      </if>
+      <if test="attr02 != null" >
+        attr02 = #{attr02,jdbcType=VARCHAR},
+      </if>
+      <if test="attr03 != null" >
+        attr03 = #{attr03,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdate != null" >
+        last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creater != null" >
+        creater = #{creater,jdbcType=BIGINT},
+      </if>
+      <if test="clientId != null" >
+        client_id = #{clientId,jdbcType=BIGINT},
+      </if>
+      <if test="warehouseCode != null" >
+        warehouse_code = #{warehouseCode,jdbcType=VARCHAR},
+      </if>
+      <if test="indate != null" >
+        indate = #{indate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="boxCode != null" >
+        box_code = #{boxCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="invengo.cn.pay.model.entity.Stock" >
+    update t_stock
+    set status = #{status,jdbcType=VARCHAR},
+      asset_classify_id = #{assetClassifyId,jdbcType=BIGINT},
+      asset_id = #{assetId,jdbcType=BIGINT},
+      asset_item_id = #{assetItemId,jdbcType=BIGINT},
+      name = #{name,jdbcType=VARCHAR},
+      num = #{num,jdbcType=VARCHAR},
+      batch_num = #{batchNum,jdbcType=VARCHAR},
+      tag_id = #{tagId,jdbcType=VARCHAR},
+      rfid = #{rfid,jdbcType=VARCHAR},
+      epc = #{epc,jdbcType=VARCHAR},
+      barcode = #{barcode,jdbcType=VARCHAR},
+      qr_code = #{qrCode,jdbcType=VARCHAR},
+      erp = #{erp,jdbcType=VARCHAR},
+      unit = #{unit,jdbcType=VARCHAR},
+      pic_url = #{picUrl,jdbcType=VARCHAR},
+      specification = #{specification,jdbcType=VARCHAR},
+      model = #{model,jdbcType=VARCHAR},
+      material = #{material,jdbcType=VARCHAR},
+      color = #{color,jdbcType=VARCHAR},
+      length = #{length,jdbcType=DECIMAL},
+      width = #{width,jdbcType=DECIMAL},
+      height = #{height,jdbcType=DECIMAL},
+      weight = #{weight,jdbcType=DECIMAL},
+      density = #{density,jdbcType=DECIMAL},
+      volume = #{volume,jdbcType=DECIMAL},
+      price01 = #{price01,jdbcType=DECIMAL},
+      price02 = #{price02,jdbcType=DECIMAL},
+      warehouse_id = #{warehouseId,jdbcType=BIGINT},
+      storage_zone_id = #{storageZoneId,jdbcType=BIGINT},
+      storage_location_id = #{storageLocationId,jdbcType=BIGINT},
+      storage_location_tag_id = #{storageLocationTagId,jdbcType=BIGINT},
+      department_id = #{departmentId,jdbcType=BIGINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      attr01 = #{attr01,jdbcType=VARCHAR},
+      attr02 = #{attr02,jdbcType=VARCHAR},
+      attr03 = #{attr03,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      creater = #{creater,jdbcType=BIGINT},
+      client_id = #{clientId,jdbcType=BIGINT},
+      warehouse_code = #{warehouseCode,jdbcType=VARCHAR},
+      indate = #{indate,jdbcType=TIMESTAMP},
+      box_code = #{boxCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

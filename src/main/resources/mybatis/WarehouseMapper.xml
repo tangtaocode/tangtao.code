@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="invengo.cn.pay.mapper.WarehouseMapper" >
+  <resultMap id="BaseResultMap" type="invengo.cn.pay.model.entity.Warehouse" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="num" property="num" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="warehouse_classify_id" property="warehouseClassifyId" jdbcType="BIGINT" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="legal_flag" property="legalFlag" jdbcType="VARCHAR" />
+    <result column="department_id" property="departmentId" jdbcType="BIGINT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="attr01" property="attr01" jdbcType="VARCHAR" />
+    <result column="attr02" property="attr02" jdbcType="VARCHAR" />
+    <result column="attr03" property="attr03" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+    <result column="creater" property="creater" jdbcType="BIGINT" />
+    <result column="client_id" property="clientId" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, num, status, type, warehouse_classify_id, address, legal_flag, department_id, 
+    remark, attr01, attr02, attr03, create_date, last_update, creater, client_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_warehouse
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_warehouse
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="invengo.cn.pay.model.entity.Warehouse" useGeneratedKeys="true" keyProperty="id">
+    insert into t_warehouse (id, name, num, 
+      status, type, warehouse_classify_id, 
+      address, legal_flag, department_id, 
+      remark, attr01, attr02, 
+      attr03, create_date, last_update, 
+      creater, client_id)
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{num,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{warehouseClassifyId,jdbcType=BIGINT}, 
+      #{address,jdbcType=VARCHAR}, #{legalFlag,jdbcType=VARCHAR}, #{departmentId,jdbcType=BIGINT}, 
+      #{remark,jdbcType=VARCHAR}, #{attr01,jdbcType=VARCHAR}, #{attr02,jdbcType=VARCHAR}, 
+      #{attr03,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{lastUpdate,jdbcType=TIMESTAMP}, 
+      #{creater,jdbcType=BIGINT}, #{clientId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="invengo.cn.pay.model.entity.Warehouse" useGeneratedKeys="true" keyProperty="id">
+    insert into t_warehouse
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="num != null" >
+        num,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="warehouseClassifyId != null" >
+        warehouse_classify_id,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="legalFlag != null" >
+        legal_flag,
+      </if>
+      <if test="departmentId != null" >
+        department_id,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="attr01 != null" >
+        attr01,
+      </if>
+      <if test="attr02 != null" >
+        attr02,
+      </if>
+      <if test="attr03 != null" >
+        attr03,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="lastUpdate != null" >
+        last_update,
+      </if>
+      <if test="creater != null" >
+        creater,
+      </if>
+      <if test="clientId != null" >
+        client_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseClassifyId != null" >
+        #{warehouseClassifyId,jdbcType=BIGINT},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="legalFlag != null" >
+        #{legalFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null" >
+        #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="attr01 != null" >
+        #{attr01,jdbcType=VARCHAR},
+      </if>
+      <if test="attr02 != null" >
+        #{attr02,jdbcType=VARCHAR},
+      </if>
+      <if test="attr03 != null" >
+        #{attr03,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdate != null" >
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creater != null" >
+        #{creater,jdbcType=BIGINT},
+      </if>
+      <if test="clientId != null" >
+        #{clientId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="invengo.cn.pay.model.entity.Warehouse" >
+    update t_warehouse
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null" >
+        num = #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseClassifyId != null" >
+        warehouse_classify_id = #{warehouseClassifyId,jdbcType=BIGINT},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="legalFlag != null" >
+        legal_flag = #{legalFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null" >
+        department_id = #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="attr01 != null" >
+        attr01 = #{attr01,jdbcType=VARCHAR},
+      </if>
+      <if test="attr02 != null" >
+        attr02 = #{attr02,jdbcType=VARCHAR},
+      </if>
+      <if test="attr03 != null" >
+        attr03 = #{attr03,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdate != null" >
+        last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creater != null" >
+        creater = #{creater,jdbcType=BIGINT},
+      </if>
+      <if test="clientId != null" >
+        client_id = #{clientId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="invengo.cn.pay.model.entity.Warehouse" >
+    update t_warehouse
+    set name = #{name,jdbcType=VARCHAR},
+      num = #{num,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      warehouse_classify_id = #{warehouseClassifyId,jdbcType=BIGINT},
+      address = #{address,jdbcType=VARCHAR},
+      legal_flag = #{legalFlag,jdbcType=VARCHAR},
+      department_id = #{departmentId,jdbcType=BIGINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      attr01 = #{attr01,jdbcType=VARCHAR},
+      attr02 = #{attr02,jdbcType=VARCHAR},
+      attr03 = #{attr03,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      creater = #{creater,jdbcType=BIGINT},
+      client_id = #{clientId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

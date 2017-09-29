@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="invengo.cn.pay.mapper.OrderItemExMapper" >
+
+  <resultMap id="BaseResultMap" type="invengo.cn.pay.model.entity.OrderItem"  extends="invengo.cn.pay.mapper.OrderItemMapper.BaseResultMap">
+  </resultMap>
+   <sql id="Base_Column_List" >
+    id, order_no, epc, remark, attr01, attr02, attr03, create_date, last_update, creater, 
+    client_id
+  </sql>
+  <select id="loadByOrderNo" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_order_item where 1=1 
+     <if test="orderNo != null" >
+        and order_no=#{orderNo,jdbcType=VARCHAR}
+      </if>
+      order by id desc
+  </select>
+ </mapper>

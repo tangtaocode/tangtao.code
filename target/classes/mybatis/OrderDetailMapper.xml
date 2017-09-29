@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="invengo.cn.pay.mapper.OrderDetailMapper" >
+  <resultMap id="BaseResultMap" type="invengo.cn.pay.model.entity.OrderDetail" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
+    <result column="quantity" property="quantity" jdbcType="BIGINT" />
+    <result column="goods_num" property="goodsNum" jdbcType="VARCHAR" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="attr01" property="attr01" jdbcType="VARCHAR" />
+    <result column="attr02" property="attr02" jdbcType="VARCHAR" />
+    <result column="attr03" property="attr03" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+    <result column="creater" property="creater" jdbcType="BIGINT" />
+    <result column="client_id" property="clientId" jdbcType="BIGINT" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, order_no, quantity, goods_num, goods_name, remark, attr01, attr02, attr03, create_date, 
+    last_update, creater, client_id, price
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_order_detail
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_order_detail
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="invengo.cn.pay.model.entity.OrderDetail" useGeneratedKeys="true" keyProperty="id">
+    insert into t_order_detail (id, order_no, quantity, 
+      goods_num, goods_name, remark, 
+      attr01, attr02, attr03, 
+      create_date, last_update, creater, 
+      client_id, price)
+    values (#{id,jdbcType=BIGINT}, #{orderNo,jdbcType=VARCHAR}, #{quantity,jdbcType=BIGINT}, 
+      #{goodsNum,jdbcType=VARCHAR}, #{goodsName,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{attr01,jdbcType=VARCHAR}, #{attr02,jdbcType=VARCHAR}, #{attr03,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{lastUpdate,jdbcType=TIMESTAMP}, #{creater,jdbcType=BIGINT}, 
+      #{clientId,jdbcType=BIGINT}, #{price,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="invengo.cn.pay.model.entity.OrderDetail" useGeneratedKeys="true" keyProperty="id">
+    insert into t_order_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="orderNo != null" >
+        order_no,
+      </if>
+      <if test="quantity != null" >
+        quantity,
+      </if>
+      <if test="goodsNum != null" >
+        goods_num,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="attr01 != null" >
+        attr01,
+      </if>
+      <if test="attr02 != null" >
+        attr02,
+      </if>
+      <if test="attr03 != null" >
+        attr03,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="lastUpdate != null" >
+        last_update,
+      </if>
+      <if test="creater != null" >
+        creater,
+      </if>
+      <if test="clientId != null" >
+        client_id,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="orderNo != null" >
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null" >
+        #{quantity,jdbcType=BIGINT},
+      </if>
+      <if test="goodsNum != null" >
+        #{goodsNum,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="attr01 != null" >
+        #{attr01,jdbcType=VARCHAR},
+      </if>
+      <if test="attr02 != null" >
+        #{attr02,jdbcType=VARCHAR},
+      </if>
+      <if test="attr03 != null" >
+        #{attr03,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdate != null" >
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creater != null" >
+        #{creater,jdbcType=BIGINT},
+      </if>
+      <if test="clientId != null" >
+        #{clientId,jdbcType=BIGINT},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="invengo.cn.pay.model.entity.OrderDetail" >
+    update t_order_detail
+    <set >
+      <if test="orderNo != null" >
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null" >
+        quantity = #{quantity,jdbcType=BIGINT},
+      </if>
+      <if test="goodsNum != null" >
+        goods_num = #{goodsNum,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null" >
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="attr01 != null" >
+        attr01 = #{attr01,jdbcType=VARCHAR},
+      </if>
+      <if test="attr02 != null" >
+        attr02 = #{attr02,jdbcType=VARCHAR},
+      </if>
+      <if test="attr03 != null" >
+        attr03 = #{attr03,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdate != null" >
+        last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creater != null" >
+        creater = #{creater,jdbcType=BIGINT},
+      </if>
+      <if test="clientId != null" >
+        client_id = #{clientId,jdbcType=BIGINT},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="invengo.cn.pay.model.entity.OrderDetail" >
+    update t_order_detail
+    set order_no = #{orderNo,jdbcType=VARCHAR},
+      quantity = #{quantity,jdbcType=BIGINT},
+      goods_num = #{goodsNum,jdbcType=VARCHAR},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      attr01 = #{attr01,jdbcType=VARCHAR},
+      attr02 = #{attr02,jdbcType=VARCHAR},
+      attr03 = #{attr03,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      creater = #{creater,jdbcType=BIGINT},
+      client_id = #{clientId,jdbcType=BIGINT},
+      price = #{price,jdbcType=DOUBLE}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
