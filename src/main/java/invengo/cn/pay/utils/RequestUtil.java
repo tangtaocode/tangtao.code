@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
  * @version $Id: RequestUtil.java, v 0.1 2014年7月23日 上午10:48:10 taixu.zqq Exp $
  */
 public class RequestUtil {
-
+	
     /**
      * 获取所有request请求参数key-value
      * 
@@ -80,5 +80,38 @@ public class RequestUtil {
             i += readlen;  
         }  
         return buffer;  
-    }  
+    }
+   
+    /**   
+     * @Title: getRequestBodyByReader   
+     * @Description: TODO(获取微信回调函数参数,返回xml)   
+     * @param: @param request
+     * @param: @return
+     * @param: @throws IOException      
+     * @return: String      
+     * @throws   
+     */ 
+    public static String getRequestBodyByReader(HttpServletRequest request) throws IOException {
+    	String tempLine;
+    	String result = "";
+    	try {
+			if(request != null) {
+				while ((tempLine = request.getReader().readLine()) != null) {
+					result += tempLine;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			try {
+				if(request.getReader() != null) {
+					request.getReader().close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+    	return result;
+    }
 }

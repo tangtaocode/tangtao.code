@@ -46,8 +46,8 @@ public class CommonPayServiceImpl implements ICommonPayService {
     exmap.put("wx_url", wxresponse.getExtData().get("code_url"));
     exmap.put("wx_code", wxresponse.getExtData().get("out_trade_no"));
     exmap.put("wx_msg", wxresponse.getMsg());
-    exmap.put("al_url", alresponse.getExtData().get("qr_code"));
-    exmap.put("al_code", alresponse.getExtData().get("out_trade_no"));
+    exmap.put("al_url", alresponse.getExtData().get("qrCode"));
+    exmap.put("al_code", alresponse.getExtData().get("outTradeNo"));
     exmap.put("al_msg", alresponse.getMsg());
     exmap.put("totalAmt", wxresponse.getExtData().get("totalAmt"));//总金额
     exmap.put("totalDisAmt", wxresponse.getExtData().get("totalDisAmt"));//优惠金额

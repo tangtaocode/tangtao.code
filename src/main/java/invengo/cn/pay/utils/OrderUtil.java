@@ -90,11 +90,35 @@ public class OrderUtil
    * @param: @param suffix
    * @param: @param counts
    * @param: @return      
-   * @return: String      
+   * @return: String
    * @throws
    */
   public static String generateOrderNo(String suffix,int counts){
     String res = getDateStr()+getNanoTimeStr()+getFixStr(getRandomStr(),RANDOM-counts)+suffix;
     return res;
+  }
+  
+
+  /**   
+ * @Title: getOrderByThirdOrder   
+ * @Description: TODO(根据传入的订单号,补0生成指定长度的订单号)
+ * @param: @param orderNo : 999
+ * @param: @param length : 6
+ * @param: @return   
+ * @return: String 000999     
+ * @throws   
+ */ 
+public static String getOrderByOrderNo(String orderNo,int length) {
+	  int oldLength = orderNo.length();
+	  int subLength = length - oldLength;
+	  if(subLength <= 0) {
+		  return orderNo;
+	  }
+	  
+	  StringBuilder newOrderNo = new StringBuilder();
+	  for(int i = 0;i < subLength;i++) {
+		  newOrderNo.append("0");
+	  }
+	  return newOrderNo.append(orderNo).toString();
   }
 }

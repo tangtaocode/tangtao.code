@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import invengo.cn.pay.model.access.MemberAccess;
 
+@SuppressWarnings("serial")
 public class CacheObject implements Serializable
 {
   private String out_trade_no;

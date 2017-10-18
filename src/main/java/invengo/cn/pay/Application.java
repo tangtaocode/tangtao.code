@@ -6,10 +6,12 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.jboss.logging.Logger;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -20,20 +22,18 @@ import org.springframework.transaction.PlatformTransactionManager;
 @SpringBootApplication
 @MapperScan("invengo.cn.pay.mapper")
 @ComponentScan
-public class Application {
+public class Application extends SpringBootServletInitializer {
     private static Logger logger = Logger.getLogger(Application.class);
 
-    @Bean
-    @ConfigurationProperties(prefix="spring.datasource")
-    public DataSource dataSource() {
-        return new org.apache.tomcat.jdbc.pool.DataSource();
-    }
+    @Autowired
+    private DataSource dataSource;
+
 
     @Bean
     public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
 
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-        sqlSessionFactoryBean.setDataSource(dataSource());
+        sqlSessionFactoryBean.setDataSource(dataSource);
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 
@@ -44,10 +44,14 @@ public class Application {
 
     @Bean
     public PlatformTransactionManager transactionManager() {
-        return new DataSourceTransactionManager(dataSource());
+        return new DataSourceTransactionManager(dataSource);
     }
 
-
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        // 注意这里要指向原先用main方法执行的Application启动类
+        return builder.sources(Application.class);
+    }
     /**
      * Start
      */
